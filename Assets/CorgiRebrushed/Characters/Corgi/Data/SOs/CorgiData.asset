@@ -15,6 +15,7 @@ MonoBehaviour:
   <Acceleration>k__BackingField: 50
   <Desacceleration>k__BackingField: 15
   <MaxSpeed>k__BackingField: 10
+  <RotationSpeed>k__BackingField: 15
   <GroundLayer>k__BackingField:
     serializedVersion: 2
     m_Bits: 2048

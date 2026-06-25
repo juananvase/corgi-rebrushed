@@ -5,15 +5,18 @@ using UnityEngine;
 [InlineEditor]
 public class CharacterDataSO : ScriptableObject
 {
-    [field: SerializeField][FoldoutGroup("Movement Variables")] public float Acceleration { get; private set; }
-    [field: SerializeField][FoldoutGroup("Movement Variables")] public float Desacceleration { get; private set; }
-    [field: SerializeField][FoldoutGroup("Movement Variables")] public float MaxSpeed { get; private set; }
+    [Header("Movement Variables")]
+    [field: SerializeField] public float Acceleration { get; private set; }
+    [field: SerializeField] public float Desacceleration { get; private set; }
+    [field: SerializeField] public float MaxSpeed { get; private set; }
+    [field: SerializeField] public float RotationSpeed { get; private set; }
     
-    [field: SerializeField][FoldoutGroup("Grounded Variables")] public LayerMask GroundLayer { get; private set; }
-    [field: SerializeField][FoldoutGroup("Grounded Variables")] public float CharacterHeight { get; private set; }
-    [field: SerializeField][FoldoutGroup("Grounded Variables")] public float CharacterLength { get; private set; }
-    [field: SerializeField][FoldoutGroup("Grounded Variables")] public float CharacterWidth { get; private set; }
+    [Header("Grounded Variables")]
+    [field: SerializeField] public LayerMask GroundLayer { get; private set; }
+    [field: SerializeField] public float CharacterHeight { get; private set; }
+    [field: SerializeField] public float CharacterLength { get; private set; }
+    [field: SerializeField] public float CharacterWidth { get; private set; }
     
     [Tooltip("How far below the character's feet to check for ground.")]
-    [field: SerializeField][FoldoutGroup("Grounded Variables")] public float CastCushion { get; private set; }
+    [field: SerializeField] public float CastCushion { get; private set; }
 }
