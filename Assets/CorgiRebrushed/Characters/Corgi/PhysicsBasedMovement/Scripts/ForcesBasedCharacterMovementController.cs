@@ -61,6 +61,8 @@ public class ForcesBasedCharacterMovementController : MonoBehaviour
     {
         if(!_manager.IsGrounded) return;
         _rigidbody.AddForce(_manager.CharacterObject.up * 10, ForceMode.Impulse);
+        
+        //TODO Implementar sonido de salto
     }
     
     [Button("DashTest")]

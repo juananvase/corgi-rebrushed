@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "gamedev-mcp": {
+      "type": "stdio",
+      "command": "C:\\Users\\Juan\\Documents\\Repos\\corgi-rebrushed\\Library\\mcp-server\\win-x64\\gamedev-mcp-server.exe",
+      "env": {
+        "MCP_PLUGIN_PORT": "22194"
+      }
+    }
+  }
+}
