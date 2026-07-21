@@ -1,5 +1,6 @@
 using System;
 using Sirenix.OdinInspector;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -26,15 +27,22 @@ public class ForcesBasedCharacterMovementController : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
+    private void Start()
+    {
+        _manager.JumpAction.performed += Jump;
+    }
+
     private void FixedUpdate()
     {
-        
+        CustomFalling();
         ApplyForceToHorizontalMovement();
         CapVelocity();
     }
 
     private void ApplyForceToHorizontalMovement()
     {
+        if (!_manager.IsGrounded) return;
+        
         if (_manager.MovementDirection == Vector3.zero)
         {
             Vector3 horizontalVelocity = new Vector3(_rigidbody.linearVelocity.x, 0f, _rigidbody.linearVelocity.z);
@@ -56,26 +64,29 @@ public class ForcesBasedCharacterMovementController : MonoBehaviour
         }
     }
     
-    [Button("JumpTest")]
-    private void Jump()
+    private void Jump(InputAction.CallbackContext context)
     {
         if(!_manager.IsGrounded) return;
-        _rigidbody.AddForce(_manager.CharacterObject.up * 10, ForceMode.Impulse);
+        
+        _rigidbody.AddForce(_manager.CharacterObject.up * _manager.CharacterData.JumpForce, ForceMode.Impulse);
         
         //TODO Implementar sonido de salto
     }
-    
-    [Button("DashTest")]
-    private void Dash()
+
+    private void CustomFalling()
     {
-        Vector3 horizontalVelocity = new Vector3(_rigidbody.linearVelocity.x, 0f, _rigidbody.linearVelocity.z);
+        if(_manager.IsGrounded) return;
         
-        if (_manager.MovementDirection == Vector3.zero)
+        if (_rigidbody.linearVelocity.y < 0)
         {
-            _rigidbody.AddForce(_manager.CharacterObject.forward * 10, ForceMode.Impulse);
+            _rigidbody.AddForce(_manager.CharacterObject.up * (Physics.gravity.y * (_manager.CharacterData.FallMultiplier - 1)), ForceMode.Force);
             return;
         }
         
-        _rigidbody.AddForce(_manager.MovementDirection * 10, ForceMode.Impulse);
+        if (_rigidbody.linearVelocity.y > 0 && !_manager.JumpAction.IsPressed())
+        {
+            _rigidbody.AddForce(_manager.CharacterObject.up * (Physics.gravity.y * (_manager.CharacterData.LowJumpMultiplier - 1)), ForceMode.Force);
+        }
     }
+    
 }

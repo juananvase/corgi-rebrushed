@@ -11,6 +11,11 @@ public class CharacterDataSO : ScriptableObject
     [field: SerializeField] public float MaxSpeed { get; private set; }
     [field: SerializeField] public float RotationSpeed { get; private set; }
     
+    [Header("Jump Variables")]
+    [field: SerializeField] public float JumpForce { get; private set; }
+    [field: SerializeField] public float FallMultiplier { get; private set; }
+    [field: SerializeField] public float LowJumpMultiplier { get; private set; }
+    
     [Header("Grounded Variables")]
     [field: SerializeField] public LayerMask GroundLayer { get; private set; }
     [field: SerializeField] public float CharacterHeight { get; private set; }

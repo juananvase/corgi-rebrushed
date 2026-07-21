@@ -15,6 +15,7 @@ public class CharacterControllerManager : MonoBehaviour
     [ShowInInspector][FoldoutGroup("Testing")] public bool IsGrounded {get; private set;}
     
     public InputAction MoveAction {get; private set;}
+    public InputAction JumpAction {get; private set;}
     
     
     private void OnEnable()
@@ -30,7 +31,9 @@ public class CharacterControllerManager : MonoBehaviour
     private void Awake()
     {
         MoveAction = InputSystem.actions.FindAction("Move");
+        JumpAction = InputSystem.actions.FindAction("Jump");
     }
+    
 
     private void Update()
     {
