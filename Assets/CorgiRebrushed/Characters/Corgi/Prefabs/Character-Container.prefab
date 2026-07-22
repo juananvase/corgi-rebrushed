@@ -1099,6 +1099,8 @@ GameObject:
   - component: {fileID: 6041611179034348397}
   - component: {fileID: 2925868597051054196}
   - component: {fileID: 2419340908151065216}
+  - component: {fileID: 6955951770390683560}
+  - component: {fileID: 484032968899301501}
   m_Layer: 10
   m_Name: Character-Container
   m_TagString: Untagged
@@ -1195,6 +1197,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterRotationController
   _manager: {fileID: 6041611179034348397}
   _cameraTransform: {fileID: 4472720011615709231}
+--- !u!114 &6955951770390683560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7937491203180931596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a001edea4a845b4baa825a4798dfbdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbilitiyManager
+  <CharacterObject>k__BackingField: {fileID: 517619471578127760}
+  <AbilitiesData>k__BackingField: {fileID: 11400000, guid: a9659934b7d6e5346a22a27643083bb7, type: 2}
+--- !u!114 &484032968899301501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7937491203180931596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9711232a257684180c8cd909fc7c06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterJump
+  _manager: {fileID: 6955951770390683560}
+  _rigidbody: {fileID: 8023257346298294945}
 --- !u!1 &8129168059337783097
 GameObject:
   m_ObjectHideFlags: 0

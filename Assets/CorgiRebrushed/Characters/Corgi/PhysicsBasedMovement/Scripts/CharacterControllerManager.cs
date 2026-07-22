@@ -57,6 +57,7 @@ public class CharacterControllerManager : MonoBehaviour
         return hit;
     }
     
+#if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = IsGrounded ? Color.green : Color.red;
@@ -72,5 +73,6 @@ public class CharacterControllerManager : MonoBehaviour
         Gizmos.DrawWireCube(Vector3.zero, halfExtents * 2f);
         
     }
+#endif
     
 }
