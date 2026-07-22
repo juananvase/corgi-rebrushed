@@ -4,32 +4,21 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(CharacterControllerManager))]
+[RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(Rigidbody))]
-public class ForcesBasedCharacterMovementController : MonoBehaviour
+public class ForcesBasedCharacterMovementController : CharacterController
 {
-    [SerializeField][FoldoutGroup("References")] private CharacterControllerManager _manager;
     [SerializeField][FoldoutGroup("References")] private Rigidbody _rigidbody;
     
-    
-    private void OnEnable()
+    protected override void Awake()
     {
-        _manager.InputActions.FindActionMap("Player").Enable();
-    }
-    
-    private void OnDisable()
-    {
-        _manager.InputActions.FindActionMap("Player").Disable();
-    }
-
-    private void Awake()
-    {
+        base.Awake();
         _rigidbody = GetComponent<Rigidbody>();
     }
 
     private void Start()
     {
-        _manager.JumpAction.performed += Jump;
+        JumpAction.performed += Jump;
     }
 
     private void FixedUpdate()
@@ -41,49 +30,49 @@ public class ForcesBasedCharacterMovementController : MonoBehaviour
 
     private void ApplyForceToHorizontalMovement()
     {
-        if (_manager.MovementDirection == Vector3.zero)
+        if (_movementDirection == Vector3.zero)
         {
             Vector3 horizontalVelocity = new Vector3(_rigidbody.linearVelocity.x, 0f, _rigidbody.linearVelocity.z);
-            _rigidbody.AddForce(horizontalVelocity * -_manager.CharacterData.Desacceleration, ForceMode.Force);
+            _rigidbody.AddForce(horizontalVelocity * -_characterData.Desacceleration, ForceMode.Force);
             return;
         }
         
-        _rigidbody.AddForce(_manager.MovementDirection * _manager.CharacterData.Acceleration, ForceMode.Force);
+        _rigidbody.AddForce(_movementDirection * _characterData.Acceleration, ForceMode.Force);
     }
     
     private void CapVelocity()
     {
         Vector3 horizontalVelocity = new Vector3(_rigidbody.linearVelocity.x, 0f, _rigidbody.linearVelocity.z);
 
-        if (horizontalVelocity.magnitude > _manager.CharacterData.MaxSpeed)
+        if (horizontalVelocity.magnitude > _characterData.MaxSpeed)
         {
-            Vector3 cappedVelocity = horizontalVelocity.normalized * _manager.CharacterData.MaxSpeed;
+            Vector3 cappedVelocity = horizontalVelocity.normalized * _characterData.MaxSpeed;
             _rigidbody.linearVelocity = new Vector3(cappedVelocity.x, _rigidbody.linearVelocity.y, cappedVelocity.z);
         }
     }
     
     private void Jump(InputAction.CallbackContext context)
     {
-        if(!_manager.IsGrounded) return;
+        if(!IsGrounded) return;
         
-        _rigidbody.AddForce(_manager.CharacterObject.up * _manager.CharacterData.JumpForce, ForceMode.Impulse);
+        _rigidbody.AddForce(_characterObject.up * _characterData.JumpForce, ForceMode.Impulse);
         
         //TODO Implementar sonido de salto
     }
 
     private void CustomFalling()
     {
-        if(_manager.IsGrounded) return;
+        if(IsGrounded) return;
         
         if (_rigidbody.linearVelocity.y < 0)
         {
-            _rigidbody.AddForce(_manager.CharacterObject.up * (Physics.gravity.y * (_manager.CharacterData.FallMultiplier - 1)), ForceMode.Force);
+            _rigidbody.AddForce(_characterObject.up * (Physics.gravity.y * (_characterData.FallMultiplier - 1)), ForceMode.Force);
             return;
         }
         
-        if (_rigidbody.linearVelocity.y > 0 && !_manager.JumpAction.IsPressed())
+        if (_rigidbody.linearVelocity.y > 0 && !JumpAction.IsPressed())
         {
-            _rigidbody.AddForce(_manager.CharacterObject.up * (Physics.gravity.y * (_manager.CharacterData.LowJumpMultiplier - 1)), ForceMode.Force);
+            _rigidbody.AddForce(_characterObject.up * (Physics.gravity.y * (_characterData.LowJumpMultiplier - 1)), ForceMode.Force);
         }
     }
     

@@ -1096,10 +1096,8 @@ GameObject:
   m_Component:
   - component: {fileID: 517619471578127760}
   - component: {fileID: 8023257346298294945}
-  - component: {fileID: 6041611179034348397}
   - component: {fileID: 2925868597051054196}
   - component: {fileID: 2419340908151065216}
-  - component: {fileID: 6955951770390683560}
   - component: {fileID: 484032968899301501}
   - component: {fileID: 2355443551183846535}
   - component: {fileID: 6243731329619755321}
@@ -1156,22 +1154,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 80
   m_CollisionDetection: 1
---- !u!114 &6041611179034348397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7937491203180931596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e97be15f9ed482a488d5150c70946026, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterManagerController
-  <InputActions>k__BackingField: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  <CharacterObject>k__BackingField: {fileID: 5470984821014206929}
-  <Orientation>k__BackingField: {fileID: 4376337836434605870}
-  <CharacterData>k__BackingField: {fileID: 11400000, guid: e9b55dda2f3d50a4ab5938572c9bdacc, type: 2}
 --- !u!114 &2925868597051054196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1184,7 +1166,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403f4865bd513be4583408bcb6d4f66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ForcesBasedCharacterController
-  _manager: {fileID: 6041611179034348397}
+  _inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  _characterObject: {fileID: 5470984821014206929}
+  _orientation: {fileID: 4376337836434605870}
+  _characterData: {fileID: 11400000, guid: e9b55dda2f3d50a4ab5938572c9bdacc, type: 2}
   _rigidbody: {fileID: 8023257346298294945}
 --- !u!114 &2419340908151065216
 MonoBehaviour:
@@ -1198,22 +1183,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6218cde08a1932b4383b15646567f899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterRotationController
-  _manager: {fileID: 6041611179034348397}
+  _inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  _characterObject: {fileID: 5470984821014206929}
+  _orientation: {fileID: 4376337836434605870}
+  _characterData: {fileID: 11400000, guid: e9b55dda2f3d50a4ab5938572c9bdacc, type: 2}
   _cameraTransform: {fileID: 4472720011615709231}
---- !u!114 &6955951770390683560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7937491203180931596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a001edea4a845b4baa825a4798dfbdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AbilitiyManager
-  <CharacterObject>k__BackingField: {fileID: 517619471578127760}
-  <AbilitiesData>k__BackingField: {fileID: 11400000, guid: a9659934b7d6e5346a22a27643083bb7, type: 2}
 --- !u!114 &484032968899301501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1226,7 +1200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e9711232a257684180c8cd909fc7c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaterJump
-  _manager: {fileID: 6955951770390683560}
+  _characterObject: {fileID: 5470984821014206929}
+  _abilitiesData: {fileID: 11400000, guid: a9659934b7d6e5346a22a27643083bb7, type: 2}
+  _abilityEventAsset: {fileID: 11400000, guid: 423ca25686d4c1b469ad12d1c708ca0a, type: 2}
   _rigidbody: {fileID: 8023257346298294945}
 --- !u!114 &2355443551183846535
 MonoBehaviour:
@@ -1240,6 +1216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653ff76e58fdbba42ae5eb9d0bb1d17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TreeFall
+  _characterObject: {fileID: 5470984821014206929}
+  _abilitiesData: {fileID: 11400000, guid: a9659934b7d6e5346a22a27643083bb7, type: 2}
+  _abilityEventAsset: {fileID: 11400000, guid: 423ca25686d4c1b469ad12d1c708ca0a, type: 2}
 --- !u!114 &6243731329619755321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1252,6 +1231,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e98727889f393c4ba13aeb0c66ddb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChilliExplosion
+  _characterObject: {fileID: 5470984821014206929}
+  _abilitiesData: {fileID: 11400000, guid: a9659934b7d6e5346a22a27643083bb7, type: 2}
+  _abilityEventAsset: {fileID: 11400000, guid: 423ca25686d4c1b469ad12d1c708ca0a, type: 2}
 --- !u!1 &8129168059337783097
 GameObject:
   m_ObjectHideFlags: 0
