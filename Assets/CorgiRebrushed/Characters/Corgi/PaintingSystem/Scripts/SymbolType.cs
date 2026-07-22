@@ -1,6 +1,7 @@
 public enum SymbolType
 {
     Unknown,
-    Line,
-    Circle
+    Water,
+    Tree,
+    Fire
 }

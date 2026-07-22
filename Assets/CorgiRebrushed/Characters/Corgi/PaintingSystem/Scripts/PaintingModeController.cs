@@ -1,3 +1,4 @@
+using System.Collections;
 using GameEvents;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -9,6 +10,9 @@ public class PaintingModeController : MonoBehaviour
     [SerializeField][FoldoutGroup("References")] private PaintCanvas _canvas;
     [SerializeField][FoldoutGroup("References")] private SymbolRecognizer _recognizer;
     [SerializeField][FoldoutGroup("References")] private ECorgiHabilityEventAsset _corgiHabilityEvent;
+    [SerializeField][FoldoutGroup("References")] private SymbolAbilityMapSO _symbolAbilityMap;
+
+    [SerializeField][FoldoutGroup("Data")] private float _recognizedStrokeHoldDuration = 1f;
 
     [ShowInInspector][FoldoutGroup("Testing")] private bool _isPainting;
     [ShowInInspector][FoldoutGroup("Testing")] private bool _isStroking;
@@ -65,14 +69,21 @@ public class PaintingModeController : MonoBehaviour
         _overlay.Hide();
 
         var symbol = _recognizer.Recognize(stroke);
-        var hability = MapSymbolToHability(symbol);
-        if (hability.HasValue) _corgiHabilityEvent.Invoke(hability.Value);
+
+        if (_symbolAbilityMap != null && _symbolAbilityMap.TryGetEntry(symbol, out var entry))
+        {
+            _canvas.RecolorStroke(entry.Color);
+            StartCoroutine(ResolveRecognizedSymbol(entry.Hability));
+        }
+        else
+        {
+            _canvas.FadeOutAndClear();
+        }
     }
 
-    private static ECorgiHability? MapSymbolToHability(SymbolType symbol) => symbol switch
+    private IEnumerator ResolveRecognizedSymbol(ECorgiHability hability)
     {
-        SymbolType.Line => ECorgiHability.Dash,
-        SymbolType.Circle => ECorgiHability.Jump,
-        _ => null
-    };
+        yield return new WaitForSeconds(_recognizedStrokeHoldDuration);
+        _canvas.FadeOutAndClear(() => _corgiHabilityEvent.Invoke(hability));
+    }
 }
