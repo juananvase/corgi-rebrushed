@@ -22,7 +22,7 @@ MonoBehaviour:
   <GroundLayer>k__BackingField:
     serializedVersion: 2
     m_Bits: 2048
-  <CharacterHeight>k__BackingField: 1.4
-  <CharacterLength>k__BackingField: 0.7
-  <CharacterWidth>k__BackingField: 0.5
-  <CastCushion>k__BackingField: 0.2
+  <CharacterHeight>k__BackingField: 1
+  <CharacterLength>k__BackingField: 0.75
+  <CharacterWidth>k__BackingField: 0.4
+  <CastCushion>k__BackingField: 0.55

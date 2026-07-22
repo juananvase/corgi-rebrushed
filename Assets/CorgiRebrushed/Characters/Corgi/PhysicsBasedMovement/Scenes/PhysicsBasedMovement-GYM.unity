@@ -490,7 +490,7 @@ Transform:
   m_GameObject: {fileID: 961739749}
   serializedVersion: 2
   m_LocalRotation: {x: 0.07088902, y: 0, z: 0, w: 0.9974842}
-  m_LocalPosition: {x: 0, y: 3, z: -7}
+  m_LocalPosition: {x: 0, y: 3.315, z: -7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -935,7 +935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517619471578127760, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.315
       objectReference: {fileID: 0}
     - target: {fileID: 517619471578127760, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -969,6 +969,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5998482702081176662, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: f5b36e42b48640749a3755690c97ac4b, type: 2}
     - target: {fileID: 7937491203180931596, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
       propertyPath: m_Name
       value: Character-Container
