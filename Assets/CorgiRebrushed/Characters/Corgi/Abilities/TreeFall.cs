@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TreeFall : MonoBehaviour
+public class TreeFall : Abilitiy
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
