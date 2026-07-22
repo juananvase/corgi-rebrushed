@@ -41,8 +41,6 @@ public class ForcesBasedCharacterMovementController : MonoBehaviour
 
     private void ApplyForceToHorizontalMovement()
     {
-        if (!_manager.IsGrounded) return;
-        
         if (_manager.MovementDirection == Vector3.zero)
         {
             Vector3 horizontalVelocity = new Vector3(_rigidbody.linearVelocity.x, 0f, _rigidbody.linearVelocity.z);
