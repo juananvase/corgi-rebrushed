@@ -5,16 +5,17 @@ using UnityEngine.InputSystem;
 
 public class CharacterControllerManager : MonoBehaviour
 {
-    [field: SerializeField][FoldoutGroup("References")] public InputActionAsset InputActions { get; private set; }
-    [field: SerializeField][FoldoutGroup("References")] public Transform CharacterObject { get; private set; }
-    [field: SerializeField][FoldoutGroup("References")] public Transform Orientation { get; private set; }
+    [field: SerializeField, FoldoutGroup("References")] public InputActionAsset InputActions { get; private set; }
+    [field: SerializeField, FoldoutGroup("References")] public Transform CharacterObject { get; private set; }
+    [field: SerializeField, FoldoutGroup("References")] public Transform Orientation { get; private set; }
     
-    [field: SerializeField][FoldoutGroup("Data")] public CharacterDataSO CharacterData { get; private set; }
+    [field: SerializeField, FoldoutGroup("Data")] public CharacterDataSO CharacterData { get; private set; }
     
-    [ShowInInspector][FoldoutGroup("Testing")] public Vector3 MovementDirection {get; private set;}
-    [ShowInInspector][FoldoutGroup("Testing")] public bool IsGrounded {get; private set;}
+    [ShowInInspector, FoldoutGroup("Testing")] public Vector3 MovementDirection {get; private set;}
+    [ShowInInspector, FoldoutGroup("Testing")] public bool IsGrounded {get; private set;}
     
     public InputAction MoveAction {get; private set;}
+    public InputAction JumpAction {get; private set;}
     
     
     private void OnEnable()
@@ -30,7 +31,9 @@ public class CharacterControllerManager : MonoBehaviour
     private void Awake()
     {
         MoveAction = InputSystem.actions.FindAction("Move");
+        JumpAction = InputSystem.actions.FindAction("Jump");
     }
+    
 
     private void Update()
     {
