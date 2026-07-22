@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.ivanmurzak.unity.mcp": "0.82.2",
     "com.kyrylokuzyk.primetween": "file:../Assets/Plugins/PrimeTween/internal/com.kyrylokuzyk.primetween.tgz",
     "com.qhenshaw.gameevents": "https://github.com/qhenshaw/GameEvents.git",
     "com.unity.ai.assistant": "2.13.0-pre.2",
