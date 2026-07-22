@@ -119,35 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &149161920 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7937491203180931596, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
-  m_PrefabInstance: {fileID: 8684439064015200718}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &149161928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149161920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e98727889f393c4ba13aeb0c66ddb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ChilliExplosion
---- !u!114 &149161929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149161920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 653ff76e58fdbba42ae5eb9d0bb1d17c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeFall
 --- !u!1 &203844586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,13 +976,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7937491203180931596, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 149161929}
-    - targetCorrespondingSourceObject: {fileID: 7937491203180931596, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 149161928}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
