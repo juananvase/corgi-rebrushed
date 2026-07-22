@@ -83,7 +83,8 @@ public class PaintingModeController : MonoBehaviour
 
     private IEnumerator ResolveRecognizedSymbol(ECorgiHability hability)
     {
+        _corgiHabilityEvent.Invoke(hability);
         yield return new WaitForSeconds(_recognizedStrokeHoldDuration);
-        _canvas.FadeOutAndClear(() => _corgiHabilityEvent.Invoke(hability));
+        _canvas.FadeOutAndClear();
     }
 }
