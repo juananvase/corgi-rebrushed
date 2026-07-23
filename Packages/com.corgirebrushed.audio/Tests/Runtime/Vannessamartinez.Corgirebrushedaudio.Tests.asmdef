@@ -1,0 +1,11 @@
+{
+    "name": "Vannessamartinez.Corgirebrushedaudio.Tests",
+    "references": [
+        "Vannessamartinez.Corgirebrushedaudio"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}

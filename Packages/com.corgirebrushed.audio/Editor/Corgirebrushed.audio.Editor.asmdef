@@ -1,0 +1,10 @@
+{
+    "name": "com.corgirebrushed.audio.Editor",
+    "references": [
+        "com.corgirebrushed.audio"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}
