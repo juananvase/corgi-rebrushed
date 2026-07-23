@@ -26,12 +26,8 @@ namespace CorgiAudio
         private bool _banksLoaded;
 
         // ──────────────────────────────────────────────
-        // Inspector — References
-        // ──────────────────────────────────────────────
-        [FoldoutGroup("References")]
-        [SerializeField]
-        private AudioEventMappingSO _eventMapping;
-
+        // Note: AudioEventMappingSO now lives in the project and is self-contained.
+        // It binds/unbinds via its own OnEnable/OnDisable. No reference needed here.
         // ──────────────────────────────────────────────
         // Inspector — Runtime State (debug)
         // ──────────────────────────────────────────────
@@ -64,16 +60,8 @@ namespace CorgiAudio
             LoadBanks();
         }
 
-        private void Start()
-        {
-            _eventMapping?.BindAll();
-        }
-
         private void OnDestroy()
         {
-            if (_eventMapping != null)
-                _eventMapping.UnbindAll();
-
             if (Instance == this)
                 Instance = null;
         }

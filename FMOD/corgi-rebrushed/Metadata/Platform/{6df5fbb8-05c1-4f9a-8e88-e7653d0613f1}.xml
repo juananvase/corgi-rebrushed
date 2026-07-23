@@ -8,10 +8,10 @@
 			<value>Desktop</value>
 		</property>
 		<property name="subDirectory">
-			<value>Desktop</value>
+			<value>C:/Users/Usuario/REPOS/corgi-rebrushed/FMOD/corgi-rebrushed/Build/Desktop</value>
 		</property>
 		<property name="speakerFormat">
-			<value>5</value>
+			<value>1</value>
 		</property>
 	</object>
 </objects>

@@ -2,6 +2,7 @@ using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class CharacterControllerManager : MonoBehaviour
 {
@@ -15,8 +16,13 @@ public class CharacterControllerManager : MonoBehaviour
     [ShowInInspector][FoldoutGroup("Testing")] public bool IsGrounded {get; private set;}
     
     public InputAction MoveAction {get; private set;}
+
+    // Event that is invoked when the character takes a footstep. Can be used to trigger footstep sounds or other effects.
+    [FoldoutGroup("Audio")] public UnityEvent OnFootstep;
     
-    
+    // Timer to control footstep audio interval
+    private float _footstepTimer;
+
     private void OnEnable()
     {
         InputActions.FindActionMap("Player").Enable();
@@ -37,6 +43,18 @@ public class CharacterControllerManager : MonoBehaviour
         GetMovementDirection();
         
         IsGrounded = CheckGrounded();
+
+        // Footstep audio
+        if (IsGrounded && MovementDirection.magnitude > 0.1f)
+        {
+            float interval = Mathf.Lerp(0.55f, 0.3f, MovementDirection.magnitude);
+            _footstepTimer += Time.deltaTime;
+            if (_footstepTimer >= interval)
+            {
+                _footstepTimer = 0f;
+                OnFootstep.Invoke();
+            }
+        }
     }
 
     private void GetMovementDirection()

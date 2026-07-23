@@ -2,6 +2,7 @@ using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterControllerManager))]
 [RequireComponent(typeof(Rigidbody))]
@@ -9,7 +10,11 @@ public class ForcesBasedCharacterMovementController : MonoBehaviour
 {
     [SerializeField][FoldoutGroup("References")] private CharacterControllerManager _manager;
     [SerializeField][FoldoutGroup("References")] private Rigidbody _rigidbody;
-    
+
+    //Sound Jump / Land
+    [FoldoutGroup("Audio")] public UnityEvent OnJump;
+    [FoldoutGroup("Audio")] public UnityEvent OnLand;
+    private bool _wasGrounded;
     
     private void OnEnable()
     {
@@ -28,7 +33,13 @@ public class ForcesBasedCharacterMovementController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        //Sound - Land Detection
+        if (!_wasGrounded && _manager.IsGrounded)
+        {
+            OnLand?.Invoke();
+        }
+        _wasGrounded = _manager.IsGrounded;
+
         ApplyForceToHorizontalMovement();
         CapVelocity();
     }
@@ -63,6 +74,7 @@ public class ForcesBasedCharacterMovementController : MonoBehaviour
         _rigidbody.AddForce(_manager.CharacterObject.up * 10, ForceMode.Impulse);
         
         //TODO Implementar sonido de salto
+        OnJump?.Invoke();
     }
     
     [Button("DashTest")]

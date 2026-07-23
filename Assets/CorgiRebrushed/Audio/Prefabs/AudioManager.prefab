@@ -14,6 +14,10 @@ GameObject:
   - component: {fileID: 6227189446646502478}
   - component: {fileID: 9059865501915549644}
   - component: {fileID: 4592705838347340790}
+  - component: {fileID: 3505539274155490412}
+  - component: {fileID: 7614342448491947858}
+  - component: {fileID: 3933992754270315393}
+  - component: {fileID: 3290673386006438684}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -69,7 +73,6 @@ MonoBehaviour:
   - Ambience
   - UI
   - Voice
-  _eventMapping: {fileID: 0}
 --- !u!114 &6227189446646502478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,3 +152,79 @@ MonoBehaviour:
     FmodParameter: TimeScale
   - Name: PaintingState
     FmodParameter: PaintingState
+--- !u!114 &3505539274155490412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af4f4207e8f0bf43adc5c9696f09608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnFootstepBinding
+  _fmodEvent:
+    Guid:
+      Data1: -30545754
+      Data2: 1160919397
+      Data3: -345026133
+      Data4: 981367807
+    Path: event:/Player/Footstep
+--- !u!114 &7614342448491947858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aaeeb59fc199fe47b4737fc2bfd6a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnJumpBinding
+  _fmodEvent:
+    Guid:
+      Data1: -153468084
+      Data2: 1260840372
+      Data3: 1244125612
+      Data4: 1329701688
+    Path: event:/Player/Jump
+--- !u!114 &3933992754270315393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc8cdec3f3ef4242813acf2f38c2390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnLandBinding
+  _fmodEvent:
+    Guid:
+      Data1: -2116343585
+      Data2: 1085307586
+      Data3: 1091631756
+      Data4: 1629860812
+    Path: event:/Player/Land
+--- !u!114 &3290673386006438684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cbe1f1815b872845bf3b062b41eb660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AmbienceController
+  _ambienceEvent:
+    Guid:
+      Data1: -1942529710
+      Data2: 1168678574
+      Data3: -591077500
+      Data4: 2045069104
+    Path: event:/Env/AmbienceMain
