@@ -74,13 +74,22 @@ public class Melee : MonoBehaviour
         ResetCooldown();
         _animator.ResetTrigger(_attackTrigger);
     }
+
+    public void OnFinalAttackAnimationEnded()
+    {
+        _count++;
+        _animator.SetInteger(_attackInt, _count);
+        
+        ResetCount();
+        _animator.ResetTrigger(_attackTrigger);
+    }
     
     private void ResetCooldown()
     {
         _nextReadyTime = Time.time + cooldownDuration;
     }
 
-    public void ResetCount()
+    private void ResetCount()
     {
         _count = 0;
         _animator.SetInteger(_attackInt, _count);
