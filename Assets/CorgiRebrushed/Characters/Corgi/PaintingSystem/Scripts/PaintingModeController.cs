@@ -78,7 +78,7 @@ public class PaintingModeController : MonoBehaviour
         if (_symbolAbilityMap != null && _symbolAbilityMap.TryGetEntry(symbol, out var entry))
         {
             _canvas.RecolorStroke(entry.Color);
-            StartCoroutine(ResolveRecognizedSymbol(entry.Hability));
+            StartCoroutine(ResolveRecognizedSymbol(entry.Ability));
         }
         else
         {
@@ -86,9 +86,9 @@ public class PaintingModeController : MonoBehaviour
         }
     }
 
-    private IEnumerator ResolveRecognizedSymbol(ECorgiHability hability)
+    private IEnumerator ResolveRecognizedSymbol(ECorgiAbility ability)
     {
-        _corgiHabilityEvent.Invoke(hability);
+        _corgiHabilityEvent.Invoke(ability);
         yield return new WaitForSeconds(_recognizedStrokeHoldDuration);
         _canvas.FadeOutAndClear();
     }

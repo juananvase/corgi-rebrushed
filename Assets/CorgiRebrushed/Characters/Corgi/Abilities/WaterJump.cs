@@ -24,9 +24,9 @@ public class WaterJump : Abilitiy
         _rigidbody = GetComponent<Rigidbody>();
     }
     
-    private void WaterImpulse(ECorgiHability context)
+    private void WaterImpulse(ECorgiAbility context)
     {
-        if (context != ECorgiHability.Water) return;
+        if (context != ECorgiAbility.Water) return;
         
         ApplyImpulseForce();
         ApplyDamage();

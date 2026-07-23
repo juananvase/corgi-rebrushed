@@ -23,6 +23,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   <CharacterHeight>k__BackingField: 1
-  <CharacterLength>k__BackingField: 0.75
+  <CharacterLength>k__BackingField: 1.3
   <CharacterWidth>k__BackingField: 0.4
   <CastCushion>k__BackingField: 0.55

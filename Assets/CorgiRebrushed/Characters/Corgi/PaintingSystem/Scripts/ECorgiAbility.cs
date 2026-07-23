@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum ECorgiHability
+public enum ECorgiAbility
 {
     Water,
     Tree,
