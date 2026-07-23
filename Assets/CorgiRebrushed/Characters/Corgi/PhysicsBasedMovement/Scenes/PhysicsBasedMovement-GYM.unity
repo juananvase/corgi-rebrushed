@@ -685,7 +685,6 @@ GameObject:
   - component: {fileID: 1701983949}
   - component: {fileID: 1701983948}
   - component: {fileID: 1701983947}
-  - component: {fileID: 1701983952}
   - component: {fileID: 1701983951}
   m_Layer: 13
   m_Name: Cube
@@ -801,20 +800,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnObjectOnDeath
   _gameObjectToSpawn: {fileID: 1179560839041106365, guid: 1046ce713afd0a74dab460f05ebc34ad, type: 3}
   _spawnOffset: {x: 0, y: 1, z: 1}
---- !u!114 &1701983952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701983946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dae60f0c55d1c3048ad104e6a3b5719e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Health
-  _currentHealth: 100
-  _maxHealth: 100
 --- !u!1 &1703704866
 GameObject:
   m_ObjectHideFlags: 0
