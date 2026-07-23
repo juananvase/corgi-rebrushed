@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 07429eb64e4d7864299c534e47ce0d09
+guid: 2c94fa3e3a5801c4eb1218c010ce6029
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1x1Gradient
+    second: {fileID: 2100000, guid: 22cf4987bc407974ab64942db65ffacc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -104,7 +109,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
