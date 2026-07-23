@@ -8,6 +8,7 @@ public class SpawnObjectOnDeath : MonoBehaviour
 
     private void OnDestroy()
     {
-        Instantiate(_gameObjectToSpawn, _spawnOffset, Quaternion.identity);
+        if(_gameObjectToSpawn == null) return;
+        Instantiate(_gameObjectToSpawn, transform.position + _spawnOffset, Quaternion.identity);
     }
 }
