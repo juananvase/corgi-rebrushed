@@ -436,6 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2005be3699cf024593f6dab612096c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PaintingModeController
+  _inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   _overlay: {fileID: 1021592536751600265}
   _canvas: {fileID: 2691398983538687618}
   _recognizer: {fileID: 5693805281533826671}

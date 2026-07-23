@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PaintingModeController : MonoBehaviour
 {
+    [SerializeField][FoldoutGroup("References")] private InputActionAsset _inputActions;
     [SerializeField][FoldoutGroup("References")] private PaintOverlay _overlay;
     [SerializeField][FoldoutGroup("References")] private PaintCanvas _canvas;
     [SerializeField][FoldoutGroup("References")] private SymbolRecognizer _recognizer;
@@ -18,24 +19,28 @@ public class PaintingModeController : MonoBehaviour
     [ShowInInspector][FoldoutGroup("Testing")] private bool _isStroking;
 
     private ThirdPersonCameraController _cameraController;
+    private InputAction _enterPaintModeAction;
+    private InputAction _paintAction;
 
     private void Awake()
     {
         _cameraController = FindAnyObjectByType<ThirdPersonCameraController>();
+        _enterPaintModeAction = InputSystem.actions.FindAction("EnterPaintMode");
+        _paintAction = InputSystem.actions.FindAction("Paint");
     }
 
     private void Update()
     {
-        if (Mouse.current.rightButton.wasPressedThisFrame)
+        if (Mouse.current.rightButton.wasPressedThisFrame && _enterPaintModeAction.inProgress)
             EnterPaintMode();
-        else if (Mouse.current.rightButton.wasReleasedThisFrame)
+        else if (Mouse.current.rightButton.wasReleasedThisFrame && !_enterPaintModeAction.inProgress)
             ExitPaintMode();
-
+        
         if (_isPainting)
         {
-            if (Mouse.current.leftButton.wasPressedThisFrame)
+            if (Mouse.current.leftButton.wasPressedThisFrame && _paintAction.inProgress)
                 BeginStroke();
-            else if (Mouse.current.leftButton.wasReleasedThisFrame)
+            else if (Mouse.current.leftButton.wasReleasedThisFrame && !_paintAction.inProgress)
                 PauseStroke();
         }
     }
@@ -73,7 +78,7 @@ public class PaintingModeController : MonoBehaviour
         if (_symbolAbilityMap != null && _symbolAbilityMap.TryGetEntry(symbol, out var entry))
         {
             _canvas.RecolorStroke(entry.Color);
-            StartCoroutine(ResolveRecognizedSymbol(entry.Hability));
+            StartCoroutine(ResolveRecognizedSymbol(entry.Ability));
         }
         else
         {
@@ -81,9 +86,9 @@ public class PaintingModeController : MonoBehaviour
         }
     }
 
-    private IEnumerator ResolveRecognizedSymbol(ECorgiHability hability)
+    private IEnumerator ResolveRecognizedSymbol(ECorgiAbility ability)
     {
-        _corgiHabilityEvent.Invoke(hability);
+        _corgiHabilityEvent.Invoke(ability);
         yield return new WaitForSeconds(_recognizedStrokeHoldDuration);
         _canvas.FadeOutAndClear();
     }

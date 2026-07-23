@@ -2,5 +2,5 @@ using UnityEngine;
 
 namespace GameEvents
 {
-    public class ECorgiHabilityEventCaller : GameEventCaller<ECorgiHability> {}
+    public class ECorgiHabilityEventCaller : GameEventCaller<ECorgiAbility> {}
 }
