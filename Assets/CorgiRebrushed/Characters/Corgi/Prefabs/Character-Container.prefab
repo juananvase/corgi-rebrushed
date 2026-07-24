@@ -770,6 +770,13 @@ MonoBehaviour:
   _abilitiesData: {fileID: 11400000, guid: a9659934b7d6e5346a22a27643083bb7, type: 2}
   _abilityEventAsset: {fileID: 11400000, guid: 423ca25686d4c1b469ad12d1c708ca0a, type: 2}
   _rigidbody: {fileID: 8023257346298294945}
+  _movementController: {fileID: 0}
+  _waterCascadeVfxPrefab: {fileID: 2443346602915605235, guid: c3f9e3786f7c49b43abe89eee32162d3, type: 3}
+  _vfxGroundOffset: -0.95
+  _vfxActiveDuration: 3
+  _vfxGrowInDuration: 0.5
+  _vfxFadeOutBuffer: 1
+  _boostSuppressionDuration: 0.5
 --- !u!114 &2355443551183846535
 MonoBehaviour:
   m_ObjectHideFlags: 0

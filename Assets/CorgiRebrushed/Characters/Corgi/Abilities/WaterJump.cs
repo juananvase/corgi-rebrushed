@@ -8,7 +8,6 @@ using UnityEngine.VFX;
 public class WaterJump : Abilitiy
 {
     [SerializeField] [FoldoutGroup("References")] private Rigidbody _rigidbody;
-    [SerializeField] [FoldoutGroup("References")] private ForcesBasedCharacterMovementController _movementController;
     [SerializeField] [FoldoutGroup("References")] private VisualEffect _waterCascadeVfxPrefab;
 
     [SerializeField] [FoldoutGroup("Data")] private float _vfxGroundOffset = -0.95f;
@@ -33,7 +32,6 @@ public class WaterJump : Abilitiy
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _movementController = GetComponent<ForcesBasedCharacterMovementController>();
     }
     
     private void WaterImpulse(ECorgiAbility context)
@@ -48,18 +46,8 @@ public class WaterJump : Abilitiy
     private void ApplyImpulseForce()
     {
         _rigidbody.AddForce(_characterObject.up * _abilitiesData.WaterJumpImpulseForce, ForceMode.Impulse);
-
-        if (_movementController == null) return;
-
-        _movementController.ExternalBoostActive = true;
-        CancelInvoke(nameof(ClearBoostFlag));
-        Invoke(nameof(ClearBoostFlag), _boostSuppressionDuration);
     }
-
-    private void ClearBoostFlag()
-    {
-        _movementController.ExternalBoostActive = false;
-    }
+    
 
     private void PlayWaterJetVfx()
     {
