@@ -11,13 +11,13 @@ public class SymbolAbilityMapSO : ScriptableObject
     public struct Entry
     {
         [field: SerializeField] public SymbolType Symbol { get; private set; }
-        [field: SerializeField] public ECorgiHability Hability { get; private set; }
+        [field: SerializeField] public ECorgiAbility Ability { get; private set; }
         [field: SerializeField] public Color Color { get; private set; }
 
-        public Entry(SymbolType symbol, ECorgiHability hability, Color color)
+        public Entry(SymbolType symbol, ECorgiAbility ability, Color color)
         {
             Symbol = symbol;
-            Hability = hability;
+            Ability = ability;
             Color = color;
         }
     }

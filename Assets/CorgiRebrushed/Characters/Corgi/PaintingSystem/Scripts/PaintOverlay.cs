@@ -14,7 +14,7 @@ public class PaintOverlay : MonoBehaviour
 
     private void LLamarEvento()
     {
-        mievento.Invoke(ECorgiHability.Water);
+        mievento.Invoke(ECorgiAbility.Water);
     }
     
 

@@ -47,7 +47,7 @@ public class PaintCanvas : MonoBehaviour
 
     private void OnEnable()  => mievento.OnInvoked.AddListener(EscucharEvento);
     private void OnDisable() => mievento.OnInvoked.RemoveListener(EscucharEvento);
-    private void EscucharEvento(ECorgiHability r) => Debug.Log(r.ToString());
+    private void EscucharEvento(ECorgiAbility r) => Debug.Log(r.ToString());
 
     private void Awake()
     {
