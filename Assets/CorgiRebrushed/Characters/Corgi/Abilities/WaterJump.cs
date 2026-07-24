@@ -8,13 +8,6 @@ using UnityEngine.VFX;
 public class WaterJump : Abilitiy
 {
     [SerializeField] [FoldoutGroup("References")] private Rigidbody _rigidbody;
-    [SerializeField] [FoldoutGroup("References")] private VisualEffect _waterCascadeVfxPrefab;
-
-    [SerializeField] [FoldoutGroup("Data")] private float _vfxGroundOffset = -0.95f;
-    [SerializeField] [FoldoutGroup("Data")] private float _vfxActiveDuration = 3f;
-    [SerializeField] [FoldoutGroup("Data")] private float _vfxGrowInDuration = 0.5f;
-    [SerializeField] [FoldoutGroup("Data")] private float _vfxFadeOutBuffer = 1f;
-    [SerializeField] [FoldoutGroup("Data")] private float _boostSuppressionDuration = 0.5f;
 
     // Cache an array for non-allocating physics checks (Max 20 targets per hit)
     private readonly Collider[] hitBuffer = new Collider[20];
@@ -28,7 +21,7 @@ public class WaterJump : Abilitiy
     {
         _abilityEventAsset.OnInvoked.RemoveListener(WaterImpulse);
     }
-
+    
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -42,7 +35,7 @@ public class WaterJump : Abilitiy
         PlayWaterJetVfx();
         ApplyDamage();
     }
-
+    
     private void ApplyImpulseForce()
     {
         _rigidbody.AddForce(_characterObject.up * _abilitiesData.WaterJumpImpulseForce, ForceMode.Impulse);
@@ -51,28 +44,22 @@ public class WaterJump : Abilitiy
 
     private void PlayWaterJetVfx()
     {
-        if (_waterCascadeVfxPrefab == null) return;
+        if (_abilitiesData.WaterCascadeVfxPrefab == null) return;
 
-        Vector3 spawnPosition = _characterObject.position + Vector3.up * _vfxGroundOffset;
-        VisualEffect vfxInstance = Instantiate(_waterCascadeVfxPrefab, spawnPosition, Quaternion.identity);
+        Vector3 spawnPosition = _characterObject.position + _abilitiesData.VfxOffset;
+        VisualEffect vfxInstance = Instantiate(_abilitiesData.WaterCascadeVfxPrefab, spawnPosition, Quaternion.identity);
+        vfxInstance.Play();
 
         Transform vfxTransform = vfxInstance.transform;
-        Vector3 targetScale = vfxTransform.localScale;
-        vfxTransform.localScale = Vector3.zero;
-        Tween.Scale(vfxTransform, endValue: targetScale, duration: _vfxGrowInDuration);
-
-        vfxInstance.Play();
-        StartCoroutine(StopAndDestroyVfx(vfxInstance));
+        Tween.Scale(vfxTransform, _abilitiesData.InScaleTweenSettings)
+            .Chain(Tween.Scale(vfxTransform, _abilitiesData.OutScaleTweenSettings))
+            .OnComplete(() => StopAndDestroyVfx(vfxInstance));
     }
 
-    private IEnumerator StopAndDestroyVfx(VisualEffect vfxInstance)
+    private void StopAndDestroyVfx(VisualEffect vfxInstance)
     {
-        yield return new WaitForSeconds(_vfxActiveDuration);
         vfxInstance.Stop();
-
-        Transform vfxTransform = vfxInstance.transform;
-        Tween.Scale(vfxTransform, endValue: Vector3.zero, duration: _vfxFadeOutBuffer)
-            .OnComplete(() => Destroy(vfxTransform.gameObject));
+        Destroy(vfxInstance.transform.gameObject);
     }
 
     private void ApplyDamage()
