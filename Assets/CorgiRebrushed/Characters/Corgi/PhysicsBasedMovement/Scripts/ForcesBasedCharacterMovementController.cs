@@ -14,6 +14,10 @@ public class ForcesBasedCharacterMovementController : CharacterController
     //[FoldoutGroup("Audio")] public UnityEvent OnJump;
 
     
+    // Set briefly by external abilities (e.g. WaterJump) so their impulse isn't immediately
+    // cut short by the low-jump-multiplier logic below, which only expects the Jump button.
+    public bool ExternalBoostActive { get; set; }
+
     protected override void Awake()
     {
         base.Awake();
@@ -76,7 +80,7 @@ public class ForcesBasedCharacterMovementController : CharacterController
             return;
         }
         
-        if (_rigidbody.linearVelocity.y > 0 && !JumpAction.IsPressed())
+        if (_rigidbody.linearVelocity.y > 0 && !JumpAction.IsPressed() && !ExternalBoostActive)
         {
             _rigidbody.AddForce(_characterObject.up * (Physics.gravity.y * (_characterData.LowJumpMultiplier - 1)), ForceMode.Force);
         }
