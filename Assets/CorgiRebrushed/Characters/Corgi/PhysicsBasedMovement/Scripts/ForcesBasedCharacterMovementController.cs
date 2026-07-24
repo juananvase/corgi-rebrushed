@@ -9,6 +9,10 @@ using UnityEngine.InputSystem;
 public class ForcesBasedCharacterMovementController : CharacterController
 {
     [SerializeField][FoldoutGroup("References")] private Rigidbody _rigidbody;
+
+    //AUDIO
+    //[FoldoutGroup("Audio")] public UnityEvent OnJump;
+
     
     protected override void Awake()
     {
@@ -58,6 +62,8 @@ public class ForcesBasedCharacterMovementController : CharacterController
         _rigidbody.AddForce(_characterObject.up * _characterData.JumpForce, ForceMode.Impulse);
         
         //TODO Implementar sonido de salto
+        //OnJump?.Invoke();
+
     }
 
     private void CustomFalling()

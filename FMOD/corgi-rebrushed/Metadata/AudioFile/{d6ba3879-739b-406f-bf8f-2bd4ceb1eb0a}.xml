@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{d6ba3879-739b-406f-bf8f-2bd4ceb1eb0a}">
 		<property name="assetPath">
-			<value>Ambience-winter-forest.wav</value>
+			<value>Ambience/Ambience-winter-forest.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>96</value>

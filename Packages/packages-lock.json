@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.corgirebrushed.audio": {
+      "version": "file:com.corgirebrushed.audio",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.test-framework": "1.6.0"
+      }
+    },
     "com.kyrylokuzyk.primetween": {
       "version": "file:../Assets/Plugins/PrimeTween/internal/com.kyrylokuzyk.primetween.tgz",
       "depth": 0,
