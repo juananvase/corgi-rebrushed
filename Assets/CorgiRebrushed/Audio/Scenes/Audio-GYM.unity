@@ -301,10 +301,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1188389082915244927, guid: b57d283d567348146bd29d93eff9d45b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1084841164}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b57d283d567348146bd29d93eff9d45b, type: 3}
 --- !u!1001 &721756683
 PrefabInstance:
@@ -363,30 +360,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ff07446ef6df24ba167f1c23d97af5, type: 3}
---- !u!1 &1084841158 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1188389082915244927, guid: b57d283d567348146bd29d93eff9d45b, type: 3}
-  m_PrefabInstance: {fileID: 606429572}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1084841164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084841158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cbe1f1815b872845bf3b062b41eb660, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AmbienceController
-  _ambienceEvent:
-    Guid:
-      Data1: -1942529710
-      Data2: 1168678574
-      Data3: -591077500
-      Data4: 2045069104
-    Path: event:/Env/AmbienceMain
 --- !u!1001 &1505648347
 PrefabInstance:
   m_ObjectHideFlags: 0

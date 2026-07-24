@@ -3,6 +3,8 @@ using Sirenix.OdinInspector;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+//Audio
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(Rigidbody))]
@@ -10,9 +12,14 @@ public class ForcesBasedCharacterMovementController : CharacterController
 {
     [SerializeField][FoldoutGroup("References")] private Rigidbody _rigidbody;
 
-    //AUDIO
-    //[FoldoutGroup("Audio")] public UnityEvent OnJump;
+    //AUDIO - 
+    [FoldoutGroup("Audio")] public UnityEvent OnJump;
+    [FoldoutGroup("Audio")] public UnityEvent OnLand;
+    [FoldoutGroup("Audio")] public UnityEvent<float> OnFootstep;
 
+    private bool _wasGrounded;
+    private float _footstepTimer;
+    //
     
     // Set briefly by external abilities (e.g. WaterJump) so their impulse isn't immediately
     // cut short by the low-jump-multiplier logic below, which only expects the Jump button.
@@ -31,6 +38,23 @@ public class ForcesBasedCharacterMovementController : CharacterController
 
     private void FixedUpdate()
     {
+       //AUDIO - Land detection
+       if (!_wasGrounded && IsGrounded)
+            OnLand?.Invoke();
+        _wasGrounded = IsGrounded;
+
+        //AUDIO - Footstep audio
+        if (IsGrounded && _movementDirection.magnitude > 0.1f)
+        {
+            float interval = Mathf.Lerp(0.55f, 0.3f, _movementDirection.magnitude);
+            _footstepTimer += Time.fixedDeltaTime;
+            if (_footstepTimer >= interval)
+            {
+                _footstepTimer = 0f;
+                OnFootstep?.Invoke(_movementDirection.magnitude);
+            }
+        }
+
         CustomFalling();
         ApplyForceToHorizontalMovement();
         CapVelocity();
@@ -65,8 +89,8 @@ public class ForcesBasedCharacterMovementController : CharacterController
         
         _rigidbody.AddForce(_characterObject.up * _characterData.JumpForce, ForceMode.Impulse);
         
-        //TODO Implementar sonido de salto
-        //OnJump?.Invoke();
+        //TODO AUDIO - Implementar sonido de salto
+        OnJump?.Invoke();
 
     }
 

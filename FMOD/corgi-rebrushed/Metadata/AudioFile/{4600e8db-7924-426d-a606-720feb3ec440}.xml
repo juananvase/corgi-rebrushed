@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{5766ace2-6516-47aa-8e73-ff76f23ff591}">
+	<object class="AudioFile" id="{4600e8db-7924-426d-a606-720feb3ec440}">
 		<property name="assetPath">
-			<value>dog-jump-1.wav</value>
+			<value>brush-wet/brush-wet-attack-layered-2.wav</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>48</value>
 		</property>
 		<property name="channelCount">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="length">
-			<value>0.26959183673469389</value>
+			<value>0.54087499999999999</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{33e68a6b-ad22-4898-887f-aef67ec1c75f}</destination>
