@@ -38,11 +38,6 @@ public class Melee : MonoBehaviour
         _enterPaintModeAction = InputSystem.actions.FindAction("EnterPaintMode");
     }
 
-    private void Update()
-    {
-        
-    }
-
     private void Start()
     {
         _attackAction.performed += PerfomrAttack;

@@ -80,7 +80,8 @@ public enum EDamageType
     Brush,
     WaterJump,
     Tree,
-    Chilli
+    Chilli,
+    Scratch
 }
 
 public enum EHealType
