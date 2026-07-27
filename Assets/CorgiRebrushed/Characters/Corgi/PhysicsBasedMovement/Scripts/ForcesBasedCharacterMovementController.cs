@@ -19,6 +19,7 @@ public class ForcesBasedCharacterMovementController : CharacterController
 
     private bool _wasGrounded;
     private float _footstepTimer;
+    private bool _wasMoving;
     //
     
     // Set briefly by external abilities (e.g. WaterJump) so their impulse isn't immediately
@@ -43,10 +44,17 @@ public class ForcesBasedCharacterMovementController : CharacterController
             OnLand?.Invoke();
         _wasGrounded = IsGrounded;
 
-        //AUDIO - Footstep audio
-        if (IsGrounded && _movementDirection.magnitude > 0.1f)
+        //AUDIO - Footsteps audio
+        bool isMoving = _movementDirection.magnitude > 0.1f;
+        if (IsGrounded && isMoving)
         {
-            float interval = Mathf.Lerp(0.55f, 0.3f, _movementDirection.magnitude);
+            float interval = Mathf.Lerp(0.3f, 0.59f, _movementDirection.magnitude);
+            // If the player just started moving, force the first footstep immediately
+            if (!_wasMoving)
+            {
+                _footstepTimer = interval;
+            }
+
             _footstepTimer += Time.fixedDeltaTime;
             if (_footstepTimer >= interval)
             {
@@ -54,6 +62,8 @@ public class ForcesBasedCharacterMovementController : CharacterController
                 OnFootstep?.Invoke(_movementDirection.magnitude);
             }
         }
+        _wasMoving = isMoving;
+        //AUDIO - End footsteps audio
 
         CustomFalling();
         ApplyForceToHorizontalMovement();
