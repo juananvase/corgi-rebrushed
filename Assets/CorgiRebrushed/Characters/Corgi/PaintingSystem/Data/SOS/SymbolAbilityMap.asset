@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SymbolAbilityMapSO
   <Mappings>k__BackingField:
   - <Symbol>k__BackingField: 1
-    <Hability>k__BackingField: 0
+    <Ability>k__BackingField: 0
     <Color>k__BackingField: {r: 0, g: 0, b: 1, a: 1}
   - <Symbol>k__BackingField: 2
-    <Hability>k__BackingField: 1
+    <Ability>k__BackingField: 1
     <Color>k__BackingField: {r: 0, g: 1, b: 0, a: 1}
   - <Symbol>k__BackingField: 3
-    <Hability>k__BackingField: 2
+    <Ability>k__BackingField: 2
     <Color>k__BackingField: {r: 1, g: 0, b: 0, a: 1}
