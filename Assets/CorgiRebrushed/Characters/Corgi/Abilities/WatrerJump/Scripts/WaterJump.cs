@@ -9,17 +9,14 @@ public class WaterJump : Abilitiy
 {
     [SerializeField] [FoldoutGroup("References")] private Rigidbody _rigidbody;
 
-    // Cache an array for non-allocating physics checks (Max 20 targets per hit)
-    private readonly Collider[] hitBuffer = new Collider[20];
-
     private void OnEnable()
     {
-        _abilityEventAsset.OnInvoked.AddListener(WaterImpulse);
+        _abilityEventAsset.OnInvoked.AddListener(PerformWaterImpulse);
     }
 
     private void OnDisable()
     {
-        _abilityEventAsset.OnInvoked.RemoveListener(WaterImpulse);
+        _abilityEventAsset.OnInvoked.RemoveListener(PerformWaterImpulse);
     }
     
     private void Awake()
@@ -27,18 +24,18 @@ public class WaterJump : Abilitiy
         _rigidbody = GetComponent<Rigidbody>();
     }
     
-    private void WaterImpulse(ECorgiAbility context)
+    private void PerformWaterImpulse(ECorgiAbility context)
     {
         if (context != ECorgiAbility.Water) return;
         
+        ApplyDamage(_abilitiesData.WaterJumpAttackBoxHalfExtents, _abilitiesData.WaterJumpAttackOffset, _abilitiesData.WaterImpulseDamage, EDamageType.WaterJump);
         ApplyImpulseForce();
         PlayWaterJetVfx();
-        ApplyDamage();
     }
     
     private void ApplyImpulseForce()
     {
-        _rigidbody.AddForce(_characterObject.up * _abilitiesData.WaterJumpImpulseForce, ForceMode.Impulse);
+        _rigidbody.AddForce(transform.up * _abilitiesData.WaterJumpImpulseForce, ForceMode.Impulse);
     }
     
 
@@ -46,13 +43,13 @@ public class WaterJump : Abilitiy
     {
         if (_abilitiesData.WaterCascadeVfxPrefab == null) return;
 
-        Vector3 spawnPosition = _characterObject.position + _abilitiesData.VfxOffset;
+        Vector3 spawnPosition = _spawnPoint.position + _abilitiesData.VfxOffset;
         VisualEffect vfxInstance = Instantiate(_abilitiesData.WaterCascadeVfxPrefab, spawnPosition, Quaternion.identity);
         vfxInstance.Play();
 
         Transform vfxTransform = vfxInstance.transform;
-        Tween.Scale(vfxTransform, _abilitiesData.InScaleTweenSettings)
-            .Chain(Tween.Scale(vfxTransform, _abilitiesData.OutScaleTweenSettings))
+        Tween.Scale(vfxTransform, _abilitiesData.WaterCascadeInScaleTweenSettings)
+            .Chain(Tween.Scale(vfxTransform, _abilitiesData.WaterCascadeOutScaleTweenSettings))
             .OnComplete(() => StopAndDestroyVfx(vfxInstance));
     }
 
@@ -60,28 +57,6 @@ public class WaterJump : Abilitiy
     {
         vfxInstance.Stop();
         Destroy(vfxInstance.transform.gameObject);
-    }
-
-    private void ApplyDamage()
-    {
-        Vector3 boxCenter = _characterObject.position + _characterObject.TransformDirection(_abilitiesData.WaterJumpAttackOffset);
-        
-        int hitCount = Physics.OverlapBoxNonAlloc(
-            boxCenter,
-            _abilitiesData.WaterJumpAttackBoxHalfExtents,
-            hitBuffer,
-            transform.rotation,
-            _abilitiesData.EnemyLayer
-        );
-        
-        for (int i = 0; i < hitCount; i++)
-        {
-            Collider enemyCollider = hitBuffer[i];
-            
-            // Try to get damageable component (adjust to your project's health script)
-            Debug.Log($"Hit {enemyCollider.name}");
-            
-        }
     }
     
 #if UNITY_EDITOR

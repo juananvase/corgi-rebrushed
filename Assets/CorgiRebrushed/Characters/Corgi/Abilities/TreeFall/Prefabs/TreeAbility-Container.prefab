@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8987062942723762720}
   - component: {fileID: 1597063850981162301}
   - component: {fileID: 6840693271180478174}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,8 +102,8 @@ GameObject:
   - component: {fileID: 1259783251749927610}
   - component: {fileID: 7768541586244165389}
   - component: {fileID: 786058246706841474}
-  m_Layer: 0
-  m_Name: Cube
+  m_Layer: 17
+  m_Name: Log
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,7 +211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7396463025483441378}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,8 +245,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5887387876193782231}
   - component: {fileID: 5791358891535869428}
-  m_Layer: 0
-  m_Name: Cube
+  m_Layer: 17
+  m_Name: Core-Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 7512310432130058836}
   - component: {fileID: 6831510666980606421}
   - component: {fileID: 6358657263566441518}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,7 +387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2982618872401224924}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1422740892725747112}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,8 +452,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2747603644208651323}
-  m_Layer: 0
-  m_Name: TreeAbility-TEST
+  - component: {fileID: 3071322806886774274}
+  m_Layer: 17
+  m_Name: TreeAbility-Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -467,7 +468,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7685143206925386872}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -476,3 +477,19 @@ Transform:
   - {fileID: 1422740892725747112}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3071322806886774274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7685143206925386872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2167b6e2a9bde741b0cf210c09880ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tree
+  _abilitiesData: {fileID: 11400000, guid: a9659934b7d6e5346a22a27643083bb7, type: 2}
+  _core: {fileID: 7396463025483441378}
+  _logCollider: {fileID: 786058246706841474}
+  _generalCollider: {fileID: 5791358891535869428}

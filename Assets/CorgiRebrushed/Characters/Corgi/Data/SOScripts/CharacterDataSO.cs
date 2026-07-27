@@ -21,4 +21,7 @@ public class CharacterDataSO : ScriptableObject
     
     [Tooltip("How far below the character's feet to check for ground.")]
     [field: SerializeField, FoldoutGroup("Grounded Variables")] public float CastCushion { get; private set; }
+    
+    [field: SerializeField, FoldoutGroup("Melee")] public float Damage { get; private set; }
+    [field: SerializeField, FoldoutGroup("Melee")] public string[] HitLayers { get; private set; }
 }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6320504930429504503}
   - component: {fileID: 7029678720483202556}
+  - component: {fileID: 1690060626426570190}
   m_Layer: 15
   m_Name: SeedAbility-Container
   m_TagString: Untagged
@@ -61,6 +62,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &1690060626426570190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3038810926253180132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e2e077e22a9ad47898099736d66c33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Seed
+  _abilitiesData: {fileID: 11400000, guid: a9659934b7d6e5346a22a27643083bb7, type: 2}
+  _spawnOffset: {x: 0, y: -0.25, z: 0}
+  _hitLayers:
+  - Ground
 --- !u!1 &5430534359132834837
 GameObject:
   m_ObjectHideFlags: 0
