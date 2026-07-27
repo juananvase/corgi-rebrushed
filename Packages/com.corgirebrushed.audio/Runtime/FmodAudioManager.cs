@@ -26,6 +26,23 @@ namespace CorgiAudio
         private bool _banksLoaded;
 
         // ──────────────────────────────────────────────
+        // Inspector — Volume Control
+        // Controls bus:/ (master) and bus:/Music directly.
+        // Range is 0-1 (attenuation only, never amplifies).
+        // Does NOT modify VCAs or internal mix balance.
+        // ──────────────────────────────────────────────
+        [FoldoutGroup("Volume Control")]
+        [SerializeField, Range(0f, 1f), OnValueChanged(nameof(OnMasterVolumeChanged))]
+        private float _masterVolume = 1f;
+
+        [FoldoutGroup("Volume Control")]
+        [SerializeField, Range(0f, 1f), OnValueChanged(nameof(OnMusicVolumeChanged))]
+        private float _musicVolume = 1f;
+
+        private FMOD.Studio.Bus _masterBus;
+        private FMOD.Studio.Bus _musicBus;
+
+        // ──────────────────────────────────────────────
         // Note: AudioEventMappingSO now lives in the project and is self-contained.
         // It binds/unbinds via its own OnEnable/OnDisable. No reference needed here.
         // ──────────────────────────────────────────────
@@ -58,6 +75,10 @@ namespace CorgiAudio
             Instance = this;
             DontDestroyOnLoad(gameObject);
             LoadBanks();
+
+            // Cache bus handles for volume control
+            RuntimeManager.StudioSystem.getBus("bus:/", out _masterBus);
+            RuntimeManager.StudioSystem.getBus("bus:/Music", out _musicBus);
         }
 
         private void OnDestroy()
@@ -88,6 +109,21 @@ namespace CorgiAudio
             {
                 Debug.LogError($"[CorgiAudio] Failed to load banks: {e.Message}");
             }
+        }
+
+        // ──────────────────────────────────────────────
+        // Volume Control (Bus attenuation)
+        // ──────────────────────────────────────────────
+        private void OnMasterVolumeChanged()
+        {
+            if (_masterBus.hasHandle())
+                _masterBus.setVolume(_masterVolume);
+        }
+
+        private void OnMusicVolumeChanged()
+        {
+            if (_musicBus.hasHandle())
+                _musicBus.setVolume(_musicVolume);
         }
 
         // ──────────────────────────────────────────────

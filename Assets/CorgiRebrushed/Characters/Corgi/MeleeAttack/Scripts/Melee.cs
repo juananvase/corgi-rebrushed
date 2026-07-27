@@ -2,6 +2,7 @@ using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events; //Required for Audio
 
 public class Melee : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class Melee : MonoBehaviour
     
     [field: SerializeField, FoldoutGroup("Melee")] private float cooldownDuration = 3f;
     
+    //Audio
+    [field: SerializeField, FoldoutGroup("Audio")]
+    public UnityEvent<int> OnAttackPerformed;
+    //End Audio
+
     private int _attackInt;
     private int _attackTrigger;
     
@@ -53,13 +59,15 @@ public class Melee : MonoBehaviour
         _attackTrigger = Animator.StringToHash("Attack");
         _attackInt = Animator.StringToHash("AttackInt");
     }
-    
+
     private void PerfomrAttack(InputAction.CallbackContext context)
     {
         if(_enterPaintModeAction.IsInProgress()) return;
         
         _animator.SetTrigger(_attackTrigger);
-        
+        //Audio - triggers FMOD with current combo step
+        OnAttackPerformed?.Invoke(_count);
+        //End Audio
         if (_isCooldownOver)
         {
             ResetCount();

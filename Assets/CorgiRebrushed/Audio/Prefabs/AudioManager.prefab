@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 433106705355514697}
   - component: {fileID: 4327233668146748922}
   - component: {fileID: 8562647205807305689}
+  - component: {fileID: 2333270974141585115}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -186,3 +187,22 @@ MonoBehaviour:
       Data3: 1091631756
       Data4: 1629860812
     Path: event:/Player/Movement/Land
+--- !u!114 &2333270974141585115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85d7eaee4dc9af4bbf857d61b59bb50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnAttackBinding
+  _fmodEvent:
+    Guid:
+      Data1: 600608081
+      Data2: 1157891736
+      Data3: 1316556422
+      Data4: 58617404
+    Path: event:/Player/Combat/Attack
