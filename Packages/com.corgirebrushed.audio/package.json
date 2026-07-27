@@ -1,0 +1,16 @@
+{
+  "name": "com.corgirebrushed.audio",
+  "displayName": "Corgi Rebrushed Audio",
+  "version": "0.1.0",
+  "unity": "6000.5",
+  "unityRelease": "0f1",
+  "description": "Modular Audio System using FMOD.",
+  "dependencies": {
+    "com.unity.test-framework": "1.6.0"
+  },
+  "author": {
+    "name": "Vannessa Martinez",
+    "url": "https://github.com/VannessaMartinez",
+    "email": "vmartinez2049@gmail.com"
+  }
+}

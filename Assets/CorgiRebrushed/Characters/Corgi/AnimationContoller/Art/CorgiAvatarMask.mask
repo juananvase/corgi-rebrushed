@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CorgiAvatarMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path:
+    m_Weight: 1
+  - m_Path: Bone.013
+    m_Weight: 0
+  - m_Path: Bone.013/Bone.012
+    m_Weight: 0
+  - m_Path: Bone.013/Bone.012/Spina
+    m_Weight: 1
+  - m_Path: Bone.013/Bone.012/Spina/Cadea
+    m_Weight: 0
+  - m_Path: Bone.013/Bone.012/Spina/Cadea/Muslo.l
+    m_Weight: 0
+  - m_Path: Bone.013/Bone.012/Spina/Cadea/Muslo.l/pierna.l
+    m_Weight: 0
+  - m_Path: Bone.013/Bone.012/Spina/Cadea/Muslo.l/pierna.l/pie.l
+    m_Weight: 0
+  - m_Path: Bone.013/Bone.012/Spina/Cadea/Muslo.r
+    m_Weight: 0
+  - m_Path: Bone.013/Bone.012/Spina/Cadea/Muslo.r/pierna.r
+    m_Weight: 0
+  - m_Path: Bone.013/Bone.012/Spina/Cadea/Muslo.r/pierna.r/pie.r
+    m_Weight: 0
+  - m_Path: Bone.013/Bone.012/Spina/Cadea/Pompis
+    m_Weight: 0
+  - m_Path: Bone.013/Bone.012/Spina/Cadea/Pompis/cola
+    m_Weight: 0
+  - m_Path: Bone.013/Bone.012/Spina/Cuello
+    m_Weight: 1
+  - m_Path: Bone.013/Bone.012/Spina/Cuello/Cabeza
+    m_Weight: 1
+  - m_Path: Bone.013/Bone.012/Spina/Cuello/Cabeza/Boca
+    m_Weight: 1
+  - m_Path: Bone.013/Bone.012/Spina/Cuello/Cabeza/Ear.l
+    m_Weight: 1
+  - m_Path: Bone.013/Bone.012/Spina/Cuello/Cabeza/Ear.r
+    m_Weight: 1
+  - m_Path: Bone.013/Bone.012/Spina/Shoulder.L
+    m_Weight: 0
+  - m_Path: Bone.013/Bone.012/Spina/Shoulder.L/Brazo.l
+    m_Weight: 0
+  - m_Path: Bone.013/Bone.012/Spina/Shoulder.L/Brazo.l/Pata.l
+    m_Weight: 0
+  - m_Path: Bone.013/Bone.012/Spina/Shoulder.R
+    m_Weight: 0
+  - m_Path: Bone.013/Bone.012/Spina/Shoulder.R/Brazo.r
+    m_Weight: 0
+  - m_Path: Bone.013/Bone.012/Spina/Shoulder.R/Brazo.r/Pata.r
+    m_Weight: 0

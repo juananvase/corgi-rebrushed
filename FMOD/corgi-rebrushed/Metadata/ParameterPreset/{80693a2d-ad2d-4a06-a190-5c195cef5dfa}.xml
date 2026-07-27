@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{80693a2d-ad2d-4a06-a190-5c195cef5dfa}">
+		<property name="name">
+			<value>PaintingState</value>
+		</property>
+		<relationship name="folder">
+			<destination>{51d2267c-0d9b-41f1-8891-4823c87ec581}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{2f9cfbe7-728e-4d51-bc7e-83f20e287e85}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{2f9cfbe7-728e-4d51-bc7e-83f20e287e85}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
