@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AbilitiesDataSO
   <EnemyLayer>k__BackingField:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 139264
   <WaterJumpImpulseForce>k__BackingField: 5
   <WaterJumpAttackBoxHalfExtents>k__BackingField: {x: 1.5, y: 0.5, z: 1.5}
   <WaterJumpAttackOffset>k__BackingField: {x: 0, y: -0.4, z: 0}
-  <InScaleTweenSettings>k__BackingField:
+  <WaterCascadeInScaleTweenSettings>k__BackingField:
     startFromCurrent: 0
     startValue: {x: 1, y: 0, z: 1}
     endValue: {x: 1, y: 1, z: 1}
@@ -38,7 +38,7 @@ MonoBehaviour:
       useUnscaledTime: 0
       _useFixedUpdate: 0
       _updateType: 0
-  <OutScaleTweenSettings>k__BackingField:
+  <WaterCascadeOutScaleTweenSettings>k__BackingField:
     startFromCurrent: 0
     startValue: {x: 1, y: 1, z: 1}
     endValue: {x: 1, y: 0, z: 1}
@@ -58,5 +58,114 @@ MonoBehaviour:
       useUnscaledTime: 0
       _useFixedUpdate: 0
       _updateType: 0
+  <WaterImpulseDamage>k__BackingField: 10
   <WaterCascadeVfxPrefab>k__BackingField: {fileID: 2443346602915605235, guid: c3f9e3786f7c49b43abe89eee32162d3, type: 3}
   <VfxOffset>k__BackingField: {x: 0, y: -1, z: 0}
+  <SeedPrefab>k__BackingField: {fileID: 3038810926253180132, guid: 304989221d520b64a902ad283609343e, type: 3}
+  <TreePrefab>k__BackingField: {fileID: 7685143206925386872, guid: 3780a967d4f2eb5429b63cdec53ef8c2, type: 3}
+  <SeedSpawnOffset>k__BackingField: {x: 0, y: 1, z: 1}
+  <TreeSpawnInScaleTweenSettings>k__BackingField:
+    startFromCurrent: 0
+    startValue: {x: 0, y: 0, z: 0}
+    endValue: {x: 1, y: 1, z: 1}
+    settings:
+      duration: 1
+      ease: 29
+      customEase:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      cycles: 1
+      cycleMode: 0
+      startDelay: 0
+      endDelay: 0
+      useUnscaledTime: 0
+      _useFixedUpdate: 0
+      _updateType: 0
+  <TreeFallTweenSettings>k__BackingField:
+    duration: 1
+    ease: 14
+    customEase:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    cycles: 1
+    cycleMode: 0
+    startDelay: 0
+    endDelay: 0
+    useUnscaledTime: 0
+    _useFixedUpdate: 0
+    _updateType: 0
+  <TreeShakeTweenSettings>k__BackingField:
+    strength: {x: 0.1, y: 0.1, z: 0.1}
+    duration: 1.1
+    frequency: 10
+    enableFalloff: 0
+    falloffEase: 0
+    strengthOverTime:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    asymmetry: 0
+    easeBetweenShakes: 0
+    cycles: 1
+    startDelay: 0
+    endDelay: 0
+    useUnscaledTime: 0
+    _useFixedUpdate: 0
+    _updateType: 0
+  <TreeDestroyTime>k__BackingField: 5
+  <TreeFallHitLayers>k__BackingField:
+  - Enemy
+  <TreeFallDamage>k__BackingField: 10
+  <ChilliPrefab>k__BackingField: {fileID: 3869377576810499731, guid: ca7f07f8c1d317848b09cdbef0be1565, type: 3}
+  <ChilliInScaleTweenSettings>k__BackingField:
+    startFromCurrent: 0
+    startValue: {x: 0, y: 0, z: 0}
+    endValue: {x: 1, y: 1, z: 1}
+    settings:
+      duration: 1
+      ease: 8
+      customEase:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      cycles: 1
+      cycleMode: 0
+      startDelay: 0
+      endDelay: 0
+      useUnscaledTime: 0
+      _useFixedUpdate: 0
+      _updateType: 0
+  <ChilliShakeTweenSettings>k__BackingField:
+    strength: {x: 0.1, y: 0.1, z: 0.1}
+    duration: 1
+    frequency: 10
+    enableFalloff: 0
+    falloffEase: 0
+    strengthOverTime:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    asymmetry: 0
+    easeBetweenShakes: 0
+    cycles: 1
+    startDelay: 0
+    endDelay: 0
+    useUnscaledTime: 0
+    _useFixedUpdate: 0
+    _updateType: 0
+  <ChilliExplosionAttackBoxHalfExtents>k__BackingField: {x: 2, y: 0.5, z: 2}
+  <ChilliExplosionAttackOffset>k__BackingField: {x: 0, y: 0, z: 0}
+  <ChilliExplosionTime>k__BackingField: 3
+  <ChilliExplosionDamage>k__BackingField: 10

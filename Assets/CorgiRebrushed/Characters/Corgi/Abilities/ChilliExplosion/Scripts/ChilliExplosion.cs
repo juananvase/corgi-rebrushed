@@ -1,16 +1,35 @@
+using System;
+using System.Collections;
+using PrimeTween;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class ChilliExplosion : Abilitiy
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnEnable()
     {
-        
+        _abilityEventAsset.OnInvoked.AddListener(PerformChilliExplosion);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        _abilityEventAsset.OnInvoked.RemoveListener(PerformChilliExplosion);
     }
+    
+    [Button]
+    private void TestChilliExplosion()
+    {
+        PerformChilliExplosion(ECorgiAbility.Fire);
+    }
+    private void PerformChilliExplosion(ECorgiAbility context)
+    {
+        if (context != ECorgiAbility.Fire) return;
+        SpawnChilli();
+    }
+
+    private void SpawnChilli()
+    {
+        Instantiate(_abilitiesData.ChilliPrefab, _spawnPoint.position, Quaternion.identity);
+    }
+    
 }

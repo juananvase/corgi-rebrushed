@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1272388441608290541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8191697477089982275}
+  m_Layer: 10
+  m_Name: WaterSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8191697477089982275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272388441608290541}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8627219474537178025}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1713255857959332632
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,9 +457,41 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8627219474537178025}
   - {fileID: 5222071997394705311}
   - {fileID: 6057285398143390280}
   m_Father: {fileID: 517619471578127760}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7451094890128508986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3959871429781610727}
+  m_Layer: 10
+  m_Name: SeedSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3959871429781610727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7451094890128508986}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8627219474537178025}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7855097078645825816
 GameObject:
@@ -441,7 +504,7 @@ GameObject:
   - component: {fileID: 4078262137910276488}
   - component: {fileID: 1420623116053072823}
   - component: {fileID: 116014184576498562}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: BrushCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -496,8 +559,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de263f038ccce35409035ba2e3a1042e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitTrigger
-  _hitLayers:
-  - Enemy
+  _characterData: {fileID: 11400000, guid: e9b55dda2f3d50a4ab5938572c9bdacc, type: 2}
+  _characterObject: {fileID: 5470984821014206929}
 --- !u!1 &7905596930921903290
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,9 +830,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaterJump
   _characterObject: {fileID: 5470984821014206929}
+  _spawnPoint: {fileID: 8191697477089982275}
   _abilitiesData: {fileID: 11400000, guid: a9659934b7d6e5346a22a27643083bb7, type: 2}
   _abilityEventAsset: {fileID: 11400000, guid: 423ca25686d4c1b469ad12d1c708ca0a, type: 2}
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 8023257346298294945}
 --- !u!114 &2355443551183846535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -782,7 +846,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653ff76e58fdbba42ae5eb9d0bb1d17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TreeFall
-  _characterObject: {fileID: 5470984821014206929}
+  _characterObject: {fileID: 7293727591045005768}
+  _spawnPoint: {fileID: 3959871429781610727}
   _abilitiesData: {fileID: 11400000, guid: a9659934b7d6e5346a22a27643083bb7, type: 2}
   _abilityEventAsset: {fileID: 11400000, guid: 423ca25686d4c1b469ad12d1c708ca0a, type: 2}
 --- !u!114 &6243731329619755321
@@ -798,8 +863,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChilliExplosion
   _characterObject: {fileID: 5470984821014206929}
+  _spawnPoint: {fileID: 0}
   _abilitiesData: {fileID: 11400000, guid: a9659934b7d6e5346a22a27643083bb7, type: 2}
   _abilityEventAsset: {fileID: 11400000, guid: 423ca25686d4c1b469ad12d1c708ca0a, type: 2}
+--- !u!1 &8172467476581512096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8627219474537178025}
+  m_Layer: 10
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8627219474537178025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8172467476581512096}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8191697477089982275}
+  - {fileID: 3959871429781610727}
+  m_Father: {fileID: 5470984821014206929}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9117231851426845311
 GameObject:
   m_ObjectHideFlags: 0
