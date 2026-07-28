@@ -22,12 +22,7 @@ public class TreeFall : Abilitiy
     {
         if (context != ECorgiAbility.Tree) return;
 
-        SpawnSeed();
-    }
-
-    private void SpawnSeed()
-    {
-        Instantiate(_abilitiesData.SeedPrefab, _spawnPoint.position, Quaternion.identity);
+        SpawnObject(_abilitiesData.SeedPrefab, _spawnPoint.position, Quaternion.identity);
     }
     
 }

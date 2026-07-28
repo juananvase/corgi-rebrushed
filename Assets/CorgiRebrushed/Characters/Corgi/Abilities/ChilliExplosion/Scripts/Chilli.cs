@@ -2,10 +2,10 @@ using System.Collections;
 using PrimeTween;
 using UnityEngine;
 
-public class Chilli : MonoBehaviour
+public class Chilli : AbilityInvokeable, IDamageable
 {
-    [SerializeField] private AbilitiesDataSO _abilitiesData;
     private Coroutine _chilliExplosionCoroutine;
+    public bool IsAlive { get; private set; }
     
     // Cache an array for non-allocating physics checks (Max 20 targets per hit)
     private readonly Collider[] hitBuffer = new Collider[20];
@@ -18,18 +18,30 @@ public class Chilli : MonoBehaviour
     private void PerformExplosion()
     {
         if(_chilliExplosionCoroutine  != null) StopCoroutine(_chilliExplosionCoroutine);
-        _chilliExplosionCoroutine = StartCoroutine(ExplosionRoutine());
+        else _chilliExplosionCoroutine = StartCoroutine(ExplosionRoutine());
+    }
+    
+    public void Damaged(DamageInfo damageInfo)
+    {
+        if(_chilliExplosionCoroutine  != null) StopCoroutine(_chilliExplosionCoroutine);
+        Tween.ShakeLocalPosition(transform, _abilitiesData.ChilliShakeTweenSettings).OnComplete(() => Explode());
     }
 
     private IEnumerator ExplosionRoutine()
     {
         yield return Tween.Delay(_abilitiesData.ChilliExplosionTime).ToYieldInstruction();
         yield return Tween.ShakeLocalPosition(transform, _abilitiesData.ChilliShakeTweenSettings).ToYieldInstruction();
-        ApplyDamage(_abilitiesData.ChilliExplosionAttackBoxHalfExtents, _abilitiesData.ChilliExplosionAttackOffset, _abilitiesData.ChilliExplosionDamage, EDamageType.Chilli);
+        Explode();
+    }
+
+    private void Explode()
+    {
+        IsAlive = false;
+        ApplyDamage(_abilitiesData.ChilliExplosionAttackBoxHalfExtents, _abilitiesData.ChilliExplosionAttackOffset, _abilitiesData.ChilliExplosionDamage, Owner, EDamageType.Chilli);
         Destroy(gameObject);
     }
 
-    private void ApplyDamage(Vector3 halfExtents, Vector3 attackOffset, float damage, EDamageType damageType)
+    private void ApplyDamage(Vector3 halfExtents, Vector3 attackOffset, float damage, GameObject instigator, EDamageType damageType)
     {
         Vector3 boxCenter = transform.position + transform.TransformDirection(attackOffset);
         
@@ -38,7 +50,7 @@ public class Chilli : MonoBehaviour
             halfExtents,
             hitBuffer,
             transform.rotation,
-            _abilitiesData.EnemyLayer
+            _abilitiesData.HitLayer
         );
         
         for (int i = 0; i < hitCount; i++)
@@ -47,7 +59,7 @@ public class Chilli : MonoBehaviour
             
             if (other.transform.root.gameObject.TryGetComponent(out IDamageable target))
             {
-                target.Damaged(new DamageInfo(damage, other.gameObject, this.gameObject, this.gameObject, damageType));
+                target.Damaged(new DamageInfo(damage, other.gameObject, this.gameObject, instigator, damageType));
             }
             
         }
@@ -64,5 +76,4 @@ public class Chilli : MonoBehaviour
         Gizmos.DrawWireCube(Vector3.zero, _abilitiesData.ChilliExplosionAttackBoxHalfExtents * 2f);
     }
 #endif
-    
 }

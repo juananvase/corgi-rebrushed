@@ -1,12 +1,21 @@
 using System;
 using UnityEngine;
 
-public class Seed : MonoBehaviour
+public class Seed : AbilityInvokeable
 {
-    [SerializeField] private AbilitiesDataSO _abilitiesData;
     [SerializeField] private Vector3 _spawnOffset;
     [SerializeField] private string[] _hitLayers;
 
+    private void SpawnTree()
+    {
+        GameObject treeObject = Instantiate(_abilitiesData.TreePrefab, transform.position + _spawnOffset, Quaternion.identity);
+        
+        if (TryGetComponent(out AbilityInvokeable tree))
+        {
+            tree.Owner = gameObject;
+        }
+    }
+    
     private void OnCollisionEnter(Collision other)
     {
         for (int i = 0; i < _hitLayers.Length; i++)
@@ -14,7 +23,7 @@ public class Seed : MonoBehaviour
             int hitLayerIndex = LayerMask.NameToLayer(_hitLayers[i]);
             if (other.gameObject.layer == hitLayerIndex)
             {
-                Instantiate(_abilitiesData.TreePrefab, transform.position + _spawnOffset, Quaternion.identity);
+                SpawnTree();
                 Destroy(gameObject);
                 break;
             }

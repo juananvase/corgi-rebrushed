@@ -30,3 +30,4 @@ MonoBehaviour:
   <HitLayers>k__BackingField:
   - Enemy
   - Tree
+  - Chilli

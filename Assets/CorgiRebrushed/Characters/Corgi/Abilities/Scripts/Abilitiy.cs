@@ -11,7 +11,7 @@ public abstract class Abilitiy : MonoBehaviour
     // Cache an array for non-allocating physics checks (Max 20 targets per hit)
     private readonly Collider[] hitBuffer = new Collider[20];
     
-    protected void ApplyDamage(Vector3 halfExtents, Vector3 attackOffset, float damage, EDamageType damageType)
+    protected void ApplyDamage(Vector3 halfExtents, Vector3 attackOffset, float damage, GameObject instigator, EDamageType damageType)
     {
         Vector3 boxCenter = transform.position + transform.TransformDirection(attackOffset);
         
@@ -20,7 +20,7 @@ public abstract class Abilitiy : MonoBehaviour
             halfExtents,
             hitBuffer,
             transform.rotation,
-            _abilitiesData.EnemyLayer
+            _abilitiesData.HitLayer
         );
         
         for (int i = 0; i < hitCount; i++)
@@ -29,9 +29,19 @@ public abstract class Abilitiy : MonoBehaviour
             
             if (other.transform.root.gameObject.TryGetComponent(out IDamageable target))
             {
-                target.Damaged(new DamageInfo(damage, other.gameObject, this.gameObject, this.gameObject, damageType));
+                target.Damaged(new DamageInfo(damage, other.gameObject, this.gameObject, instigator, damageType));
             }
             
+        }
+    }
+    
+    protected void SpawnObject(GameObject objectPrefab, Vector3 position, Quaternion rotation)
+    {
+        GameObject objectToSpawn = Instantiate(objectPrefab, position, rotation);
+        
+        if (objectToSpawn.TryGetComponent(out AbilityInvokeable other))
+        {
+            other.Owner = gameObject;
         }
     }
 }

@@ -4,9 +4,8 @@ using PrimeTween;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class CoreTree : MonoBehaviour, IDamageable
+public class CoreTree : AbilityInvokeable, IDamageable
 {
-    [SerializeField, FoldoutGroup("References")] private AbilitiesDataSO _abilitiesData;
     [SerializeField, FoldoutGroup("References")] private Transform _core;
     [SerializeField, FoldoutGroup("References")] private Collider _logCollider;
     [SerializeField, FoldoutGroup("References")] private Collider _generalCollider;
@@ -58,7 +57,7 @@ public class CoreTree : MonoBehaviour, IDamageable
         if (!IsAlive) return;
         
         if(_fallenTreeCoroutine != null) StopCoroutine(_fallenTreeCoroutine);
-        _fallenTreeCoroutine = StartCoroutine(OnFallenTreeRoutine(damageInfo));
+        else _fallenTreeCoroutine = StartCoroutine(OnFallenTreeRoutine(damageInfo));
     }
     
     private void OnTriggerEnter(Collider other)
@@ -70,7 +69,7 @@ public class CoreTree : MonoBehaviour, IDamageable
             {
                 if (other.transform.root.gameObject.TryGetComponent(out IDamageable target))
                 {
-                    target.Damaged(new DamageInfo(_abilitiesData.TreeFallDamage, other.gameObject, this.gameObject, this.gameObject, EDamageType.Tree));
+                    target.Damaged(new DamageInfo(_abilitiesData.TreeFallDamage, other.gameObject, this.gameObject, Owner, EDamageType.Tree));
                 }
             }
         }
