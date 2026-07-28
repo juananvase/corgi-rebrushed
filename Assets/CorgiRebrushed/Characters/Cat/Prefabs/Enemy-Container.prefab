@@ -221,8 +221,8 @@ GameObject:
   - component: {fileID: 4385168095908701205}
   - component: {fileID: 2947524439657717721}
   - component: {fileID: 4007694160605200535}
+  - component: {fileID: 6086393749447648838}
   - component: {fileID: 3104425843437375809}
-  - component: {fileID: 4395710773737095585}
   m_Layer: 13
   m_Name: Enemy-Container
   m_TagString: Untagged
@@ -312,9 +312,9 @@ MonoBehaviour:
   OnDamaged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4395710773737095585}
-        m_TargetAssemblyTypeName: HitFeedback, Assembly-CSharp
-        m_MethodName: PerformCharacterHitFeedback
+      - m_Target: {fileID: 6086393749447648838}
+        m_TargetAssemblyTypeName: CharacterHitFeedback, Assembly-CSharp
+        m_MethodName: PerformHitFeedback
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -324,6 +324,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6086393749447648838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8258083359746542861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd6519584e986c4293b260eddff0e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterHitFeedback
+  _hitFeedbackData: {fileID: 11400000, guid: 9027eace6ac7be141853daebb61e95f7, type: 2}
+  _renderer: {fileID: 2220539495657152672}
+  _rigidbody: {fileID: 4385168095908701205}
 --- !u!114 &3104425843437375809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,23 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   _enemyData: {fileID: 11400000, guid: c6a269f8d2a095a45af44085876d9b57, type: 2}
   _navMeshAgent: {fileID: 2947524439657717721}
---- !u!114 &4395710773737095585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8258083359746542861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf794d42c9eead54e8ae5050ae200f8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HitFeedback
-  _renderer: {fileID: 2220539495657152672}
-  _flashColor: {r: 1, g: 0.19339621, b: 0.19339621, a: 1}
-  _flashDuration: 0.5
-  _rigidbody: {fileID: 4385168095908701205}
-  _pushBackForce: 5
+  _rigidbody: {fileID: 0}
 --- !u!1 &8797053903892301168
 GameObject:
   m_ObjectHideFlags: 0

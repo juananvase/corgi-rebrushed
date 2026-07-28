@@ -6,36 +6,25 @@ using UnityEngine;
 
 public class HitFeedback : MonoBehaviour
 {
-    [SerializeField]  private Renderer _renderer;
-    [SerializeField]  private Color _flashColor;
-    [SerializeField]  private float _flashDuration;
-    [SerializeField]  private Rigidbody _rigidbody;
-    [SerializeField]  private float _pushBackForce;
+    
+    [SerializeField, FoldoutGroup("References")]  protected HitFeedbackDataSO _hitFeedbackData;
+    [SerializeField, FoldoutGroup("References")]  private Renderer _renderer;
+    
 
     private Color _originalColor;
     private Coroutine _flashCoroutine;
 
     private void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody>();
         _originalColor =  _renderer.material.color;
     }
 
-    public void PerformCharacterHitFeedback(DamageInfo damageInfo)
+    public virtual void PerformHitFeedback(DamageInfo damageInfo)
     {
         PerformFlash();
-        PerformPushBack(damageInfo.Instigator.transform, damageInfo.Victim.transform);
+        PerformPause();
     }
-
-    [Button("PushBack Test")]
-    private void PerformPushBack(Transform instigator, Transform victim)
-    {
-        if(_rigidbody == null) return;
-        
-        Vector3 direction = (victim.position - instigator.position).normalized;
-        _rigidbody.AddForce(direction * _pushBackForce, ForceMode.Impulse);
-        
-    }
+    
 
     [Button("Flash Test")]
     private void PerformFlash()
@@ -46,9 +35,16 @@ public class HitFeedback : MonoBehaviour
 
     private IEnumerator FlashRoutine()
     {
-        _renderer.material.color = _flashColor;
-        yield return Tween.Delay(_flashDuration).ToYieldInstruction();
+        _renderer.material.color = _hitFeedbackData.FlashColor;
+        yield return Tween.Delay(_hitFeedbackData.FlashDuration).ToYieldInstruction();
         _renderer.material.color = _originalColor;
     }
+    
+    [Button("Pause Test")]
+    private void PerformPause()
+    {
+        GameTimeManager.instance.ModifyTimeScaleForDuration(_hitFeedbackData.PauseDuration);
+    }
+    
     
 }
