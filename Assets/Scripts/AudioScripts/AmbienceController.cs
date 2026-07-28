@@ -15,10 +15,12 @@ public class AmbienceController : MonoBehaviour
         if (!_ambienceEvent.IsNull)
         {
             _ambienceInstance = RuntimeManager.CreateInstance(_ambienceEvent);
+            // Tell FMOD this is a 2D sound attached to this GameObject
+            _ambienceInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
             _ambienceInstance.start();
         }
     }
-
+    
     private void OnDestroy()
     {
         if (_ambienceInstance.isValid())

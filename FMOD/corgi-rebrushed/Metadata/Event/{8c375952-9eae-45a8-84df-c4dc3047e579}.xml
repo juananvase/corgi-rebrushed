@@ -145,9 +145,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{3e4c6a56-4bc3-4a1f-9672-77129bfa7515}">
-		<property name="volume">
-			<value>-13.5</value>
-		</property>
 		<property name="name">
 			<value>Wind</value>
 		</property>
@@ -186,7 +183,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{41f249b7-4385-48df-8a64-143237959945}">
 		<property name="volume">
-			<value>-5</value>
+			<value>-19.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -226,7 +223,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{d117e4cd-5107-48f2-bc56-6454c546f4c1}">
 		<property name="volume">
-			<value>-15</value>
+			<value>-18</value>
 		</property>
 		<property name="name">
 			<value>Audio 2</value>
@@ -308,7 +305,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{7670d628-8bdc-4fb2-9149-0899ac97d63d}">
 		<property name="surroundStereoSeparation">
-			<value>108.299553</value>
+			<value>0</value>
 		</property>
 		<property name="overridingOutputFormat">
 			<value>1</value>
@@ -334,6 +331,7 @@
 	<object class="MixerBusEffectChain" id="{b734673b-33b0-473a-8978-1f12a89a5524}">
 		<relationship name="effects">
 			<destination>{f42ac321-b68f-4178-a98c-3ae0a9bd0fd4}</destination>
+			<destination>{472dd0eb-1053-4301-99e0-1f625b832c57}</destination>
 			<destination>{dd9ef4be-1439-4476-88bb-8c83e710802d}</destination>
 		</relationship>
 	</object>
@@ -468,6 +466,14 @@
 			<value>6</value>
 		</property>
 	</object>
+	<object class="ThreeEQEffect" id="{472dd0eb-1053-4301-99e0-1f625b832c57}">
+		<property name="lowGain">
+			<value>-35</value>
+		</property>
+		<property name="lowCrossover">
+			<value>440</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{dd9ef4be-1439-4476-88bb-8c83e710802d}" />
 	<object class="AutomationPoint" id="{2f379c65-0090-4a92-8b8f-e734be95e58f}">
 		<property name="position">
@@ -514,10 +520,10 @@
 	</object>
 	<object class="ThreeEQEffect" id="{ab366a42-dbc9-4a95-9e43-baf59818e86e}">
 		<property name="lowGain">
-			<value>10</value>
+			<value>-3</value>
 		</property>
 		<property name="midGain">
-			<value>-42</value>
+			<value>-19.5</value>
 		</property>
 		<property name="highGain">
 			<value>-44</value>

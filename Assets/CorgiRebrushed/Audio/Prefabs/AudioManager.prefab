@@ -18,6 +18,10 @@ GameObject:
   - component: {fileID: 4327233668146748922}
   - component: {fileID: 8562647205807305689}
   - component: {fileID: 2333270974141585115}
+  - component: {fileID: 8070763160961315194}
+  - component: {fileID: 8460631265442713392}
+  - component: {fileID: 518385050302144492}
+  - component: {fileID: 6596137285609482891}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -73,6 +77,8 @@ MonoBehaviour:
   - Ambience
   - UI
   - Voice
+  _masterVolume: 1
+  _musicVolume: 1
 --- !u!114 &9059865501915549644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,3 +212,93 @@ MonoBehaviour:
       Data3: 1316556422
       Data4: 58617404
     Path: event:/Player/Combat/Attack
+--- !u!114 &8070763160961315194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b20e52e9d49df949972163a2dacf123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnPaintingModeBinding
+  _enterFmodEvent:
+    Guid:
+      Data1: 561328647
+      Data2: 1267291245
+      Data3: 286111895
+      Data4: -1616011267
+    Path: event:/Painting/Enter
+  _exitFmodEvent:
+    Guid:
+      Data1: -640408115
+      Data2: 1094472353
+      Data3: -727970402
+      Data4: 1846879206
+    Path: event:/Painting/Exit
+--- !u!114 &8460631265442713392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3425099900f58484fa82e31724617544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnPaintStrokeBinding
+  _fmodEvent:
+    Guid:
+      Data1: 903856665
+      Data2: 1267640780
+      Data3: 756721826
+      Data4: -421643875
+    Path: event:/Painting/Brush
+--- !u!114 &518385050302144492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5fec9e00dfebd4bbacc21e4659f975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnSymbolConfirmedBinding
+  _confirmedFmodEvent:
+    Guid:
+      Data1: -1641778584
+      Data2: 1309092970
+      Data3: 1891267982
+      Data4: -2054854684
+    Path: event:/Painting/Confirm
+  _failedFmodEvent:
+    Guid:
+      Data1: 667184871
+      Data2: 1251970287
+      Data3: -1150144346
+      Data4: -1671417539
+    Path: event:/Painting/Failed
+--- !u!114 &6596137285609482891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02a73af596c20ac4da7509b5c4325884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnWaterJetBinding
+  _fmodEvent:
+    Guid:
+      Data1: 688063355
+      Data2: 1165960445
+      Data3: 1523021496
+      Data4: 338045401
+    Path: event:/Abilities/WaterJet

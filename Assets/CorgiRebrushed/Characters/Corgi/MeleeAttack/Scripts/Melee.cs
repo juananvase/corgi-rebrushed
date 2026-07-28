@@ -65,9 +65,11 @@ public class Melee : MonoBehaviour
         if(_enterPaintModeAction.IsInProgress()) return;
         
         _animator.SetTrigger(_attackTrigger);
+
         //Audio - triggers FMOD with current combo step
         OnAttackPerformed?.Invoke(_count);
         //End Audio
+
         if (_isCooldownOver)
         {
             ResetCount();

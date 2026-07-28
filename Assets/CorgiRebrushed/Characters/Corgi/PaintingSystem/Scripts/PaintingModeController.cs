@@ -3,6 +3,7 @@ using GameEvents;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events; //Reqquired for Audio
 
 public class PaintingModeController : MonoBehaviour
 {
@@ -17,6 +18,13 @@ public class PaintingModeController : MonoBehaviour
 
     [ShowInInspector][FoldoutGroup("Testing")] private bool _isPainting;
     [ShowInInspector][FoldoutGroup("Testing")] private bool _isStroking;
+    
+    // Audio
+    [FoldoutGroup("Audio")] public UnityEvent OnPaintingModeEnter;
+    [FoldoutGroup("Audio")] public UnityEvent OnPaintingModeExit;
+    [FoldoutGroup("Audio")] public UnityEvent OnSymbolConfirmed;
+    [FoldoutGroup("Audio")] public UnityEvent OnSymbolFailed;
+    // End Audio
 
     private ThirdPersonCameraController _cameraController;
     private InputAction _enterPaintModeAction;
@@ -51,6 +59,9 @@ public class PaintingModeController : MonoBehaviour
         if (_cameraController != null) _cameraController.enabled = false;
         _overlay.Show();
         _canvas.PrepareSession();
+        // Audio - 
+        OnPaintingModeEnter?.Invoke();
+        // End Audio
     }
 
     private void BeginStroke()
@@ -67,6 +78,9 @@ public class PaintingModeController : MonoBehaviour
 
     private void ExitPaintMode()
     {
+       //Audio
+       OnPaintingModeExit?.Invoke(); // Audio — before state changes to still have context
+       // End Audio
         _isPainting = false;
         _isStroking = false;
         if (_cameraController != null) _cameraController.enabled = true;
@@ -82,12 +96,18 @@ public class PaintingModeController : MonoBehaviour
         }
         else
         {
+            // Audio
+            OnSymbolFailed?.Invoke();
+            // End Audio
             _canvas.FadeOutAndClear();
         }
     }
 
     private IEnumerator ResolveRecognizedSymbol(ECorgiAbility ability)
     {
+        // Audio
+        OnSymbolConfirmed?.Invoke();
+        // End Audio
         _corgiHabilityEvent.Invoke(ability);
         yield return new WaitForSeconds(_recognizedStrokeHoldDuration);
         _canvas.FadeOutAndClear();

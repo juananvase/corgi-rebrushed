@@ -179,7 +179,7 @@
 	</object>
 	<object class="SingleSound" id="{8ac8b37b-de55-46f8-9a9d-c62bd72f7adc}">
 		<property name="pitch">
-			<value>16.5</value>
+			<value>10</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{4f9037af-3b31-4810-9ef8-499280013ca0}</destination>
@@ -187,7 +187,7 @@
 	</object>
 	<object class="SingleSound" id="{576b408e-aee6-4dcf-9c40-03c052efbbf7}">
 		<property name="pitch">
-			<value>19</value>
+			<value>8.5</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{49719c2d-0092-4ebe-be1e-f1beb3c9a297}</destination>
@@ -195,7 +195,7 @@
 	</object>
 	<object class="SingleSound" id="{fcd8b864-f170-44cf-ab9d-b1f17d40151e}">
 		<property name="pitch">
-			<value>11.5</value>
+			<value>3.60000014</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{98310ff9-95c0-4020-95b0-d18285994d4a}</destination>
@@ -203,7 +203,7 @@
 	</object>
 	<object class="SingleSound" id="{423dbe77-3478-46ef-9163-8204d62968cc}">
 		<property name="pitch">
-			<value>20</value>
+			<value>9</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{3d9832e9-2773-4198-80b8-f1ceda2db1e5}</destination>
@@ -211,7 +211,7 @@
 	</object>
 	<object class="SingleSound" id="{f744de77-87e9-43a2-936a-ea3be7dba5cd}">
 		<property name="pitch">
-			<value>21.5</value>
+			<value>16</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{1eb3c5f4-8f41-4900-a002-dd29fde04964}</destination>

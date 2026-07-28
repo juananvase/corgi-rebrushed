@@ -99,7 +99,7 @@ namespace CorgiAudio
                 foreach (var bankName in _bankNames)
                 {
                     RuntimeManager.LoadBank(bankName, true);
-                    Debug.Log($"[CorgiAudio] Loaded bank: {bankName}");
+                    //Debug.Log($"[CorgiAudio] Loaded bank: {bankName}");
                 }
 
                 _banksLoaded = true;
