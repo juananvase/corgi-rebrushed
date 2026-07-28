@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 9059865501915549644}
   - component: {fileID: 4592705838347340790}
   - component: {fileID: 2421962285473641383}
+  - component: {fileID: 7367623572277809987}
+  - component: {fileID: 256401300777029155}
+  - component: {fileID: 3756841497894435881}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -128,3 +131,74 @@ MonoBehaviour:
       Data3: -591077500
       Data4: 2045069104
     Path: event:/Env/AmbienceMain
+--- !u!114 &7367623572277809987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b20e52e9d49df949972163a2dacf123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnPaintingModeBinding
+  _enterFmodEvent:
+    Guid:
+      Data1: 561328647
+      Data2: 1267291245
+      Data3: 286111895
+      Data4: -1616011267
+    Path: event:/Painting/Enter
+  _exitFmodEvent:
+    Guid:
+      Data1: -640408115
+      Data2: 1094472353
+      Data3: -727970402
+      Data4: 1846879206
+    Path: event:/Painting/Exit
+--- !u!114 &256401300777029155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3425099900f58484fa82e31724617544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnPaintStrokeBinding
+  _fmodEvent:
+    Guid:
+      Data1: 903856665
+      Data2: 1267640780
+      Data3: 756721826
+      Data4: -421643875
+    Path: event:/Painting/Brush
+--- !u!114 &3756841497894435881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5fec9e00dfebd4bbacc21e4659f975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnSymbolConfirmedBinding
+  _confirmedFmodEvent:
+    Guid:
+      Data1: -1641778584
+      Data2: 1309092970
+      Data3: 1891267982
+      Data4: -2054854684
+    Path: event:/Painting/Confirm
+  _failedFmodEvent:
+    Guid:
+      Data1: 667184871
+      Data2: 1251970287
+      Data3: -1150144346
+      Data4: -1671417539
+    Path: event:/Painting/Failed
