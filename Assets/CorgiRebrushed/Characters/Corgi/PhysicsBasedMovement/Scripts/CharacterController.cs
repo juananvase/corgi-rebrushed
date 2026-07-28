@@ -9,7 +9,7 @@ public abstract class CharacterController : MonoBehaviour
     [SerializeField, FoldoutGroup("References")] protected Transform _characterObject;
     [SerializeField, FoldoutGroup("References")] protected Transform _orientation;
     
-    [SerializeField, FoldoutGroup("Data")] protected CharacterDataSO _characterData;
+    [field: SerializeField, FoldoutGroup("Data")] public CharacterDataSO CharacterData {get; private set;}
     
     [ShowInInspector, FoldoutGroup("Testing")] protected Vector3 _movementDirection;
     [ShowInInspector, FoldoutGroup("Testing")] public bool IsGrounded {get; private set;}
@@ -50,10 +50,10 @@ public abstract class CharacterController : MonoBehaviour
     
     private bool CheckGrounded()
     {
-        Vector3 halfExtents = new Vector3(_characterData.CharacterWidth * 0.95f, 0.05f, _characterData.CharacterLength * 0.95f);
-        float maxDistance = (_characterData.CharacterHeight * 0.5f) + _characterData.CastCushion - halfExtents.y;
+        Vector3 halfExtents = new Vector3(CharacterData.CharacterWidth * 0.95f, 0.05f, CharacterData.CharacterLength * 0.95f);
+        float maxDistance = (CharacterData.CharacterHeight * 0.5f) + CharacterData.CastCushion - halfExtents.y;
         
-        bool hit = Physics.BoxCast(_characterObject.position, halfExtents, Vector3.down, out RaycastHit hitInfo, _characterObject.rotation, maxDistance, _characterData.GroundLayer);
+        bool hit = Physics.BoxCast(_characterObject.position, halfExtents, Vector3.down, out RaycastHit hitInfo, _characterObject.rotation, maxDistance, CharacterData.GroundLayer);
         return hit;
     }
     
@@ -62,8 +62,8 @@ public abstract class CharacterController : MonoBehaviour
     {
         Gizmos.color = IsGrounded ? Color.green : Color.red;
         
-        Vector3 halfExtents = new Vector3(_characterData.CharacterWidth * 0.95f, 0.05f, _characterData.CharacterLength * 0.95f);
-        float maxDistance = (_characterData.CharacterHeight * 0.5f) + _characterData.CastCushion - halfExtents.y;
+        Vector3 halfExtents = new Vector3(CharacterData.CharacterWidth * 0.95f, 0.05f, CharacterData.CharacterLength * 0.95f);
+        float maxDistance = (CharacterData.CharacterHeight * 0.5f) + CharacterData.CastCushion - halfExtents.y;
         
         // Draw a wireframe box at the destination where the check finishes
         Vector3 endPosition = _characterObject.position + (Vector3.down * maxDistance);

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 214390fd9ab300b4982f28e2f6fa3393, type: 3}
+  m_Name: EnemyData
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDataSO
+  <GorundLayer>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 2048
+  <PlayerLayer>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 1024
+  <PatrolRadius>k__BackingField: 10
+  <AttackCooldown>k__BackingField: 1
+  <MeleeAttackDamage>k__BackingField: 10
+  <AttackHalfExtents>k__BackingField: {x: 0.5, y: 0.5, z: 0.5}
+  <AttackOffset>k__BackingField: {x: 0, y: 0, z: 1.5}
+  <VisionRange>k__BackingField: 10
+  <EngagementRange>k__BackingField: 2

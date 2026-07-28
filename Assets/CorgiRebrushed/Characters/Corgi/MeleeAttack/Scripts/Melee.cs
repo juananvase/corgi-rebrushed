@@ -20,7 +20,7 @@ public class Melee : MonoBehaviour
 
     private InputAction _attackAction;
     private InputAction _enterPaintModeAction;
-
+    
     private void OnEnable()
     {
         _inputActions.FindActionMap("Player").Enable();
@@ -38,11 +38,6 @@ public class Melee : MonoBehaviour
         _enterPaintModeAction = InputSystem.actions.FindAction("EnterPaintMode");
     }
 
-    private void Update()
-    {
-
-    }
-
     private void Start()
     {
         _attackAction.performed += PerfomrAttack;
@@ -53,11 +48,11 @@ public class Melee : MonoBehaviour
         _attackTrigger = Animator.StringToHash("Attack");
         _attackInt = Animator.StringToHash("AttackInt");
     }
-
+    
     private void PerfomrAttack(InputAction.CallbackContext context)
     {
         if(_enterPaintModeAction.IsInProgress()) return;
-
+        
         _animator.SetTrigger(_attackTrigger);
         
         if (_isCooldownOver)
