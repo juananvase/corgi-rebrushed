@@ -603,6 +603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 517619471578127760}
   - component: {fileID: 8023257346298294945}
+  - component: {fileID: 4415029665305666297}
   - component: {fileID: 6376064758358441661}
   - component: {fileID: 2925868597051054196}
   - component: {fileID: 2419340908151065216}
@@ -611,6 +612,7 @@ GameObject:
   - component: {fileID: 484032968899301501}
   - component: {fileID: 2355443551183846535}
   - component: {fileID: 6243731329619755321}
+  - component: {fileID: 5783637703336466095}
   m_Layer: 10
   m_Name: Character-Container
   m_TagString: Untagged
@@ -664,6 +666,36 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 80
   m_CollisionDetection: 1
+--- !u!114 &4415029665305666297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7937491203180931596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c113216c654db0742b961c6e3c01125c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  _currentHealth: 100
+  _maxHealth: 100
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5783637703336466095}
+        m_TargetAssemblyTypeName: HitFeedback, Assembly-CSharp
+        m_MethodName: PerformCharacterHitFeedback
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onStartChilliState: {fileID: 11400000, guid: 0a56338db4b39c445ae24bad6797bd63, type: 2}
 --- !u!114 &6376064758358441661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,7 +728,7 @@ MonoBehaviour:
   _inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   _characterObject: {fileID: 5470984821014206929}
   _orientation: {fileID: 4376337836434605870}
-  _characterData: {fileID: 11400000, guid: e9b55dda2f3d50a4ab5938572c9bdacc, type: 2}
+  <CharacterData>k__BackingField: {fileID: 11400000, guid: e9b55dda2f3d50a4ab5938572c9bdacc, type: 2}
   _rigidbody: {fileID: 8023257346298294945}
 --- !u!114 &2419340908151065216
 MonoBehaviour:
@@ -713,7 +745,7 @@ MonoBehaviour:
   _inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   _characterObject: {fileID: 5470984821014206929}
   _orientation: {fileID: 4376337836434605870}
-  _characterData: {fileID: 11400000, guid: e9b55dda2f3d50a4ab5938572c9bdacc, type: 2}
+  <CharacterData>k__BackingField: {fileID: 11400000, guid: e9b55dda2f3d50a4ab5938572c9bdacc, type: 2}
   _cameraTransform: {fileID: 4472720011615709231}
 --- !u!114 &8080527194411569046
 MonoBehaviour:
@@ -829,7 +861,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e9711232a257684180c8cd909fc7c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaterJump
-  _characterObject: {fileID: 5470984821014206929}
   _spawnPoint: {fileID: 8191697477089982275}
   _abilitiesData: {fileID: 11400000, guid: a9659934b7d6e5346a22a27643083bb7, type: 2}
   _abilityEventAsset: {fileID: 11400000, guid: 423ca25686d4c1b469ad12d1c708ca0a, type: 2}
@@ -846,7 +877,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653ff76e58fdbba42ae5eb9d0bb1d17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TreeFall
-  _characterObject: {fileID: 7293727591045005768}
   _spawnPoint: {fileID: 3959871429781610727}
   _abilitiesData: {fileID: 11400000, guid: a9659934b7d6e5346a22a27643083bb7, type: 2}
   _abilityEventAsset: {fileID: 11400000, guid: 423ca25686d4c1b469ad12d1c708ca0a, type: 2}
@@ -862,10 +892,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e98727889f393c4ba13aeb0c66ddb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChilliExplosion
-  _characterObject: {fileID: 5470984821014206929}
-  _spawnPoint: {fileID: 0}
+  _spawnPoint: {fileID: 3959871429781610727}
   _abilitiesData: {fileID: 11400000, guid: a9659934b7d6e5346a22a27643083bb7, type: 2}
   _abilityEventAsset: {fileID: 11400000, guid: 423ca25686d4c1b469ad12d1c708ca0a, type: 2}
+  _movement: {fileID: 2925868597051054196}
+  _bodySkinMesh: {fileID: 3339557784315467354}
+  _onStartChilliState: {fileID: 11400000, guid: 0a56338db4b39c445ae24bad6797bd63, type: 2}
+--- !u!114 &5783637703336466095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7937491203180931596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf794d42c9eead54e8ae5050ae200f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitFeedback
+  _renderer: {fileID: 3339557784315467354}
+  _flashColor: {r: 1, g: 0.1462264, b: 0.1462264, a: 1}
+  _flashDuration: 0.5
+  _rigidbody: {fileID: 8023257346298294945}
+  _pushBackForce: 5
 --- !u!1 &8172467476581512096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,6 +1264,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8591129279467596484}
   m_SourcePrefab: {fileID: 100100000, guid: 07429eb64e4d7864299c534e47ce0d09, type: 3}
+--- !u!137 &3339557784315467354 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1630794972795428178, guid: 07429eb64e4d7864299c534e47ce0d09, type: 3}
+  m_PrefabInstance: {fileID: 4105525288139836168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4572129997254831331 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 07429eb64e4d7864299c534e47ce0d09, type: 3}

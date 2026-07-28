@@ -7,7 +7,7 @@ using UnityEngine.VFX;
 [InlineEditor]
 public class AbilitiesDataSO : ScriptableObject
 {
-    [field: SerializeField, FoldoutGroup("General")] public LayerMask EnemyLayer { get; private set; }
+    [field: SerializeField, FoldoutGroup("General")] public LayerMask HitLayer { get; private set; }
     
     
     [field: SerializeField, FoldoutGroup("Water Impulse")] public float WaterJumpImpulseForce { get; private set; }
@@ -37,6 +37,10 @@ public class AbilitiesDataSO : ScriptableObject
     [field: SerializeField, FoldoutGroup("Chilli Explosion")] public float ChilliExplosionTime { get; private set; }
     [field: SerializeField, FoldoutGroup("Chilli Explosion")] public float ChilliExplosionDamage { get; private set; }
     
-    
+    [field: SerializeField, FoldoutGroup("Chilli boost")] public float ChilliSateDuration { get; private set; }
+    [field: SerializeField, FoldoutGroup("Chilli boost")] public float ChilliAcceleration { get; private set; }
+    [field: SerializeField, FoldoutGroup("Chilli boost")] public float ChilliMaxSpeed { get; private set; }
+    [field: SerializeField, FoldoutGroup("Chilli boost")] public Material ChilliCorgiMaterial { get; private set; }
+    [field: SerializeField, FoldoutGroup("Chilli boost")] public Material CommonCorgiMaterial { get; private set; }
     
 }

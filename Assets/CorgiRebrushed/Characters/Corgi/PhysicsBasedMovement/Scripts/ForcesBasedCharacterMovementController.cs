@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using PrimeTween;
 using Sirenix.OdinInspector;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -9,10 +11,9 @@ using UnityEngine.InputSystem;
 public class ForcesBasedCharacterMovementController : CharacterController
 {
     [SerializeField][FoldoutGroup("References")] private Rigidbody _rigidbody;
-
-    //AUDIO
-    //[FoldoutGroup("Audio")] public UnityEvent OnJump;
-
+    
+    [ShowInInspector, FoldoutGroup("Testing")] public float CurrentAcceleration { get; set; }
+    [ShowInInspector, FoldoutGroup("Testing")] public float CurrentMaxSpeed { get; set; }
     
     // Set briefly by external abilities (e.g. WaterJump) so their impulse isn't immediately
     // cut short by the low-jump-multiplier logic below, which only expects the Jump button.
@@ -22,6 +23,9 @@ public class ForcesBasedCharacterMovementController : CharacterController
     {
         base.Awake();
         _rigidbody = GetComponent<Rigidbody>();
+        
+        CurrentAcceleration = CharacterData.Acceleration;
+        CurrentMaxSpeed = CharacterData.MaxSpeed;
     }
 
     private void Start()
@@ -41,20 +45,20 @@ public class ForcesBasedCharacterMovementController : CharacterController
         if (_movementDirection == Vector3.zero)
         {
             Vector3 horizontalVelocity = new Vector3(_rigidbody.linearVelocity.x, 0f, _rigidbody.linearVelocity.z);
-            _rigidbody.AddForce(horizontalVelocity * -_characterData.Desacceleration, ForceMode.Force);
+            _rigidbody.AddForce(horizontalVelocity * -CharacterData.Desacceleration, ForceMode.Force);
             return;
         }
         
-        _rigidbody.AddForce(_movementDirection * _characterData.Acceleration, ForceMode.Force);
+        _rigidbody.AddForce(_movementDirection * CurrentAcceleration, ForceMode.Force);
     }
     
     private void CapVelocity()
     {
         Vector3 horizontalVelocity = new Vector3(_rigidbody.linearVelocity.x, 0f, _rigidbody.linearVelocity.z);
 
-        if (horizontalVelocity.magnitude > _characterData.MaxSpeed)
+        if (horizontalVelocity.magnitude > CurrentMaxSpeed)
         {
-            Vector3 cappedVelocity = horizontalVelocity.normalized * _characterData.MaxSpeed;
+            Vector3 cappedVelocity = horizontalVelocity.normalized * CurrentMaxSpeed;
             _rigidbody.linearVelocity = new Vector3(cappedVelocity.x, _rigidbody.linearVelocity.y, cappedVelocity.z);
         }
     }
@@ -63,7 +67,7 @@ public class ForcesBasedCharacterMovementController : CharacterController
     {
         if(!IsGrounded) return;
         
-        _rigidbody.AddForce(_characterObject.up * _characterData.JumpForce, ForceMode.Impulse);
+        _rigidbody.AddForce(_characterObject.up * CharacterData.JumpForce, ForceMode.Impulse);
         
         //TODO Implementar sonido de salto
         //OnJump?.Invoke();
@@ -76,14 +80,13 @@ public class ForcesBasedCharacterMovementController : CharacterController
         
         if (_rigidbody.linearVelocity.y < 0)
         {
-            _rigidbody.AddForce(_characterObject.up * (Physics.gravity.y * (_characterData.FallMultiplier - 1)), ForceMode.Force);
+            _rigidbody.AddForce(_characterObject.up * (Physics.gravity.y * (CharacterData.FallMultiplier - 1)), ForceMode.Force);
             return;
         }
         
         if (_rigidbody.linearVelocity.y > 0 && !JumpAction.IsPressed() && !ExternalBoostActive)
         {
-            _rigidbody.AddForce(_characterObject.up * (Physics.gravity.y * (_characterData.LowJumpMultiplier - 1)), ForceMode.Force);
+            _rigidbody.AddForce(_characterObject.up * (Physics.gravity.y * (CharacterData.LowJumpMultiplier - 1)), ForceMode.Force);
         }
     }
-    
 }
