@@ -398,7 +398,7 @@ AnimatorController:
     m_Mask: {fileID: 31900000, guid: 8398f5cae6a211345a3aa63f646ef520, type: 2}
     m_Motions: []
     m_Behaviours: []
-    m_BlendingMode: 0
+    m_BlendingMode: 1
     m_SyncedLayerIndex: -1
     m_DefaultWeight: 1
     m_IKPass: 0
@@ -419,10 +419,10 @@ AnimatorStateMachine:
     m_Position: {x: 50, y: 50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8257855026921586077}
-    m_Position: {x: 430, y: -10, z: 0}
+    m_Position: {x: 430, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8289200088046583697}
-    m_Position: {x: 280, y: 60, z: 0}
+    m_Position: {x: 220, y: 230, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -1172003947428697574}
@@ -449,7 +449,7 @@ AnimatorState:
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
+  m_WriteDefaultValues: 0
   m_Mirror: 0
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
@@ -500,10 +500,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.15
-  m_TransitionOffset: 0
-  m_ExitTime: 0
-  m_HasExitTime: 1
+  m_TransitionDuration: 0.08235121
+  m_TransitionOffset: 1.5002154
+  m_ExitTime: 1.2001709
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -555,16 +555,16 @@ AnimatorStateMachine:
     m_Position: {x: -260, y: 210, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7010841699625083186}
-    m_Position: {x: 20, y: 250, z: 0}
+    m_Position: {x: 200, y: 490, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5192949557846349646}
     m_Position: {x: -70, y: 380, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7869069730933432563}
-    m_Position: {x: 230, y: 510, z: 0}
+    m_Position: {x: 130, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1610749551609205007}
-    m_Position: {x: 200, y: 170, z: 0}
+    m_Position: {x: 470, y: 120, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -747050061771566124}
@@ -645,9 +645,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.07130929
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 0
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -931,9 +931,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.29180318
-  m_TransitionOffset: 0.73515457
-  m_ExitTime: 0.50717205
+  m_TransitionDuration: 0.39784938
+  m_TransitionOffset: 0
+  m_ExitTime: 0.4344117
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
