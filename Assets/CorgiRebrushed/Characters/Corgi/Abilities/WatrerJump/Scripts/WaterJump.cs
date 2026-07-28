@@ -4,14 +4,10 @@ using PrimeTween;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.VFX;
-using UnityEngine.Events; //Required for Audio
 
 public class WaterJump : Abilitiy
 {
     [SerializeField] [FoldoutGroup("References")] private Rigidbody _rigidbody;
-    // Audio
-    [FoldoutGroup("Audio")] public UnityEvent OnWaterJetActivated;
-    // End Audio
 
     private void OnEnable()
     {
@@ -31,9 +27,6 @@ public class WaterJump : Abilitiy
     private void PerformWaterImpulse(ECorgiAbility context)
     {
         if (context != ECorgiAbility.Water) return;
-        // Audio
-        OnWaterJetActivated?.Invoke();
-        // End Audio
         
         ApplyDamage(_abilitiesData.WaterJumpAttackBoxHalfExtents, _abilitiesData.WaterJumpAttackOffset, _abilitiesData.WaterImpulseDamage, gameObject, EDamageType.WaterJump);
         ApplyImpulseForce();

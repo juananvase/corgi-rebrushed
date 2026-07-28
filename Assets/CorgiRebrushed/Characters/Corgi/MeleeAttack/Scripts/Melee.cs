@@ -2,8 +2,6 @@ using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Events; //Required for Audio
-
 
 public class Melee : MonoBehaviour
 {
@@ -19,9 +17,6 @@ public class Melee : MonoBehaviour
     private bool _isCooldownOver => Time.time >= _nextReadyTime;
     
     [ShowInInspector] private int _count;
-    // Audio
-    [field: SerializeField, FoldoutGroup("Audio")] public UnityEvent<int> OnAttackPerformed;
-    // End Audio
 
     private InputAction _attackAction;
     private InputAction _enterPaintModeAction;
@@ -59,10 +54,7 @@ public class Melee : MonoBehaviour
         if(_enterPaintModeAction.IsInProgress()) return;
         
         _animator.SetTrigger(_attackTrigger);
-        //Audio - triggers FMOD with current combo step
-        OnAttackPerformed?.Invoke(_count);
-        //End Audio
-
+        
         if (_isCooldownOver)
         {
             ResetCount();
