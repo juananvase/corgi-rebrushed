@@ -5,12 +5,22 @@ using Sirenix.OdinInspector;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events; //Required for Audio
 
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(Rigidbody))]
 public class ForcesBasedCharacterMovementController : CharacterController
 {
     [SerializeField][FoldoutGroup("References")] private Rigidbody _rigidbody;
+    // Audio — footstep
+    private float _footstepTimer;
+    private bool _wasMoving;
+    private bool _wasGrounded = true; // starts true so it doesn't trigger on scene load
+    public UnityEvent<float> OnFootstep;
+    public UnityEvent OnJump;
+    public UnityEvent OnLand;
+    
+    // End Audio
     
     [ShowInInspector, FoldoutGroup("Testing")] public float CurrentAcceleration { get; set; }
     [ShowInInspector, FoldoutGroup("Testing")] public float CurrentMaxSpeed { get; set; }
@@ -38,6 +48,34 @@ public class ForcesBasedCharacterMovementController : CharacterController
         CustomFalling();
         ApplyForceToHorizontalMovement();
         CapVelocity();
+        //AUDIO - Footstep audio
+        bool isMoving = _movementDirection.magnitude > 0.1f;
+        if (IsGrounded && isMoving)
+        {
+            float interval = Mathf.Lerp(0.3f, 0.55f, _movementDirection.magnitude);
+
+            // If the player just started moving, force the first footstep immediately
+            if (!_wasMoving)
+            {
+                _footstepTimer = interval;
+            }
+
+            _footstepTimer += Time.fixedDeltaTime;
+            if (_footstepTimer >= interval)
+            {
+                _footstepTimer = 0f;
+                OnFootstep?.Invoke(_movementDirection.magnitude);
+            }
+        }
+        _wasMoving = isMoving; // Audio - Land detection
+        if (IsGrounded && !_wasGrounded)
+        {
+            OnLand?.Invoke();
+        }
+        _wasGrounded = IsGrounded;
+
+        // End Audio
+
     }
 
     private void ApplyForceToHorizontalMovement()
@@ -70,7 +108,9 @@ public class ForcesBasedCharacterMovementController : CharacterController
         _rigidbody.AddForce(_characterObject.up * CharacterData.JumpForce, ForceMode.Impulse);
         
         //TODO Implementar sonido de salto
-        //OnJump?.Invoke();
+        //Audio
+        OnJump?.Invoke();
+        //End Audio
 
     }
 
