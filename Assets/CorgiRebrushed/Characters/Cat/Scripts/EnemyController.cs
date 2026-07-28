@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField, FoldoutGroup("References")] private EnemyDataSO _enemyData;
     [SerializeField, FoldoutGroup("References")] private NavMeshAgent _navMeshAgent; 
+    [SerializeField, FoldoutGroup("References")] private Rigidbody _rigidbody; 
     
     private Transform _playerTransform;
 
@@ -27,14 +28,33 @@ public class EnemyController : MonoBehaviour
 
     private void Awake()
     {
-        _playerTransform = EnemyEncounterManager.instance.PlayerTransform;
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        _rigidbody = GetComponent<Rigidbody>();
+    }
+
+    private void Start()
+    {
+        _playerTransform = EnemyEncounterManager.instance.PlayerTransform;
     }
 
     private void Update()
     {
         DetectPlayer();
         UpdateBehaviourState();
+    }
+
+    private void FixedUpdate()
+    {
+        ApplyStopingForce();
+    }
+
+    private void ApplyStopingForce()
+    {
+        if (_navMeshAgent.velocity.magnitude < 0.1f)
+        {
+            Vector3 horizontalVelocity = new Vector3(_rigidbody.linearVelocity.x, 0f, _rigidbody.linearVelocity.z);
+            _rigidbody.AddForce(horizontalVelocity * -15f, ForceMode.Force);
+        }
     }
 
     private void UpdateBehaviourState()
@@ -93,7 +113,6 @@ public class EnemyController : MonoBehaviour
 
     private void Attack()
     {
-        Debug.Log("Attack");
         ApplyDamage(_enemyData.AttackHalfExtents, _enemyData.AttackOffset, _enemyData.MeleeAttackDamage, EDamageType.Scratch);
     }
     

@@ -28,7 +28,7 @@ public class WaterJump : Abilitiy
     {
         if (context != ECorgiAbility.Water) return;
         
-        ApplyDamage(_abilitiesData.WaterJumpAttackBoxHalfExtents, _abilitiesData.WaterJumpAttackOffset, _abilitiesData.WaterImpulseDamage, EDamageType.WaterJump);
+        ApplyDamage(_abilitiesData.WaterJumpAttackBoxHalfExtents, _abilitiesData.WaterJumpAttackOffset, _abilitiesData.WaterImpulseDamage, gameObject, EDamageType.WaterJump);
         ApplyImpulseForce();
         PlayWaterJetVfx();
     }

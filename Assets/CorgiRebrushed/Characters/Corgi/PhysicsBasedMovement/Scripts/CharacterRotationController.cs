@@ -22,7 +22,7 @@ public class CharacterRotationController : CharacterController
 
         if(_movementDirection  == Vector3.zero) return;
         
-        _characterObject.forward = Vector3.Slerp(_characterObject.forward, _movementDirection, Time.deltaTime * _characterData.RotationSpeed);
+        _characterObject.forward = Vector3.Slerp(_characterObject.forward, _movementDirection, Time.deltaTime * CharacterData.RotationSpeed);
     }
     
 }

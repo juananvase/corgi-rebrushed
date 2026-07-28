@@ -1,5 +1,6 @@
 using UnityEngine;
 using Sirenix.OdinInspector;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour, IDamageable, IHealable
 {
@@ -9,12 +10,16 @@ public class Health : MonoBehaviour, IDamageable, IHealable
     [BoxGroup("Debug"), ShowInInspector] public float Percentage => _currentHealth / _maxHealth;
     [BoxGroup("Debug"), ShowInInspector] public bool IsAlive => _currentHealth >= 1f;
 
-    public void Damaged(DamageInfo damageInfo)
+    [SerializeField, BoxGroup("Events")]private UnityEvent<DamageInfo> OnDamaged;
+
+    public virtual void Damaged(DamageInfo damageInfo)
     {
         if (!IsAlive) return;
         if (damageInfo.Amount < 1f) return;
         _currentHealth -= damageInfo.Amount;
         _currentHealth = Mathf.Clamp(_currentHealth, 0f, _maxHealth);
+        
+        OnDamaged.Invoke(damageInfo);
     }
     [ContextMenu("Damage Test 10%"), Button("Damage Test 10%")]
     public void DamageTest()
