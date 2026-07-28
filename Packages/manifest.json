@@ -2,6 +2,7 @@
   "dependencies": {
     "com.kyrylokuzyk.primetween": "file:../Assets/Plugins/PrimeTween/internal/com.kyrylokuzyk.primetween.tgz",
     "com.qhenshaw.gameevents": "https://github.com/qhenshaw/GameEvents.git",
+    "com.unity.ai.assistant": "2.16.0-pre.1",
     "com.unity.ai.inference": "2.6.1",
     "com.unity.ai.navigation": "2.0.14",
     "com.unity.cinemachine": "3.1.7",
