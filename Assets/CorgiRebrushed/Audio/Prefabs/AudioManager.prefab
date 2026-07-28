@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 7367623572277809987}
   - component: {fileID: 256401300777029155}
   - component: {fileID: 3756841497894435881}
+  - component: {fileID: 5326221070090887830}
+  - component: {fileID: 7554123504450075542}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -202,3 +204,41 @@ MonoBehaviour:
       Data3: -1150144346
       Data4: -1671417539
     Path: event:/Painting/Failed
+--- !u!114 &5326221070090887830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02a73af596c20ac4da7509b5c4325884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnWaterJetBinding
+  _fmodEvent:
+    Guid:
+      Data1: 688063355
+      Data2: 1165960445
+      Data3: 1523021496
+      Data4: 338045401
+    Path: event:/Abilities/WaterJet
+--- !u!114 &7554123504450075542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4a5234b23c43b4e88d0f6ef3eb65c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnTreeBinding
+  _fmodEvent:
+    Guid:
+      Data1: 601422357
+      Data2: 1333606226
+      Data3: 883049091
+      Data4: 1072999852
+    Path: event:/Abilities/TreeSpawn

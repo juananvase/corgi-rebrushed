@@ -3,28 +3,28 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 /// <summary>
-/// Plays audio when the Water Jump ability is activated.
-/// Listens to WaterJump.OnWaterJetActivated UnityEvent and fires a one-shot FMOD event.
+/// Plays audio when the Tree ability spawns.
+/// Listens to TreeFall.OnTreeSpawnActivated UnityEvent and fires a one-shot FMOD event.
 /// </summary>
-[AddComponentMenu("Corgi Audio/On Water Jet Binding")]
-public class OnWaterJetBinding : MonoBehaviour
+[AddComponentMenu("Corgi Audio/On Tree Binding")]
+public class OnTreeBinding : MonoBehaviour
 {
     // ────────────────────────────────────────────────────────────
     // FMOD Event Reference — assigned in the Inspector
     // ────────────────────────────────────────────────────────────
     [FoldoutGroup("FMOD")]
-    [SerializeField] private EventReference _fmodEvent;   // water jet / splash sound (e.g., Abilities/WaterJet)
+    [SerializeField] private EventReference _fmodEvent;   // tree spawn sound (e.g., Abilities/TreeSpawn)
 
     // ────────────────────────────────────────────────────────────
-    // Lifecycle: subscribe to the WaterJump event
-    // Uses Awake/OnDestroy because WaterJump is always active on the
+    // Lifecycle: subscribe to the TreeFall spawn event
+    // Uses Awake/OnDestroy because TreeFall is always active on the
     // same GameObject — no enable/disable toggling expected.
     // ────────────────────────────────────────────────────────────
     private void Awake()
     {
-        var waterJump = FindObjectOfType<WaterJump>();
-        if (waterJump != null)
-            waterJump.OnWaterJetActivated.AddListener(OnWaterJet);
+        var treeFall = FindObjectOfType<TreeFall>();
+        if (treeFall != null)
+            treeFall.OnTreeSpawnActivated.AddListener(OnTreeSpawn);
     }
 
     // ────────────────────────────────────────────────────────────
@@ -32,18 +32,18 @@ public class OnWaterJetBinding : MonoBehaviour
     // ────────────────────────────────────────────────────────────
     private void OnDestroy()
     {
-        var waterJump = FindObjectOfType<WaterJump>();
-        if (waterJump != null)
-            waterJump.OnWaterJetActivated.RemoveListener(OnWaterJet);
+        var treeFall = FindObjectOfType<TreeFall>();
+        if (treeFall != null)
+            treeFall.OnTreeSpawnActivated.RemoveListener(OnTreeSpawn);
     }
 
     // ────────────────────────────────────────────────────────────
-    // Event handler: water jet activated — play the audio event
+    // Event handler: tree spawn activated — play the audio event
     // ────────────────────────────────────────────────────────────
-    private void OnWaterJet()
+    private void OnTreeSpawn()
     {
-        // PlayOneShot is sufficient — the water jet sound is a short
-        // one-shot that doesn't need parameter updates or manual lifetime.
+        // PlayOneShot is sufficient — a short one-shot stinger that
+        // doesn't need parameter updates or manual lifetime control.
         if (!_fmodEvent.IsNull)
             RuntimeManager.PlayOneShot(_fmodEvent);
     }
