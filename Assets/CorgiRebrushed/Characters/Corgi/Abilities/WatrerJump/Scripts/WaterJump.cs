@@ -3,11 +3,13 @@ using System.Collections;
 using PrimeTween;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.VFX;
 
 public class WaterJump : Abilitiy
 {
     [SerializeField] [FoldoutGroup("References")] private Rigidbody _rigidbody;
+    [SerializeField, BoxGroup("Events")] private UnityEvent OnWaterImpulse;
 
     private void OnEnable()
     {
@@ -30,6 +32,7 @@ public class WaterJump : Abilitiy
         
         ApplyDamage(_abilitiesData.WaterJumpAttackBoxHalfExtents, _abilitiesData.WaterJumpAttackOffset, _abilitiesData.WaterImpulseDamage, gameObject, EDamageType.WaterJump);
         ApplyImpulseForce();
+        OnWaterImpulse.Invoke();
         PlayWaterJetVfx();
     }
     

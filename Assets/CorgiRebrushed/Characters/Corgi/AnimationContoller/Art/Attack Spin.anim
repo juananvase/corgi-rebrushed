@@ -13706,14 +13706,14 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.25
-    functionName: HitEnable
+    functionName: SpinHitEnable
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.0416666
-    functionName: HitDisable
+    functionName: SpinHitDisable
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

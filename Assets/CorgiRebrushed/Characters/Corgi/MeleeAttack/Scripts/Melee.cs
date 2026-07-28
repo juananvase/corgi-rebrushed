@@ -16,7 +16,7 @@ public class Melee : MonoBehaviour
     private float _nextReadyTime;
     private bool _isCooldownOver => Time.time >= _nextReadyTime;
     
-    [ShowInInspector] private int _count;
+    [ShowInInspector] public int Count { get; private set; }
 
     private InputAction _attackAction;
     private InputAction _enterPaintModeAction;
@@ -63,8 +63,8 @@ public class Melee : MonoBehaviour
 
     public void OnAttackAnimationEnded()
     {
-        _count++;
-        _animator.SetInteger(_attackInt, _count);
+        Count++;
+        _animator.SetInteger(_attackInt, Count);
         
         ResetCooldown();
         _animator.ResetTrigger(_attackTrigger);
@@ -72,8 +72,8 @@ public class Melee : MonoBehaviour
 
     public void OnFinalAttackAnimationEnded()
     {
-        _count++;
-        _animator.SetInteger(_attackInt, _count);
+        Count++;
+        _animator.SetInteger(_attackInt, Count);
         
         ResetCount();
         _animator.ResetTrigger(_attackTrigger);
@@ -86,8 +86,8 @@ public class Melee : MonoBehaviour
 
     private void ResetCount()
     {
-        _count = 0;
-        _animator.SetInteger(_attackInt, _count);
+        Count = 0;
+        _animator.SetInteger(_attackInt, Count);
     }
     
 }
