@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{c0a559fb-8901-4539-aead-81d07874d639}">
+		<property name="assetPath">
+			<value>Stingers/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{33e68a6b-ad22-4898-887f-aef67ec1c75f}</destination>
+		</relationship>
+	</object>
+</objects>

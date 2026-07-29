@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{06fb9f56-8572-4b65-9691-2dc1a3d8178d}">
+		<property name="name">
+			<value>AttackStep</value>
+		</property>
+		<relationship name="folder">
+			<destination>{51d2267c-0d9b-41f1-8891-4823c87ec581}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{4149a36e-b7ae-4110-ad91-27be203fa5b4}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{4149a36e-b7ae-4110-ad91-27be203fa5b4}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

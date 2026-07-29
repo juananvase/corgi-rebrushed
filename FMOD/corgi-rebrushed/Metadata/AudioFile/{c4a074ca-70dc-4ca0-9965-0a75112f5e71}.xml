@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{c4a074ca-70dc-4ca0-9965-0a75112f5e71}">
+		<property name="assetPath">
+			<value>Water/water_hose.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>10.293291666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{33e68a6b-ad22-4898-887f-aef67ec1c75f}</destination>
+		</relationship>
+	</object>
+</objects>

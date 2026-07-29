@@ -5,11 +5,15 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.VFX;
+using UnityEngine.Events; //Required for audio
 
 public class WaterJump : Abilitiy
 {
     [SerializeField] [FoldoutGroup("References")] private Rigidbody _rigidbody;
     [SerializeField, BoxGroup("Events")] private UnityEvent OnWaterImpulse;
+    //Audio
+     [FoldoutGroup("Audio")] public UnityEvent OnWaterJetActivated;
+    // End Audio
 
     private void OnEnable()
     {
@@ -34,6 +38,9 @@ public class WaterJump : Abilitiy
         ApplyImpulseForce();
         OnWaterImpulse.Invoke();
         PlayWaterJetVfx();
+        //Audio
+        OnWaterJetActivated?.Invoke();
+        // End Audio
     }
     
     private void ApplyImpulseForce()

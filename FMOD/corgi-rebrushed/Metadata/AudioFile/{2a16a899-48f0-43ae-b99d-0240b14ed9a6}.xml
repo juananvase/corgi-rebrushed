@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{2a16a899-48f0-43ae-b99d-0240b14ed9a6}">
+		<property name="assetPath">
+			<value>Stingers/on-confirm-painting-mode-stinger.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>8</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{33e68a6b-ad22-4898-887f-aef67ec1c75f}</destination>
+		</relationship>
+	</object>
+</objects>

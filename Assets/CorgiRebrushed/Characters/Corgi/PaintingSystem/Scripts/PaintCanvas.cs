@@ -5,6 +5,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.Events; // Required for Audio
 
 public class PaintCanvas : MonoBehaviour
 {
@@ -31,6 +32,12 @@ public class PaintCanvas : MonoBehaviour
     private static readonly int OpacityID = Shader.PropertyToID("_Opacity");
 
     [ShowInInspector][FoldoutGroup("Testing")] private int _pointCount;
+    
+    // Audio 
+    [FoldoutGroup("Audio")] public UnityEvent<float> OnPaintStroke;// sends brush speed (0-1 normalized) to FMOD
+    [FoldoutGroup("Audio")] public UnityEvent OnPaintStrokeBegin; // triggers audio when a stroke begins
+    [FoldoutGroup("Audio")] public UnityEvent OnPaintStrokeEnd; // triggers audio when a stroke ends
+    // End Audio
 
     private Texture2D _texture;
     private Color[]   _pixels;
@@ -72,6 +79,9 @@ public class PaintCanvas : MonoBehaviour
         _currentLength = 0f;
         _isDrawing     = true;
         RegenerateBristles();
+        // Audio
+        OnPaintStrokeBegin?.Invoke(); // Audio — start looping brush sound
+        // End Audio
     }
 
     public void PauseStroke() => _isDrawing = false;
@@ -80,6 +90,9 @@ public class PaintCanvas : MonoBehaviour
     {
         _isDrawing = false;
         return new List<Vector2>(_stroke);
+        // Audio
+        OnPaintStrokeEnd?.Invoke(); // Audio — stop looping brush sound
+        // End Audio
     }
 
     public void RecolorStroke(Color color)
@@ -129,7 +142,9 @@ public class PaintCanvas : MonoBehaviour
             : 1f;
 
         DrawSegment(_lastPos, _smoothedPos, speed, startTaper);
-
+        // Audio — normalized brush speed
+        OnPaintStroke?.Invoke(Mathf.Clamp01(speed / Mathf.Max(_speedFadeMax, 0.01f))); 
+        // End Audio
         _stroke.Add(_smoothedPos);
         _pointCount = _stroke.Count;
         _lastPos = _smoothedPos;

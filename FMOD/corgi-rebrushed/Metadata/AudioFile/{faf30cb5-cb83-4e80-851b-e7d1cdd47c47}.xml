@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{faf30cb5-cb83-4e80-851b-e7d1cdd47c47}">
+		<property name="assetPath">
+			<value>Paint/liquid3.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>17.616</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{33e68a6b-ad22-4898-887f-aef67ec1c75f}</destination>
+		</relationship>
+	</object>
+</objects>

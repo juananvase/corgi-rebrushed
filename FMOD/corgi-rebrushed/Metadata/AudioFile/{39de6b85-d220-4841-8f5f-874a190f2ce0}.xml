@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{39de6b85-d220-4841-8f5f-874a190f2ce0}">
 		<property name="assetPath">
-			<value>spring-forest-ambience.wav</value>
+			<value>Ambience/spring-forest-ambience.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
