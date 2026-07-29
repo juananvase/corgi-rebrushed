@@ -19,6 +19,9 @@ GameObject:
   - component: {fileID: 3756841497894435881}
   - component: {fileID: 5326221070090887830}
   - component: {fileID: 7554123504450075542}
+  - component: {fileID: 4724013868395125071}
+  - component: {fileID: 2134784149678256}
+  - component: {fileID: 5139425640005806545}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -242,3 +245,60 @@ MonoBehaviour:
       Data3: 883049091
       Data4: 1072999852
     Path: event:/Abilities/TreeSpawn
+--- !u!114 &4724013868395125071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb12f616df4901544bea8a5fc22e21fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnFootstepBinding
+  _fmodEvent:
+    Guid:
+      Data1: -30545754
+      Data2: 1160919397
+      Data3: -345026133
+      Data4: 981367807
+    Path: event:/Player/Movement/Footstep
+--- !u!114 &2134784149678256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccea48a879898448b2d3e496bee9ed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnJumpBinding
+  _fmodEvent:
+    Guid:
+      Data1: -153468084
+      Data2: 1260840372
+      Data3: 1244125612
+      Data4: 1329701688
+    Path: event:/Player/Movement/Jump
+--- !u!114 &5139425640005806545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 395940b33bb48974aaf49e82c2d3ad23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnLandBinding
+  _fmodEvent:
+    Guid:
+      Data1: -2116343585
+      Data2: 1085307586
+      Data3: 1091631756
+      Data4: 1629860812
+    Path: event:/Player/Movement/Land
