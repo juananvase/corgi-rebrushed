@@ -1,3 +1,4 @@
+using GameEvents;
 using PrimeTween;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -8,6 +9,7 @@ using UnityEngine.VFX;
 public class AbilitiesDataSO : ScriptableObject
 {
     [field: SerializeField, FoldoutGroup("General")] public LayerMask HitLayer { get; private set; }
+    //[field: SerializeField, FoldoutGroup("General")] public TransformEventAsset OnHitCamaraShake { get; private set; }
     
     
     [field: SerializeField, FoldoutGroup("Water Impulse")] public float WaterJumpImpulseForce { get; private set; }

@@ -34,7 +34,7 @@ public class EnemyController : MonoBehaviour
 
     private void Start()
     {
-        _playerTransform = EnemyEncounterManager.instance.PlayerTransform;
+        _playerTransform = GameManager.instance.PlayerTransform;
     }
 
     private void Update()

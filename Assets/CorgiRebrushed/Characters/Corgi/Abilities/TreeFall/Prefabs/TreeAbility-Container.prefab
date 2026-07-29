@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tree
   _abilitiesData: {fileID: 11400000, guid: a9659934b7d6e5346a22a27643083bb7, type: 2}
+  _onHitCamaraShake: {fileID: 11400000, guid: 6a82bb5cf2d638749b2583bd4a810a41, type: 2}
   OnDamaged:
     m_PersistentCalls:
       m_Calls:
@@ -252,6 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HitFeedback
   _hitFeedbackData: {fileID: 11400000, guid: 9027eace6ac7be141853daebb61e95f7, type: 2}
   _renderer: {fileID: 2849960972580577496}
+  _onHitCamaraShake: {fileID: 11400000, guid: 6a82bb5cf2d638749b2583bd4a810a41, type: 2}
 --- !u!1001 &2524448827843558981
 PrefabInstance:
   m_ObjectHideFlags: 0
