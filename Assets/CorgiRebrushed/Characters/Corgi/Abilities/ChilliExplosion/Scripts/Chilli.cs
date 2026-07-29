@@ -5,7 +5,7 @@ using UnityEngine;
 public class Chilli : AbilityInvokeable, IDamageable
 {
     private Coroutine _chilliExplosionCoroutine;
-    public bool IsAlive { get; private set; }
+    public bool IsAlive { get; }
     
     // Cache an array for non-allocating physics checks (Max 20 targets per hit)
     private readonly Collider[] hitBuffer = new Collider[20];
@@ -24,7 +24,7 @@ public class Chilli : AbilityInvokeable, IDamageable
     public void Damaged(DamageInfo damageInfo)
     {
         if(_chilliExplosionCoroutine  != null) StopCoroutine(_chilliExplosionCoroutine);
-        Tween.ShakeLocalPosition(transform, _abilitiesData.ChilliShakeTweenSettings).OnComplete(() => Explode());
+        Tween.ShakeLocalPosition(transform, _abilitiesData.ChilliShakeTweenSettings).OnComplete(() => Explode(), warnIfTargetDestroyed: false);
     }
 
     private IEnumerator ExplosionRoutine()
@@ -36,7 +36,6 @@ public class Chilli : AbilityInvokeable, IDamageable
 
     private void Explode()
     {
-        IsAlive = false;
         ApplyDamage(_abilitiesData.ChilliExplosionAttackBoxHalfExtents, _abilitiesData.ChilliExplosionAttackOffset, _abilitiesData.ChilliExplosionDamage, Owner, EDamageType.Chilli);
         Destroy(gameObject);
     }
