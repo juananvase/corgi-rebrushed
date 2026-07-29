@@ -34,17 +34,18 @@ public class ChilliExplosion : Abilitiy
     public void StartChilliState(Transform context)
     {
         if(context != transform) return;
-        
-        if(_chilliStateCoroutine != null) StopCoroutine(_chilliStateCoroutine);
+
+        if (_chilliStateCoroutine != null)
+        {
+            StopCoroutine(_chilliStateCoroutine);
+            _chilliStateCoroutine = null;
+            _chilliStateCoroutine = StartCoroutine(ChilliStateRoutine());
+        }
         else _chilliStateCoroutine = StartCoroutine(ChilliStateRoutine());
     }
 
     private IEnumerator ChilliStateRoutine()
     {
-        float previousAcceleration = _movement.CurrentAcceleration;
-        float previousMaxSpeed = _movement.CurrentMaxSpeed;
-        Material previousMaterial = _bodySkinMesh.material;
-        
         _movement.CurrentAcceleration = _abilitiesData.ChilliAcceleration;
         _movement.CurrentMaxSpeed = _abilitiesData.ChilliMaxSpeed;
         _bodySkinMesh.material = _abilitiesData.ChilliCorgiMaterial;

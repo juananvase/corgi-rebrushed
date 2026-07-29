@@ -7,6 +7,8 @@ public class AttackAnimationEventHandler : MonoBehaviour
     [SerializeField] private UnityEvent _onFinishFinalAttackAnimation;
     [SerializeField] private UnityEvent _onHitEnable;
     [SerializeField] private UnityEvent _onHitDisable;
+    [SerializeField] private UnityEvent _onSpinHitEnable;
+    [SerializeField] private UnityEvent _onSpinHitDisable;
 
     public void FinishAttackAnimation()
     {
@@ -26,5 +28,15 @@ public class AttackAnimationEventHandler : MonoBehaviour
     public void HitDisable()
     {
         _onHitDisable.Invoke();
+    }
+    
+    public void SpinHitEnable()
+    {
+        _onSpinHitEnable.Invoke();
+    }
+
+    public void SpinHitDisable()
+    {
+        _onSpinHitDisable.Invoke();
     }
 }

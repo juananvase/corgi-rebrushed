@@ -33,7 +33,7 @@ public class CoreTree : AbilityInvokeable, IDamageable
 
     private Quaternion GetEndFallRotation()
     {
-        Quaternion targetRotation = _core.rotation * Quaternion.Euler(93f, 0f, 0f);
+        Quaternion targetRotation = _core.rotation * Quaternion.Euler(88f, 0f, 0f);
         
         return targetRotation;
     }
