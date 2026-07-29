@@ -16,13 +16,11 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>4</value>
+			<value>2</value>
 		</property>
 		<property name="enumerationLabels">
 			<value>Exploration</value>
 			<value>Combat</value>
-			<value>Cats</value>
-			<value>Frida</value>
 		</property>
 		<property name="isGlobal">
 			<value>true</value>
