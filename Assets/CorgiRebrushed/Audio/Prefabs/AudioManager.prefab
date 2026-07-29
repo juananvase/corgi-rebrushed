@@ -154,14 +154,14 @@ MonoBehaviour:
       Data2: 1267291245
       Data3: 286111895
       Data4: -1616011267
-    Path: event:/Painting/Enter
+    Path: event:/Painting/StingersPainting/Enter
   _exitFmodEvent:
     Guid:
       Data1: -640408115
       Data2: 1094472353
       Data3: -727970402
       Data4: 1846879206
-    Path: event:/Painting/Exit
+    Path: event:/Painting/StingersPainting/Exit
 --- !u!114 &256401300777029155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +199,7 @@ MonoBehaviour:
       Data2: 1309092970
       Data3: 1891267982
       Data4: -2054854684
-    Path: event:/Painting/Confirm
+    Path: event:/Painting/StingersPainting/Confirm
   _failedFmodEvent:
     Guid:
       Data1: 667184871

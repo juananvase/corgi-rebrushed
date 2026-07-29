@@ -8,7 +8,7 @@
 			<value>0</value>
 		</property>
 		<relationship name="folder">
-			<destination>{620257ce-ca43-45b3-bc4b-a9b20eed5ac4}</destination>
+			<destination>{731c07bc-5b39-41e2-ba24-300fa8f079ed}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{d948d0fb-2940-4742-a05f-5153c044494a}</destination>
@@ -103,6 +103,9 @@
 		<property name="name">
 			<value>Bark-0</value>
 		</property>
+		<property name="pitch">
+			<value>-2.60000014</value>
+		</property>
 		<relationship name="event">
 			<destination>{dac5ad30-a454-4a32-af4c-bfd43aedc347}</destination>
 		</relationship>
@@ -130,6 +133,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{7bf3bfac-8d39-445c-a1bb-3cf5b32dabf6}">
+		<property name="volume">
+			<value>-21.5</value>
+		</property>
 		<property name="name">
 			<value>Bark</value>
 		</property>
@@ -160,10 +166,10 @@
 	<object class="MixerBusFader" id="{20c01594-ae7f-476b-a895-248a4966971d}" />
 	<object class="ThreeEQEffect" id="{e09a6aae-c9a8-426a-898d-ca8c161f88fb}">
 		<property name="lowGain">
-			<value>-4</value>
+			<value>-4.5</value>
 		</property>
 		<property name="highGain">
-			<value>4</value>
+			<value>4.5</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{87b1af12-39ba-4e02-af89-9f825580a69f}" />

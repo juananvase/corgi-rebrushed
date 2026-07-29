@@ -416,6 +416,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7367623572277809987, guid: b57d283d567348146bd29d93eff9d45b, type: 3}
+      propertyPath: _exitFmodEvent.Path
+      value: event:/Painting/StingersPainting/Exit
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6596137285609482891, guid: b57d283d567348146bd29d93eff9d45b, type: 3}
     - {fileID: 433106705355514697, guid: b57d283d567348146bd29d93eff9d45b, type: 3}
