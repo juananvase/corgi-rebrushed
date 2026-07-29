@@ -28,6 +28,9 @@
 		<relationship name="timeline">
 			<destination>{31c4da38-a041-4754-9d62-788a242311cf}</destination>
 		</relationship>
+		<relationship name="parameters">
+			<destination>{c9724a72-3bea-45a2-bf41-002ed2d5e6ba}</destination>
+		</relationship>
 		<relationship name="banks">
 			<destination>{ff32c3b6-e43f-4005-9a43-24a640c6bba3}</destination>
 		</relationship>
@@ -38,6 +41,9 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{a160fca8-f6ce-471d-bce2-900f358e9a01}">
+		<relationship name="modules">
+			<destination>{2e8bbed5-8004-459e-a620-9ee323e5a282}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{9d0fa937-d2f2-40c9-84cf-6c7729d29dbb}</destination>
 		</relationship>
@@ -60,6 +66,11 @@
 			<value>false</value>
 		</property>
 	</object>
+	<object class="ActionSheet" id="{c9724a72-3bea-45a2-bf41-002ed2d5e6ba}">
+		<relationship name="modules">
+			<destination>{2e8bbed5-8004-459e-a620-9ee323e5a282}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{9d0fa937-d2f2-40c9-84cf-6c7729d29dbb}">
 		<relationship name="effectChain">
 			<destination>{a486d021-e927-42b6-98a1-12fa12ee82aa}</destination>
@@ -71,6 +82,7 @@
 			<destination>{36c046a7-0913-42c4-b2f4-86d71f92775f}</destination>
 		</relationship>
 	</object>
+	<object class="MultiSound" id="{2e8bbed5-8004-459e-a620-9ee323e5a282}" />
 	<object class="MixerBusEffectChain" id="{8d0d13e5-383b-45c6-81a1-1bbccc93b058}">
 		<relationship name="effects">
 			<destination>{43f15a61-3ec1-4089-9902-6161a3e85dfb}</destination>
