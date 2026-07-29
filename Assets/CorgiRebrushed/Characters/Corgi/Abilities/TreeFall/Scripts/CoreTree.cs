@@ -3,16 +3,16 @@ using System.Collections;
 using PrimeTween;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class CoreTree : AbilityInvokeable, IDamageable
+public class CoreTree : AbilityInvokeable
 {
     [SerializeField, FoldoutGroup("References")] private Transform _core;
     [SerializeField, FoldoutGroup("References")] private Collider _logCollider;
     [SerializeField, FoldoutGroup("References")] private Collider _generalCollider;
+
     
     private Coroutine _fallenTreeCoroutine;
-
-    public bool IsAlive { get; private set; } = true;
     
     private void OnEnable()
     {
@@ -40,7 +40,6 @@ public class CoreTree : AbilityInvokeable, IDamageable
 
     private IEnumerator OnFallenTreeRoutine(DamageInfo damageInfo)
     {
-        IsAlive = false;
         _generalCollider.enabled = false;
         _logCollider.enabled = true;
         _logCollider.isTrigger = true;
@@ -52,9 +51,9 @@ public class CoreTree : AbilityInvokeable, IDamageable
         Destroy(transform.root.gameObject);
     }
     
-    public void Damaged(DamageInfo damageInfo)
+    public override void Damaged(DamageInfo damageInfo)
     {
-        if (!IsAlive) return;
+        base.Damaged(damageInfo);
         
         if(_fallenTreeCoroutine != null) StopCoroutine(_fallenTreeCoroutine);
         else _fallenTreeCoroutine = StartCoroutine(OnFallenTreeRoutine(damageInfo));

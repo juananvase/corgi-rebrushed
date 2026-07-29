@@ -2,10 +2,9 @@ using System.Collections;
 using PrimeTween;
 using UnityEngine;
 
-public class Chilli : AbilityInvokeable, IDamageable
+public class Chilli : AbilityInvokeable
 {
     private Coroutine _chilliExplosionCoroutine;
-    public bool IsAlive { get; }
     
     // Cache an array for non-allocating physics checks (Max 20 targets per hit)
     private readonly Collider[] hitBuffer = new Collider[20];
@@ -21,8 +20,10 @@ public class Chilli : AbilityInvokeable, IDamageable
         else _chilliExplosionCoroutine = StartCoroutine(ExplosionRoutine());
     }
     
-    public void Damaged(DamageInfo damageInfo)
+    public override void Damaged(DamageInfo damageInfo)
     {
+        base.Damaged(damageInfo);
+        
         if(_chilliExplosionCoroutine  != null) StopCoroutine(_chilliExplosionCoroutine);
         Tween.ShakeLocalPosition(transform, _abilitiesData.ChilliShakeTweenSettings).OnComplete(() => Explode(), warnIfTargetDestroyed: false);
     }

@@ -14,7 +14,7 @@ public class HitFeedback : MonoBehaviour
     private Color _originalColor;
     private Coroutine _flashCoroutine;
 
-    private void Awake()
+    private void Start()
     {
         _originalColor =  _renderer.material.color;
     }
