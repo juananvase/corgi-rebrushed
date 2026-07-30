@@ -44,4 +44,9 @@ public abstract class Abilitiy : MonoBehaviour
             other.Owner = gameObject;
         }
     }
+    
+    protected float ResetCooldown(float cooldownDuration)
+    {
+        return Time.time + cooldownDuration;
+    }
 }

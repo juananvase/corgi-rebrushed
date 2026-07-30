@@ -10,6 +10,13 @@ public class CoreTree : AbilityInvokeable
     [SerializeField, FoldoutGroup("References")] private Transform _core;
     [SerializeField, FoldoutGroup("References")] private Collider _logCollider;
     [SerializeField, FoldoutGroup("References")] private Collider _generalCollider;
+    [SerializeField, FoldoutGroup("References")] private ParticleSystem _fallDustParticles;
+    [SerializeField, FoldoutGroup("References")] private ParticleSystem _destroyWoodParticles;
+    [SerializeField, FoldoutGroup("References")] private GameObject _body;
+    [SerializeField, FoldoutGroup("References")] private GameObject _colliders;
+    
+    private ParticleSystem.EmissionModule _fallDustParticlesEmission; 
+    private ParticleSystem.EmissionModule _destroyWoodParticlesEmission; 
 
     
     private Coroutine _fallenTreeCoroutine;
@@ -20,6 +27,17 @@ public class CoreTree : AbilityInvokeable
         _logCollider.enabled = false;
         _logCollider.isTrigger = true;
         Tween.Scale(transform, _abilitiesData.TreeSpawnInScaleTweenSettings);
+        
+        _fallDustParticlesEmission = _fallDustParticles.emission;
+        _destroyWoodParticlesEmission = _destroyWoodParticles.emission;
+        
+        _fallDustParticles.Stop();
+        _destroyWoodParticles.Stop();
+    }
+
+    private void OnDestroy()
+    {
+        _destroyWoodParticlesEmission.enabled = false;
     }
 
     private void FaceTarget(Transform other)
@@ -45,9 +63,24 @@ public class CoreTree : AbilityInvokeable
         _logCollider.isTrigger = true;
         FaceTarget(damageInfo.Instigator.transform);
         yield return Tween.Rotation(_core, new TweenSettings<Quaternion>(endValue: GetEndFallRotation(), _abilitiesData.TreeFallTweenSettings)).ToYieldInstruction();
+        
+        _fallDustParticles.Play();
+        _fallDustParticlesEmission.enabled = true;
+        yield return Tween.Delay(1f).ToYieldInstruction();
+        
+        _fallDustParticlesEmission.enabled = false;
         _logCollider.isTrigger = false;
         yield return Tween.Delay(_abilitiesData.TreeDestroyTime).ToYieldInstruction();
+        
         yield return Tween.ShakeLocalPosition(_core, _abilitiesData.TreeShakeTweenSettings).ToYieldInstruction();
+        
+        _destroyWoodParticles.transform.SetParent(transform.root);
+        _destroyWoodParticles.Play();
+        _destroyWoodParticlesEmission.enabled = true;
+        _body.SetActive(false);
+        _colliders.SetActive(false);
+        yield return Tween.Delay(1f).ToYieldInstruction();
+        
         Destroy(transform.root.gameObject);
     }
     

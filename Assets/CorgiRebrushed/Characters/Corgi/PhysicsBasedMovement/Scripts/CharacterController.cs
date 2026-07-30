@@ -46,6 +46,7 @@ public abstract class CharacterController : MonoBehaviour
     {
         Vector2 moveInputValue =  MoveAction.ReadValue<Vector2>();
         _movementDirection = (_orientation.forward * moveInputValue.y + _orientation.right * moveInputValue.x).normalized;
+
     }
     
     private bool CheckGrounded()

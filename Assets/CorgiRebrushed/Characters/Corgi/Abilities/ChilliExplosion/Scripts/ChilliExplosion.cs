@@ -12,6 +12,9 @@ public class ChilliExplosion : Abilitiy
     [SerializeField] [FoldoutGroup("References")] private TransformEventAsset _onStartChilliState;
     private Coroutine _chilliStateCoroutine;
     
+    private float _nextReadyTime;
+    private bool _isCooldownOver => Time.time >= _nextReadyTime;
+    
     private void OnEnable()
     {
         _abilityEventAsset.OnInvoked.AddListener(PerformChilliExplosion);
@@ -26,8 +29,10 @@ public class ChilliExplosion : Abilitiy
     
     private void PerformChilliExplosion(ECorgiAbility context)
     {
+        if (!_isCooldownOver) return;
         if (context != ECorgiAbility.Fire) return;
         SpawnObject(_abilitiesData.ChilliPrefab, _spawnPoint.position, Quaternion.identity);
+        _nextReadyTime = ResetCooldown(_abilitiesData.ChilliExplosionCoolDownDuration);
     }
     
     [Button("Test Chilli State")]

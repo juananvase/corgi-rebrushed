@@ -21,7 +21,7 @@ MonoBehaviour:
   <PatrolRadius>k__BackingField: 10
   <AttackCooldown>k__BackingField: 1
   <MeleeAttackDamage>k__BackingField: 10
-  <AttackHalfExtents>k__BackingField: {x: 0.5, y: 0.5, z: 0.5}
-  <AttackOffset>k__BackingField: {x: 0, y: 0, z: 1.5}
+  <AttackHalfExtents>k__BackingField: {x: 0.5, y: 0.85, z: 0.5}
+  <AttackOffset>k__BackingField: {x: 0, y: 0.35, z: 1.5}
   <VisionRange>k__BackingField: 10
   <EngagementRange>k__BackingField: 2

@@ -11,7 +11,7 @@ public class HitFeedback : MonoBehaviour
     
     [SerializeField, FoldoutGroup("References")]  protected HitFeedbackDataSO _hitFeedbackData;
     [SerializeField, FoldoutGroup("References")]  private Renderer _renderer;
-    //[SerializeField, FoldoutGroup("References")] private TransformEventAsset _onHitCamaraShake;
+
     
 
     private Color _originalColor;
