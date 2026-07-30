@@ -62,10 +62,9 @@ public class GameTimeManager : MonoBehaviour
 
     private IEnumerator ModifyTimeScaleRoutine(float  duration, float amount)
     {
-        Debug.Log(Time.timeScale);
         _isTimeScaleBeingUsed  = true;
         Time.timeScale = amount;
-        yield return Tween.Delay(duration).ToYieldInstruction();
+        yield return Tween.Delay(duration, useUnscaledTime: true).ToYieldInstruction();
         _isTimeScaleBeingUsed  = false;
         Time.timeScale = 1f;
     }

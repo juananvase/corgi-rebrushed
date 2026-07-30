@@ -3,16 +3,23 @@ using System.Collections;
 using PrimeTween;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class CoreTree : AbilityInvokeable, IDamageable
+public class CoreTree : AbilityInvokeable
 {
     [SerializeField, FoldoutGroup("References")] private Transform _core;
     [SerializeField, FoldoutGroup("References")] private Collider _logCollider;
     [SerializeField, FoldoutGroup("References")] private Collider _generalCollider;
+    [SerializeField, FoldoutGroup("References")] private ParticleSystem _fallDustParticles;
+    [SerializeField, FoldoutGroup("References")] private ParticleSystem _destroyWoodParticles;
+    [SerializeField, FoldoutGroup("References")] private GameObject _body;
+    [SerializeField, FoldoutGroup("References")] private GameObject _colliders;
+    
+    private ParticleSystem.EmissionModule _fallDustParticlesEmission; 
+    private ParticleSystem.EmissionModule _destroyWoodParticlesEmission; 
+
     
     private Coroutine _fallenTreeCoroutine;
-
-    public bool IsAlive { get; private set; } = true;
     
     private void OnEnable()
     {
@@ -20,6 +27,17 @@ public class CoreTree : AbilityInvokeable, IDamageable
         _logCollider.enabled = false;
         _logCollider.isTrigger = true;
         Tween.Scale(transform, _abilitiesData.TreeSpawnInScaleTweenSettings);
+        
+        _fallDustParticlesEmission = _fallDustParticles.emission;
+        _destroyWoodParticlesEmission = _destroyWoodParticles.emission;
+        
+        _fallDustParticles.Stop();
+        _destroyWoodParticles.Stop();
+    }
+
+    private void OnDestroy()
+    {
+        _destroyWoodParticlesEmission.enabled = false;
     }
 
     private void FaceTarget(Transform other)
@@ -40,21 +58,35 @@ public class CoreTree : AbilityInvokeable, IDamageable
 
     private IEnumerator OnFallenTreeRoutine(DamageInfo damageInfo)
     {
-        IsAlive = false;
         _generalCollider.enabled = false;
         _logCollider.enabled = true;
         _logCollider.isTrigger = true;
         FaceTarget(damageInfo.Instigator.transform);
         yield return Tween.Rotation(_core, new TweenSettings<Quaternion>(endValue: GetEndFallRotation(), _abilitiesData.TreeFallTweenSettings)).ToYieldInstruction();
+        
+        _fallDustParticles.Play();
+        _fallDustParticlesEmission.enabled = true;
+        yield return Tween.Delay(1f).ToYieldInstruction();
+        
+        _fallDustParticlesEmission.enabled = false;
         _logCollider.isTrigger = false;
         yield return Tween.Delay(_abilitiesData.TreeDestroyTime).ToYieldInstruction();
+        
         yield return Tween.ShakeLocalPosition(_core, _abilitiesData.TreeShakeTweenSettings).ToYieldInstruction();
+        
+        _destroyWoodParticles.transform.SetParent(transform.root);
+        _destroyWoodParticles.Play();
+        _destroyWoodParticlesEmission.enabled = true;
+        _body.SetActive(false);
+        _colliders.SetActive(false);
+        yield return Tween.Delay(1f).ToYieldInstruction();
+        
         Destroy(transform.root.gameObject);
     }
     
-    public void Damaged(DamageInfo damageInfo)
+    public override void Damaged(DamageInfo damageInfo)
     {
-        if (!IsAlive) return;
+        base.Damaged(damageInfo);
         
         if(_fallenTreeCoroutine != null) StopCoroutine(_fallenTreeCoroutine);
         else _fallenTreeCoroutine = StartCoroutine(OnFallenTreeRoutine(damageInfo));

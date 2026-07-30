@@ -14,6 +14,7 @@ public class ForcesBasedCharacterMovementController : CharacterController
     
     [ShowInInspector, FoldoutGroup("Testing")] public float CurrentAcceleration { get; set; }
     [ShowInInspector, FoldoutGroup("Testing")] public float CurrentMaxSpeed { get; set; }
+    [ShowInInspector, FoldoutGroup("Testing")] private bool _canMove = true;
     
     // Set briefly by external abilities (e.g. WaterJump) so their impulse isn't immediately
     // cut short by the low-jump-multiplier logic below, which only expects the Jump button.
@@ -33,6 +34,11 @@ public class ForcesBasedCharacterMovementController : CharacterController
         JumpAction.performed += Jump;
     }
 
+    protected override void Update()
+    {
+        base.Update();
+    }
+
     private void FixedUpdate()
     {
         CustomFalling();
@@ -40,9 +46,19 @@ public class ForcesBasedCharacterMovementController : CharacterController
         CapVelocity();
     }
 
+    public void AllowMovement()
+    {
+        _canMove = true;
+    }
+
+    public void RestrictMovement()
+    {
+        _canMove = false;
+    }
+    
     private void ApplyForceToHorizontalMovement()
     {
-        if (_movementDirection == Vector3.zero)
+        if (_movementDirection == Vector3.zero || !_canMove)
         {
             Vector3 horizontalVelocity = new Vector3(_rigidbody.linearVelocity.x, 0f, _rigidbody.linearVelocity.z);
             _rigidbody.AddForce(horizontalVelocity * -CharacterData.Desacceleration, ForceMode.Force);
@@ -65,7 +81,7 @@ public class ForcesBasedCharacterMovementController : CharacterController
     
     private void Jump(InputAction.CallbackContext context)
     {
-        if(!IsGrounded) return;
+        if(!IsGrounded || !_canMove) return;
         
         _rigidbody.AddForce(_characterObject.up * CharacterData.JumpForce, ForceMode.Impulse);
         

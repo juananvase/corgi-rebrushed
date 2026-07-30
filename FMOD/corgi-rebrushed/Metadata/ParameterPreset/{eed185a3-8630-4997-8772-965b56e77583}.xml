@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{eed185a3-8630-4997-8772-965b56e77583}">
+		<property name="name">
+			<value>BrushSpeed</value>
+		</property>
+		<relationship name="folder">
+			<destination>{51d2267c-0d9b-41f1-8891-4823c87ec581}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f31f5a83-04da-4c18-8421-2ef130fc6c1a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f31f5a83-04da-4c18-8421-2ef130fc6c1a}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

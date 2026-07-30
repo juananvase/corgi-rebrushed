@@ -1,10 +1,13 @@
 using System;
+using GameEvents;
+using PrimeTween;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class HitTrigger : MonoBehaviour
 {
-    [SerializeField] private CharacterDataSO _characterData;
-    [SerializeField] private Transform _characterObject;
+    [SerializeField, FoldoutGroup("References")] private CharacterDataSO _characterData;
+    [SerializeField, FoldoutGroup("References")] private Transform _characterObject;
 
     private void OnTriggerEnter(Collider other)
     {

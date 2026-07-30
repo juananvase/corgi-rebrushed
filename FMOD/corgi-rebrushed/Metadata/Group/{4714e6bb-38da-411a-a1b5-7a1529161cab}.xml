@@ -4,6 +4,9 @@
 		<property name="name">
 			<value>Voice</value>
 		</property>
+		<relationship name="masters">
+			<destination>{83972432-18c0-4d4e-8f12-e0d7138f18a1}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{707b096a-12b9-42f6-b14b-5288d15c3d15}</destination>
 		</relationship>

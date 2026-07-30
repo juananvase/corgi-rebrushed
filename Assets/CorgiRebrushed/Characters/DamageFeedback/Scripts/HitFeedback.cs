@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
+using GameEvents;
 using PrimeTween;
 using Sirenix.OdinInspector;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class HitFeedback : MonoBehaviour
@@ -9,12 +11,13 @@ public class HitFeedback : MonoBehaviour
     
     [SerializeField, FoldoutGroup("References")]  protected HitFeedbackDataSO _hitFeedbackData;
     [SerializeField, FoldoutGroup("References")]  private Renderer _renderer;
+
     
 
     private Color _originalColor;
     private Coroutine _flashCoroutine;
-
-    private void Awake()
+    
+    private void Start()
     {
         _originalColor =  _renderer.material.color;
     }
@@ -23,8 +26,18 @@ public class HitFeedback : MonoBehaviour
     {
         PerformFlash();
         PerformPause();
+        PerformCameraShake(GameManager.instance.PlayerCameraCinemachineImpulseSource);
     }
     
+    [Button("CameraShake Test")]
+    private void PerformCameraShake(CinemachineImpulseSource impulseSource)
+    {
+        Tween.Custom(useUnscaledTime: true, startValue: _hitFeedbackData.CameraShakeForce, endValue: 0f, duration: _hitFeedbackData.CameraShakeDuration, onValueChange: force =>
+        {
+            CinemachineImpulseManager.Instance.IgnoreTimeScale = true;
+            impulseSource.GenerateImpulse(force * 0.1f);
+        });
+    }
 
     [Button("Flash Test")]
     private void PerformFlash()
