@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         InitiateSinglenton();
+
+        if (SceneManager.GetActiveScene().buildIndex > 4) return;
         CurrentLevelIndex = SceneManager.GetActiveScene().buildIndex;
     }
     

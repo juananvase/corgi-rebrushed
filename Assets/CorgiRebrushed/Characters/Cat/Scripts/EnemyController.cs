@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField, FoldoutGroup("References")] private Rigidbody _rigidbody; 
     [SerializeField, FoldoutGroup("References")] private Animator _animator;
     [SerializeField, FoldoutGroup("References")] private Encounter _encounter;
+    [SerializeField, FoldoutGroup("Death")] private TweenSettings<Vector3> _deathTweenSettings;
     
     private Transform _playerTransform;
 
@@ -45,10 +46,18 @@ public class EnemyController : MonoBehaviour
     {
         _playerTransform = GameManager.instance.PlayerTransform;
         _encounter.EnemyRegister(this);
+        transform.parent = null;
     }
 
     public void Death()
     {
+        StartCoroutine(DeathRoutine());
+    }
+
+    private IEnumerator DeathRoutine()
+    {
+        yield return Tween.Scale(transform, _deathTweenSettings);
+        
         DeregisterFromEncounter();
         Destroy(gameObject);
     }
