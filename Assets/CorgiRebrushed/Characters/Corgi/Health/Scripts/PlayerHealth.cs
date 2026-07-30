@@ -1,4 +1,6 @@
+using System.Collections;
 using GameEvents;
+using PrimeTween;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -16,6 +18,12 @@ public class PlayerHealth : Health
     protected override void PerfomDeath()
     {
         base.PerfomDeath();
+        StartCoroutine(DeathRoutine());
+    }
+
+    private IEnumerator DeathRoutine()
+    {
+        yield return Tween.Delay(1.5f).ToYieldInstruction();
         GameManager.instance.Respawn();
     }
 }

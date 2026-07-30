@@ -1188,6 +1188,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 517619471578127760, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
   m_PrefabInstance: {fileID: 8684439064015200718}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2143922999 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6376064758358441661, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
+  m_PrefabInstance: {fileID: 8684439064015200718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc78bf59fcf228f4d9e6b9589c68e088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CorgiAnimationDriver
 --- !u!1001 &353012471153919905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1645,6 +1656,42 @@ PrefabInstance:
     - target: {fileID: 517619471578127760, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523232665300491628, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
+      propertyPath: m_ControllerManager.Controllers.Array.data[0].Input.Gain
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523232665300491628, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
+      propertyPath: m_ControllerManager.Controllers.Array.data[1].Input.Gain
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415029665305666297, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415029665305666297, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415029665305666297, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2143922999}
+    - target: {fileID: 4415029665305666297, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415029665305666297, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TriggerDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415029665305666297, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CorgiAnimationDriver, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415029665305666297, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7398605094141443656, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
       propertyPath: serializationData.Prefab

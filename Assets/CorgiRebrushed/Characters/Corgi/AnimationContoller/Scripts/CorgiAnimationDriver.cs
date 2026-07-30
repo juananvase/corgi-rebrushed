@@ -17,6 +17,7 @@ public class CorgiAnimationDriver : MonoBehaviour
     private static readonly int SpeedParam = Animator.StringToHash("Speed");
     private static readonly int GroundedParam = Animator.StringToHash("Grounded");
     private static readonly int JumpParam = Animator.StringToHash("Jump");
+    private static readonly int IsDeathParam = Animator.StringToHash("IsDeath");
 
     private void Awake()
     {
@@ -49,5 +50,10 @@ public class CorgiAnimationDriver : MonoBehaviour
     {
         if (_characterController.IsGrounded)
             _animator.SetTrigger(JumpParam);
+    }
+
+    public void TriggerDeath()
+    {
+        _animator.SetBool(IsDeathParam, true);
     }
 }
