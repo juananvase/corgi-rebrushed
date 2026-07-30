@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 2134784149678256}
   - component: {fileID: 5139425640005806545}
   - component: {fileID: 4347367654171503907}
+  - component: {fileID: 7297849959085067508}
+  - component: {fileID: 1898203188846938975}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -329,3 +331,48 @@ MonoBehaviour:
       Data3: 1316556422
       Data4: 58617404
     Path: event:/Player/Combat/Attack-Corgi
+--- !u!114 &7297849959085067508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3d22f18584800429b72bd4ae2e6b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnChilliExplosionBinding
+  _fmodEvent:
+    Guid:
+      Data1: 1141681340
+      Data2: 1332452865
+      Data3: -1066777957
+      Data4: 42626897
+    Path: event:/Abilities/ChilliExplosion
+--- !u!114 &1898203188846938975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b212d8c1412cbc2498247c30b392403b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnChilliStateBinding
+  _enterFmodEvent:
+    Guid:
+      Data1: -480484405
+      Data2: 1145250039
+      Data3: -1952619376
+      Data4: -1524961723
+    Path: event:/Abilities/StingersAbilities/ChilliStateEnter
+  _exitFmodEvent:
+    Guid:
+      Data1: 1402800159
+      Data2: 1282168506
+      Data3: -37777267
+      Data4: -1604678493
+    Path: event:/Abilities/StingersAbilities/ChilliStateExit
