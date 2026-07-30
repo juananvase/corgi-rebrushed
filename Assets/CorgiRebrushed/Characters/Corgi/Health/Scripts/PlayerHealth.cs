@@ -23,7 +23,6 @@ public class PlayerHealth : Health
 
     private IEnumerator DeathRoutine()
     {
-        //
         yield return Tween.Delay(1.5f).ToYieldInstruction();
         GameManager.instance.Respawn();
     }

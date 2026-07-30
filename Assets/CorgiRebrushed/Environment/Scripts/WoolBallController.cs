@@ -7,12 +7,12 @@ public class WoolBallController : MonoBehaviour
     [SerializeField, FoldoutGroup("References")] private Rigidbody _rigidbody;
     [SerializeField, FoldoutGroup("References")] private Transform _respawnPoint;
     [SerializeField, FoldoutGroup("WoolBall")] private float _acceleration;
+    [SerializeField, FoldoutGroup("WoolBall")] private Vector3 _direction;
     [SerializeField, FoldoutGroup("WoolBall")] private float _respawnTime;
     [SerializeField, FoldoutGroup("WoolBall")] private float _maxSpeed;
     [SerializeField, FoldoutGroup("WoolBall")] private float _damage;
     [SerializeField, FoldoutGroup("WoolBall")] private string[] _hitLayers;
     
-    [ShowInInspector, FoldoutGroup("Testing")] public Vector3 CurrentDirection { get; set; }
     [ShowInInspector, FoldoutGroup("Testing")] public float CurrentAcceleration { get; set; }
     [ShowInInspector, FoldoutGroup("Testing")] public float CurrentMaxSpeed { get; set; }
     
@@ -55,7 +55,6 @@ public class WoolBallController : MonoBehaviour
 
     private void ApplyForceToHorizontalMovement()
     {
-        CurrentDirection = new Vector3(0,0,1) * CurrentAcceleration;
         _rigidbody.AddForce(new Vector3(0,0,1) * CurrentAcceleration, ForceMode.Force);
     }
     
