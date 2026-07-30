@@ -5,11 +5,17 @@ public class AttackAnimationEventHandler : MonoBehaviour
 {
     [SerializeField] private UnityEvent _onFinishAttackAnimation;
     [SerializeField] private UnityEvent _onFinishFinalAttackAnimation;
+    [SerializeField] private UnityEvent _onStartAttackAnimation;
     [SerializeField] private UnityEvent _onHitEnable;
     [SerializeField] private UnityEvent _onHitDisable;
     [SerializeField] private UnityEvent _onSpinHitEnable;
     [SerializeField] private UnityEvent _onSpinHitDisable;
-
+    
+    public void StartAttackAnimation()
+    {
+        _onStartAttackAnimation.Invoke();
+    }
+    
     public void FinishAttackAnimation()
     {
         _onFinishAttackAnimation.Invoke();

@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,16 +34,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,12 +95,2058 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e96ef6753b367439389a4da3d36e30
+      internalID: 1513339913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4530b3d0641ec6f4c91720e4420c34b0
+      internalID: 656122346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ff6ad8e82c5214fb40a324f2497b86
+      internalID: -1988229942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87fbd4f7de7a24e46bc28c9e70869f61
+      internalID: 1884857116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0099418ab0a46094fb0e61bcec833c65
+      internalID: 1098845246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03343a99516f404c81091a1b4714ad1
+      internalID: 1576854599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10af80f86818864b9ff9a0bf0f5fb73
+      internalID: 1425810395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed322bd6505e61428da276ecc4841a5
+      internalID: -1013740620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30eb27129ba27e442afa499a4d581f4f
+      internalID: 1121140992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c6d33c78670da4da11d0469df17b37
+      internalID: 1780360463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7451b57bbe1fd44d82a40fa109b3ead
+      internalID: 1860543840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46e9efc656ec0041aaca7b7ecb68a8c
+      internalID: 1374461438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2de04a23c86a844a625057a77aa75d
+      internalID: 1066264350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f500e448f3bb0bf4483c78151a94f89f
+      internalID: 1467528505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5319eca39c6a6db48a29ebb9d5eda005
+      internalID: 1564924717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5c6c45300b841b41b450dc7db3a6af8
+      internalID: 411181177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebea812c81bcbfa4ab322565aba8ed20
+      internalID: -557391914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9672a69fe9eb92b4f97d01fa30ecd649
+      internalID: 41152659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9d16f63fd4ddf47b9b04ce82331105
+      internalID: -1101435295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535eccb8e8592874dbe0e3494de209e0
+      internalID: 1402993378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1927a89e15168314d94369af6b1d55f5
+      internalID: 281765307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e509c2c3fb2fc4a94ff243b40b8e44
+      internalID: -1263563975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c69ca1b851ef541baa3871fdbc5276
+      internalID: 319407143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59058a434e9d5d7409dbbb3cc1c24acb
+      internalID: 558513777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366f55d02bd2d1340804e6547380b3c2
+      internalID: -2994614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0e268646dd3f546810ba1b5b3eed0e
+      internalID: 423610700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2687001bb54e7d4789d509eb225285e
+      internalID: 30712839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddee208eb18c5845aef673c6de11016
+      internalID: -2070700438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc533806d912be149ad6868da8a1001f
+      internalID: -954393171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f925ede84f37e428c5a8d232172ba9
+      internalID: 830373391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73de20b9ebb95244b1b0faa5c54807f
+      internalID: -340006617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb268ba3a5784f04c972efa728cd9e8f
+      internalID: -850411173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cacb0adb1e60034ea6de72d1a685576
+      internalID: 1148442297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f4563bad2901c48b33bf48cc37be99
+      internalID: 829418393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0a45c1e07176a49aae1adde86dd7ca
+      internalID: -1737506894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422b410d3f5cbbe49b886f108da17442
+      internalID: 857431554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94dc33235578feb4fb33562e697e7072
+      internalID: 1350049477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25a5287d4bcd094fa390b592f61d269
+      internalID: -429107730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f63a9941ff5014bb735532fdf1a14d
+      internalID: 162876991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0db39a0b7f49dd46884042ab6b1933b
+      internalID: -1517717844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ade785b9ee8c114689b86da8bd1d387
+      internalID: 1389516228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b50b70aae534e4cbd386734104081e
+      internalID: -2027846337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd6f0bddf763a04592e688fd7af16ad
+      internalID: 1465838174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7cc0043068035841b99fd6d99fe773a
+      internalID: 1642835933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb1525a7d660db418af7faa1edfb829
+      internalID: 229008644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10450d136bbc8fb4abd0df48181a83b2
+      internalID: 1709358080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a5031d17f6ab6428decd23940c5e7b
+      internalID: 1366969869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8712f8ba793ceb44fb646e8eb2a7ab14
+      internalID: 1014477159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69ce11919b53104b99c583c0d998d6d
+      internalID: 901151245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c9c180ba3c50242880a6638c025702
+      internalID: 176846701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df71ab4f89f3d5f4fb330832aac956c2
+      internalID: -693549088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b98c5cfef4aa645854eebc9ee678b4
+      internalID: 227090343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53dab259dd545c748a021135f1fbaca9
+      internalID: -865024421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_53
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd0fd409f60ae24fa869d01b0f66969
+      internalID: 591326812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088878c4b86415249af6bbfcd260a98d
+      internalID: 1603418435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_55
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcf2697e7f215a14d8798a0f8693e46a
+      internalID: -313524039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_56
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce3d4a1d742748428c423e4aff7f8a4
+      internalID: -451372364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_57
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93893aa915eedb341b9c5ce216376639
+      internalID: 1537925360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3530a09bc5d4d9a4ea08bbc418b4da31
+      internalID: 66808524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_59
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f97555b073292644be1595b01ce437d
+      internalID: 1576384501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d441d488f19177949a4168197c80b8cd
+      internalID: -2043882964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_61
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c4c8839112c5545b60f688988eb0b5
+      internalID: -1548365392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_62
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d9d752cbe728844b177cf9da63b3c2
+      internalID: 707737634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_63
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe03469a13d11c24d93fd902c1d1c431
+      internalID: -351670249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_64
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae18e6c252d543408c3ef489791b4c6
+      internalID: 1635796751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_65
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0766bda17719cba438f29bad55ccec16
+      internalID: -1099209107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1858177e53ba78946b0eb99cb643c44d
+      internalID: 1850175229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_67
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db790bc2d92bb949bf31f6f9588e52c
+      internalID: -195717726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_68
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871ace5eb7b1d4f4db0433841b2bf283
+      internalID: 1144227907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_69
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4fabb3d8523654099feb9ac84364e6
+      internalID: -643857005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_70
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6498c2497c90e0a48a296525aa86a999
+      internalID: -872920365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_71
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 355fe9f1f6092714cb8f01fc5a2b6340
+      internalID: -1543347503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9bbb9ab467a4849bcaef1e6bd5563b
+      internalID: 57809108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_73
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a92ffa45f5621c43a923951edad3965
+      internalID: -828633602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_74
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd71dddd045c6054cba212831289e5ff
+      internalID: -692625810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_75
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff454c3844b9a543b1c7246826903eb
+      internalID: -1197925570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_76
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca63573c90bd964ab0f2a04526a4707
+      internalID: 855867317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_77
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2da46e0d6e2464296b7b9d40316073
+      internalID: -897072184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5decb390b2217840842f51d1601b8bb
+      internalID: -800711878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_79
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f8877b6b5322f47a4ce852a17cf73f
+      internalID: -1322239781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_80
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7afee3900a96c3a489f04e68e51db39f
+      internalID: 196193797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_81
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e4b16d49389294ab42d6d3dd7b4268
+      internalID: -1642695101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_82
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48adffef599645042b018bd4407124ef
+      internalID: -1393550441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_83
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7d7b86414d68a46ba6924f225d9f41
+      internalID: -1879427914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13da1222ab6b4ce4180bd073cfe344c4
+      internalID: 324507694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_85
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29746e74112a61f4dbdd21e0c82fabc0
+      internalID: 214609302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_86
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311187305d06fc245832928c97b94994
+      internalID: -1387387574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_87
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b31c1b9c0180a74a81899bb2b561c40
+      internalID: -218867652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_88
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f942b0589ea025843b5e330374236a4d
+      internalID: 1853010506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_89
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6da42bc9a97bb4243aff0df642b543f6
+      internalID: -848135601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f5399fb0c3d6f4aa1dcfd3ce28d535
+      internalID: 898712695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_91
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 0
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8fd3b5aa1d384b41aac4848a115b93c
+      internalID: -2011670941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_arbol_spritesheet_92
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 0
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3310da21adbf741ae48b3c2d173586
+      internalID: 1606418952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 016c68510e019fc44bb7f1e9b2101a63
     internalID: 0
     vertices: []
     indices: 
@@ -108,8 +2154,103 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
-    nameFileIdTable: {}
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":16.0},"gridSpriteSize":{"x":985.0,"y":913.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Hechizo_arbol_spritesheet_0: 1513339913
+      Hechizo_arbol_spritesheet_1: 656122346
+      Hechizo_arbol_spritesheet_10: 1860543840
+      Hechizo_arbol_spritesheet_11: 1374461438
+      Hechizo_arbol_spritesheet_12: 1066264350
+      Hechizo_arbol_spritesheet_13: 1467528505
+      Hechizo_arbol_spritesheet_14: 1564924717
+      Hechizo_arbol_spritesheet_15: 411181177
+      Hechizo_arbol_spritesheet_16: -557391914
+      Hechizo_arbol_spritesheet_17: 41152659
+      Hechizo_arbol_spritesheet_18: -1101435295
+      Hechizo_arbol_spritesheet_19: 1402993378
+      Hechizo_arbol_spritesheet_2: -1988229942
+      Hechizo_arbol_spritesheet_20: 281765307
+      Hechizo_arbol_spritesheet_21: -1263563975
+      Hechizo_arbol_spritesheet_22: 319407143
+      Hechizo_arbol_spritesheet_23: 558513777
+      Hechizo_arbol_spritesheet_24: -2994614
+      Hechizo_arbol_spritesheet_25: 423610700
+      Hechizo_arbol_spritesheet_26: 30712839
+      Hechizo_arbol_spritesheet_27: -2070700438
+      Hechizo_arbol_spritesheet_28: -954393171
+      Hechizo_arbol_spritesheet_29: 830373391
+      Hechizo_arbol_spritesheet_3: 1884857116
+      Hechizo_arbol_spritesheet_30: -340006617
+      Hechizo_arbol_spritesheet_31: -850411173
+      Hechizo_arbol_spritesheet_32: 1148442297
+      Hechizo_arbol_spritesheet_33: 829418393
+      Hechizo_arbol_spritesheet_34: -1737506894
+      Hechizo_arbol_spritesheet_35: 857431554
+      Hechizo_arbol_spritesheet_36: 1350049477
+      Hechizo_arbol_spritesheet_37: -429107730
+      Hechizo_arbol_spritesheet_38: 162876991
+      Hechizo_arbol_spritesheet_39: -1517717844
+      Hechizo_arbol_spritesheet_4: 1098845246
+      Hechizo_arbol_spritesheet_40: 1389516228
+      Hechizo_arbol_spritesheet_41: -2027846337
+      Hechizo_arbol_spritesheet_42: 1465838174
+      Hechizo_arbol_spritesheet_43: 1642835933
+      Hechizo_arbol_spritesheet_44: 229008644
+      Hechizo_arbol_spritesheet_45: 1709358080
+      Hechizo_arbol_spritesheet_46: 1366969869
+      Hechizo_arbol_spritesheet_47: 1014477159
+      Hechizo_arbol_spritesheet_48: 901151245
+      Hechizo_arbol_spritesheet_49: 176846701
+      Hechizo_arbol_spritesheet_5: 1576854599
+      Hechizo_arbol_spritesheet_50: -693549088
+      Hechizo_arbol_spritesheet_51: 227090343
+      Hechizo_arbol_spritesheet_52: -865024421
+      Hechizo_arbol_spritesheet_53: 591326812
+      Hechizo_arbol_spritesheet_54: 1603418435
+      Hechizo_arbol_spritesheet_55: -313524039
+      Hechizo_arbol_spritesheet_56: -451372364
+      Hechizo_arbol_spritesheet_57: 1537925360
+      Hechizo_arbol_spritesheet_58: 66808524
+      Hechizo_arbol_spritesheet_59: 1576384501
+      Hechizo_arbol_spritesheet_6: 1425810395
+      Hechizo_arbol_spritesheet_60: -2043882964
+      Hechizo_arbol_spritesheet_61: -1548365392
+      Hechizo_arbol_spritesheet_62: 707737634
+      Hechizo_arbol_spritesheet_63: -351670249
+      Hechizo_arbol_spritesheet_64: 1635796751
+      Hechizo_arbol_spritesheet_65: -1099209107
+      Hechizo_arbol_spritesheet_66: 1850175229
+      Hechizo_arbol_spritesheet_67: -195717726
+      Hechizo_arbol_spritesheet_68: 1144227907
+      Hechizo_arbol_spritesheet_69: -643857005
+      Hechizo_arbol_spritesheet_7: -1013740620
+      Hechizo_arbol_spritesheet_70: -872920365
+      Hechizo_arbol_spritesheet_71: -1543347503
+      Hechizo_arbol_spritesheet_72: 57809108
+      Hechizo_arbol_spritesheet_73: -828633602
+      Hechizo_arbol_spritesheet_74: -692625810
+      Hechizo_arbol_spritesheet_75: -1197925570
+      Hechizo_arbol_spritesheet_76: 855867317
+      Hechizo_arbol_spritesheet_77: -897072184
+      Hechizo_arbol_spritesheet_78: -800711878
+      Hechizo_arbol_spritesheet_79: -1322239781
+      Hechizo_arbol_spritesheet_8: 1121140992
+      Hechizo_arbol_spritesheet_80: 196193797
+      Hechizo_arbol_spritesheet_81: -1642695101
+      Hechizo_arbol_spritesheet_82: -1393550441
+      Hechizo_arbol_spritesheet_83: -1879427914
+      Hechizo_arbol_spritesheet_84: 324507694
+      Hechizo_arbol_spritesheet_85: 214609302
+      Hechizo_arbol_spritesheet_86: -1387387574
+      Hechizo_arbol_spritesheet_87: -218867652
+      Hechizo_arbol_spritesheet_88: 1853010506
+      Hechizo_arbol_spritesheet_89: -848135601
+      Hechizo_arbol_spritesheet_9: 1780360463
+      Hechizo_arbol_spritesheet_90: 898712695
+      Hechizo_arbol_spritesheet_91: -2011670941
+      Hechizo_arbol_spritesheet_92: 1606418952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

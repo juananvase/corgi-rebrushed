@@ -12,4 +12,10 @@ public class PlayerHealth : Health
         
         base.Damaged(damageInfo);
     }
+
+    protected override void PerfomDeath()
+    {
+        base.PerfomDeath();
+        GameManager.instance.Respawn();
+    }
 }

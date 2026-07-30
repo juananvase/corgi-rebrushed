@@ -170,3 +170,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   <PlayerTransform>k__BackingField: {fileID: 0}
   <PlayerCameraCinemachineImpulseSource>k__BackingField: {fileID: 0}
+  _onTreatCollected: {fileID: 11400000, guid: c4ac23fc7c595ea40b60f8152c61b12c, type: 2}

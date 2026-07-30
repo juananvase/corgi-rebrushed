@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,16 +34,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,12 +95,2058 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f05223f2a8ba54aa7b1108ec809544
+      internalID: -318882872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d47a26a706295543be532e4b8c517b1
+      internalID: -1034568647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bead73fb64029db4a9938f34f3af2903
+      internalID: -1547904644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ae7d1402a47e94f8762b69eaffadae
+      internalID: 1792479926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b075280b45cea6143a037c37acacc3c8
+      internalID: -1976900026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316dbf9722f215b47a21fbe9715ee9de
+      internalID: -990813463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b30b4959afb0a458706e7e1c5efdc0
+      internalID: 54836523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf548c4518cecf489a4d7230345f7bd
+      internalID: -800651671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f18d759f78b24244fb878436d46713f0
+      internalID: -2133800654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5956f3f775b3444aed2e6955903993
+      internalID: 1372682109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7bacb67aba07834083bf874bbd8073f
+      internalID: -528534029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5119086870c7fa4b9169f7bb78db981
+      internalID: 1278798120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed66e74fbf9b065449c512c1f5168ad0
+      internalID: -1439698954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b554be777948bf43b6de0fc886bb0d2
+      internalID: -2139950148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0987810d988ac1a4d82aee220f32a7f5
+      internalID: 672119448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a24f4401cab48340866c3b6228d6ed8
+      internalID: -1869341100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1acfa55760bf64ba2ae1b0d5f6f3ac
+      internalID: -936827408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a34971d271830d54dbd4b7ed7fc39d38
+      internalID: 1725078043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9cf0bd80a373a419b7ce52d024878e
+      internalID: 1878003879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b4801e96da00c4db48fbaa29e1494d
+      internalID: -1894685069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad705a4576a5bd94a88b5f0302e81d29
+      internalID: -338848993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a38c161b0a83fd409bc619b29835b1f
+      internalID: 1240235119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9472e0745a9989141b55e248c8478f18
+      internalID: 4155745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c0e94d5a3578c43bc32b35c44b6a20
+      internalID: -2109854319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ac7dd3621fab248bddd9c151ccbc2f
+      internalID: 435547504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff9a6cefbaf63e4099ccc9eaefe58e3
+      internalID: -1481343097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b31d4b50c3d924a90e1208cf89f4e9
+      internalID: -1388701949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0969109ccf09a2a4995b692588d57296
+      internalID: -1139115287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357c11363f7653b42a4d6306ddfd41d0
+      internalID: -1101764861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8ea7da260b5fe4294fc443482693d1
+      internalID: 1513958647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44bd893885bd1e4ca1e5f90cfc837cf
+      internalID: 684692158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3f4b88f1ce6cb4fbf86b8527634470
+      internalID: 1010543989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22dc05e1072f26d4282d30d0424e77e5
+      internalID: -1767556124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69c46f16e25123429edde4493b9fbba
+      internalID: -987867774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab62bb65070fa841b9707347035327d
+      internalID: 113381833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba931b739e6137442bc998f078fb7d9d
+      internalID: -1173868277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90a606628ee81c4297b7dedcc99fba2
+      internalID: -1369022686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b0e33badcd8c845bd8b57af2461c6d
+      internalID: 634793725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8142730f7591fce4ba8a620535eb7f9e
+      internalID: -437151557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a03f6e7bb5e90a47a1674133be580f8
+      internalID: 1435977259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21fc1589c651dd740992a198976d4c06
+      internalID: 1149061823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83e41e76163e704684d2a851f6afaf7
+      internalID: 1495700800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85099068470d9614eb9fd23f400f10f1
+      internalID: 154315710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36205c3f5cb45ad41bb000f050acc76a
+      internalID: 1505400682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f701ff8ef72e241b722228b46f7c12
+      internalID: 302643122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2afdedb875fa4fb48ab938fae44c6199
+      internalID: -1371183389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef083557ee8e49e4fa3dadf7aa66eef8
+      internalID: 1735471153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b6e05b82c346646bbe8f2566171452
+      internalID: -623874036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd3b1145bccceed498e3ba7674241dcd
+      internalID: -1561711456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31516446f9b579c4d90a14cb0727c907
+      internalID: -2083231327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f5d51b71e099eb4d8e83bcea7d6b079
+      internalID: -715005582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f83c6990c041bc4b8a8d8cad9f48875
+      internalID: 1979745512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95026a62fde90f46ba4c5dd0850b76e
+      internalID: -1490431757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_53
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f06afa342e34a4a8d0d6287cfa816f
+      internalID: 1685253661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c90d1caac38fe4785ea9bd44553f7a
+      internalID: 2115213645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_55
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1a6ce318edc5645b8c216458f2bf58
+      internalID: -970711221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_56
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed39f6b67fb28d439b11d1a796d5edf
+      internalID: 999639885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_57
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e83f4960f0bde48408b3939de22580b4
+      internalID: 1249284111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd9d24894c77fc4282d8f76113ec938
+      internalID: 982627631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_59
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e08f3694a7dd9419aaf1413a45d194
+      internalID: 226938073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d42e90a60c9b849bb790c6846f38a2
+      internalID: 674927832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_61
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398fbef246498a74f8b48f91830a02b6
+      internalID: -1936391392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_62
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd0a6e0b890ad54ab1a5dc1dcb8c95e
+      internalID: 472395722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_63
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9579de590b86348ae9a80c7ba6ce0b
+      internalID: -351186185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_64
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74075277dd94b5b4cbc6a066a8df0d46
+      internalID: 493822848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_65
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4b137b1abf762448e2431bee292e7d
+      internalID: 1755466323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9af7191d80d3b49b8fdb7b38e06932
+      internalID: -1806820918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_67
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7634a2c689761419530442fef0152e
+      internalID: -1177052627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_68
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e304530e9fba9fc46a311eb3a28db7a3
+      internalID: -1844794277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_69
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbaa901e190035a42a99edae8f3b7842
+      internalID: 1257409600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_70
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a932a10eb02116439c275f5c3674f90
+      internalID: -273503673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_71
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c8776c1fc9ef5438cd71b292eb16b9
+      internalID: -93265948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc832af88e3a4c046b257dc6ad677d15
+      internalID: 1552786608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_73
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a999da4dfe4de64d854975cfd203d16
+      internalID: 1582059367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_74
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86107b5190e31e54d98d8a6a6a59b722
+      internalID: 515698102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_75
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4194cc725d13a44c8b63f7aa933ed0c
+      internalID: 422252523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_76
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf0a2a0bceefc642ba0352004f5495c
+      internalID: -1053259813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_77
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670fa92002126704198bce4c0a464ea7
+      internalID: 1548679371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92e2995dc5bde748bb8279386cc0aa2
+      internalID: 1300982148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_79
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e81d1f7eeadcb4fba05b4eac96e9e2
+      internalID: 1752618367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_80
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74d40681c84ce641a7d03950c06e1a8
+      internalID: 937410139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_81
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bcd6fc7cbe880846bb42db94d4d9546
+      internalID: 1763146850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_82
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c1b7b381140124c88886eeb680fc60
+      internalID: -103718776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_83
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9d1e90f2749b74d969c019042eac66
+      internalID: 1170537496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 432e8154cd7f86249a54ee6e193cf2ba
+      internalID: 1501426668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_85
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177c8eb22cb4a214e9d6e0dd4dbb3573
+      internalID: -1530569891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_86
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a870f9f2fc7614c8b0f1b9b2263a14
+      internalID: -1422455996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_87
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413ca651ff5ef1c4eaa6abca40443fd1
+      internalID: -205501735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_88
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8142cf4cf3bf34eba28b0baee39664
+      internalID: -889079060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_89
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c6b0eaec4ee264dbcad73cb2a51c8c
+      internalID: 2001177677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d0b189f26da864e8bbc1f2b12dc129
+      internalID: 1820630866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_91
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 0
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5265f8d82bcb518459a0c666723030ba
+      internalID: -1605057507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Chilly_spritesheet_92
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 0
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe764e713f898844be47ae4951592c0
+      internalID: 1089891792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f12db21f89704174eac1e43f9bd42bf3
     internalID: 0
     vertices: []
     indices: 
@@ -108,8 +2154,103 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
-    nameFileIdTable: {}
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":16.0},"gridSpriteSize":{"x":985.0,"y":913.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Hechizo_Chilly_spritesheet_0: -318882872
+      Hechizo_Chilly_spritesheet_1: -1034568647
+      Hechizo_Chilly_spritesheet_10: -528534029
+      Hechizo_Chilly_spritesheet_11: 1278798120
+      Hechizo_Chilly_spritesheet_12: -1439698954
+      Hechizo_Chilly_spritesheet_13: -2139950148
+      Hechizo_Chilly_spritesheet_14: 672119448
+      Hechizo_Chilly_spritesheet_15: -1869341100
+      Hechizo_Chilly_spritesheet_16: -936827408
+      Hechizo_Chilly_spritesheet_17: 1725078043
+      Hechizo_Chilly_spritesheet_18: 1878003879
+      Hechizo_Chilly_spritesheet_19: -1894685069
+      Hechizo_Chilly_spritesheet_2: -1547904644
+      Hechizo_Chilly_spritesheet_20: -338848993
+      Hechizo_Chilly_spritesheet_21: 1240235119
+      Hechizo_Chilly_spritesheet_22: 4155745
+      Hechizo_Chilly_spritesheet_23: -2109854319
+      Hechizo_Chilly_spritesheet_24: 435547504
+      Hechizo_Chilly_spritesheet_25: -1481343097
+      Hechizo_Chilly_spritesheet_26: -1388701949
+      Hechizo_Chilly_spritesheet_27: -1139115287
+      Hechizo_Chilly_spritesheet_28: -1101764861
+      Hechizo_Chilly_spritesheet_29: 1513958647
+      Hechizo_Chilly_spritesheet_3: 1792479926
+      Hechizo_Chilly_spritesheet_30: 684692158
+      Hechizo_Chilly_spritesheet_31: 1010543989
+      Hechizo_Chilly_spritesheet_32: -1767556124
+      Hechizo_Chilly_spritesheet_33: -987867774
+      Hechizo_Chilly_spritesheet_34: 113381833
+      Hechizo_Chilly_spritesheet_35: -1173868277
+      Hechizo_Chilly_spritesheet_36: -1369022686
+      Hechizo_Chilly_spritesheet_37: 634793725
+      Hechizo_Chilly_spritesheet_38: -437151557
+      Hechizo_Chilly_spritesheet_39: 1435977259
+      Hechizo_Chilly_spritesheet_4: -1976900026
+      Hechizo_Chilly_spritesheet_40: 1149061823
+      Hechizo_Chilly_spritesheet_41: 1495700800
+      Hechizo_Chilly_spritesheet_42: 154315710
+      Hechizo_Chilly_spritesheet_43: 1505400682
+      Hechizo_Chilly_spritesheet_44: 302643122
+      Hechizo_Chilly_spritesheet_45: -1371183389
+      Hechizo_Chilly_spritesheet_46: 1735471153
+      Hechizo_Chilly_spritesheet_47: -623874036
+      Hechizo_Chilly_spritesheet_48: -1561711456
+      Hechizo_Chilly_spritesheet_49: -2083231327
+      Hechizo_Chilly_spritesheet_5: -990813463
+      Hechizo_Chilly_spritesheet_50: -715005582
+      Hechizo_Chilly_spritesheet_51: 1979745512
+      Hechizo_Chilly_spritesheet_52: -1490431757
+      Hechizo_Chilly_spritesheet_53: 1685253661
+      Hechizo_Chilly_spritesheet_54: 2115213645
+      Hechizo_Chilly_spritesheet_55: -970711221
+      Hechizo_Chilly_spritesheet_56: 999639885
+      Hechizo_Chilly_spritesheet_57: 1249284111
+      Hechizo_Chilly_spritesheet_58: 982627631
+      Hechizo_Chilly_spritesheet_59: 226938073
+      Hechizo_Chilly_spritesheet_6: 54836523
+      Hechizo_Chilly_spritesheet_60: 674927832
+      Hechizo_Chilly_spritesheet_61: -1936391392
+      Hechizo_Chilly_spritesheet_62: 472395722
+      Hechizo_Chilly_spritesheet_63: -351186185
+      Hechizo_Chilly_spritesheet_64: 493822848
+      Hechizo_Chilly_spritesheet_65: 1755466323
+      Hechizo_Chilly_spritesheet_66: -1806820918
+      Hechizo_Chilly_spritesheet_67: -1177052627
+      Hechizo_Chilly_spritesheet_68: -1844794277
+      Hechizo_Chilly_spritesheet_69: 1257409600
+      Hechizo_Chilly_spritesheet_7: -800651671
+      Hechizo_Chilly_spritesheet_70: -273503673
+      Hechizo_Chilly_spritesheet_71: -93265948
+      Hechizo_Chilly_spritesheet_72: 1552786608
+      Hechizo_Chilly_spritesheet_73: 1582059367
+      Hechizo_Chilly_spritesheet_74: 515698102
+      Hechizo_Chilly_spritesheet_75: 422252523
+      Hechizo_Chilly_spritesheet_76: -1053259813
+      Hechizo_Chilly_spritesheet_77: 1548679371
+      Hechizo_Chilly_spritesheet_78: 1300982148
+      Hechizo_Chilly_spritesheet_79: 1752618367
+      Hechizo_Chilly_spritesheet_8: -2133800654
+      Hechizo_Chilly_spritesheet_80: 937410139
+      Hechizo_Chilly_spritesheet_81: 1763146850
+      Hechizo_Chilly_spritesheet_82: -103718776
+      Hechizo_Chilly_spritesheet_83: 1170537496
+      Hechizo_Chilly_spritesheet_84: 1501426668
+      Hechizo_Chilly_spritesheet_85: -1530569891
+      Hechizo_Chilly_spritesheet_86: -1422455996
+      Hechizo_Chilly_spritesheet_87: -205501735
+      Hechizo_Chilly_spritesheet_88: -889079060
+      Hechizo_Chilly_spritesheet_89: 2001177677
+      Hechizo_Chilly_spritesheet_9: 1372682109
+      Hechizo_Chilly_spritesheet_90: 1820630866
+      Hechizo_Chilly_spritesheet_91: -1605057507
+      Hechizo_Chilly_spritesheet_92: 1089891792
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

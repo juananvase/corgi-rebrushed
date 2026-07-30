@@ -12,6 +12,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField, FoldoutGroup("References")] private NavMeshAgent _navMeshAgent; 
     [SerializeField, FoldoutGroup("References")] private Rigidbody _rigidbody; 
     [SerializeField, FoldoutGroup("References")] private Animator _animator;
+    [SerializeField, FoldoutGroup("References")] private Encounter _encounter;
     
     private Transform _playerTransform;
 
@@ -34,6 +35,7 @@ public class EnemyController : MonoBehaviour
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _rigidbody = GetComponent<Rigidbody>();
+        _encounter = transform.root.GetComponentInChildren<Encounter>();
         
         _attackTrigger = Animator.StringToHash("Attack");
         _speed = Animator.StringToHash("Speed");
@@ -42,6 +44,18 @@ public class EnemyController : MonoBehaviour
     private void Start()
     {
         _playerTransform = GameManager.instance.PlayerTransform;
+        _encounter.EnemyRegister(this);
+    }
+
+    public void Death()
+    {
+        DeregisterFromEncounter();
+        Destroy(gameObject);
+    }
+
+    private void DeregisterFromEncounter()
+    {
+        _encounter.EnemyDeregister(this);
     }
 
     private void Update()
