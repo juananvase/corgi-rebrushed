@@ -13,6 +13,7 @@ public class CharacterVFXController : MonoBehaviour
     
     [SerializeField][FoldoutGroup("Melee VFX")] private Melee _melee;
     [SerializeField][FoldoutGroup("Melee VFX")] private ParticleSystem _meleeSlashVFX;
+    [SerializeField][FoldoutGroup("Melee VFX")] private ParticleSystem _meleeSpinSlashVFX;
     [SerializeField][FoldoutGroup("Melee VFX")] private Transform _meleeSlashTransform;
     [SerializeField][FoldoutGroup("Melee VFX")] private Transform[] _meleeSlashVFXTransforms;
     
@@ -83,10 +84,21 @@ public class CharacterVFXController : MonoBehaviour
         _meleeSlashTransform = _meleeSlashVFXTransforms[value];
     }
 
-    public void PerformMeleeSlashVFX()
+    private void PlayMeleeSlash(ParticleSystem slashVFX)
     {
         SetMeleeSlashTransform();
-        _meleeSlashVFX.Play();
+        slashVFX.transform.SetPositionAndRotation(_meleeSlashTransform.position, _meleeSlashTransform.rotation);
+        slashVFX.Play();
+    }
+
+    public void PerformMeleeSlashVFX()
+    {
+        PlayMeleeSlash(_meleeSlashVFX);
+    }
+
+    public void PerformSpinSlashVFX()
+    {
+        PlayMeleeSlash(_meleeSpinSlashVFX);
     }
 
     private void SetRunParticles()
