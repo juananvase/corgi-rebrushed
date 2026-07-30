@@ -63,7 +63,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ba323cd33eaa7e14a85e3e0dc433cd68, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c33d5ba0b1a3949439600c17e6ff0afc, type: 2}
+      objectReference: {fileID: 2100000, guid: 481ccd15d62fdfe49b99c23c67f58b52, type: 2}
     - target: {fileID: 919132149155446097, guid: ba323cd33eaa7e14a85e3e0dc433cd68, type: 3}
       propertyPath: m_Name
       value: Bola de estambre (2)
