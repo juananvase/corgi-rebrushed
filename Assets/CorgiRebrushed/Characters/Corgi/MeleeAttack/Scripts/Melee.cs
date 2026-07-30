@@ -2,6 +2,7 @@ using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events; // Required fur audio
 
 public class Melee : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class Melee : MonoBehaviour
     private bool _isCooldownOver => Time.time >= _nextReadyTime;
     
     [ShowInInspector] public int Count { get; private set; }
+
+    //Audio
+    private int _lastInvokedCount = -1;  // Audio — prevents duplicate bark on rapid clicks
+    [FoldoutGroup("Audio")] public UnityEvent<int> OnAttackPerformed;
+    // End Audio
 
     private InputAction _attackAction;
     private InputAction _enterPaintModeAction;
@@ -59,6 +65,11 @@ public class Melee : MonoBehaviour
         {
             ResetCount();
         }
+
+        // Audio — fire at impact moment
+        OnAttackPerformed?.Invoke(Count % 3);
+        //End Audio
+
     }
 
     public void OnAttackAnimationEnded()
@@ -74,7 +85,7 @@ public class Melee : MonoBehaviour
     {
         Count++;
         _animator.SetInteger(_attackInt, Count);
-        
+       
         ResetCount();
         _animator.ResetTrigger(_attackTrigger);
     }
@@ -88,6 +99,7 @@ public class Melee : MonoBehaviour
     {
         Count = 0;
         _animator.SetInteger(_attackInt, Count);
+       
     }
     
 }

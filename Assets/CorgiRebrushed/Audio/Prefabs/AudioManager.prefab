@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 4724013868395125071}
   - component: {fileID: 2134784149678256}
   - component: {fileID: 5139425640005806545}
+  - component: {fileID: 4347367654171503907}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -302,3 +303,29 @@ MonoBehaviour:
       Data3: 1091631756
       Data4: 1629860812
     Path: event:/Player/Movement/Land
+--- !u!114 &4347367654171503907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85d7eaee4dc9af4bbf857d61b59bb50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnAttackBinding
+  _barkFmodEvent:
+    Guid:
+      Data1: -1992047239
+      Data2: 1318552002
+      Data3: -123938687
+      Data4: 1550426246
+    Path: event:/Player/Voice/Corgi/BarkAttack
+  _attackFmodEvent:
+    Guid:
+      Data1: 600608081
+      Data2: 1157891736
+      Data3: 1316556422
+      Data4: 58617404
+    Path: event:/Player/Combat/Attack-Corgi
