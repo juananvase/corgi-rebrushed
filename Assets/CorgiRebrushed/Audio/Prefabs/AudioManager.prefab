@@ -25,6 +25,10 @@ GameObject:
   - component: {fileID: 4347367654171503907}
   - component: {fileID: 7297849959085067508}
   - component: {fileID: 1898203188846938975}
+  - component: {fileID: 1293469112898538550}
+  - component: {fileID: 1484931727395699772}
+  - component: {fileID: 7737536626449496628}
+  - component: {fileID: 8117276061265376974}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -376,3 +380,79 @@ MonoBehaviour:
       Data3: -37777267
       Data4: -1604678493
     Path: event:/Abilities/StingersAbilities/ChilliStateExit
+--- !u!114 &1293469112898538550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ec932570d75a3a48ab56572829fa951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnPlayerDeathBinding
+  _fmodEvent:
+    Guid:
+      Data1: -896820065
+      Data2: 1108046836
+      Data3: 441940113
+      Data4: -665912069
+    Path: event:/Player/StingersPlayer/PlayerDeath
+--- !u!114 &1484931727395699772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1f82b6ed0a2744db91e59793ad3527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnEnemyDefeatBinding
+  _fmodEvent:
+    Guid:
+      Data1: -1753543080
+      Data2: 1314886757
+      Data3: -769053508
+      Data4: -745334795
+    Path: event:/Enemy/StingersEnemy/EnemyDefeat
+--- !u!114 &7737536626449496628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8182504c7740aef44b5d0c61e60a9f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnPlayerHitBinding
+  _fmodEvent:
+    Guid:
+      Data1: 801483214
+      Data2: 1297877130
+      Data3: 521791362
+      Data4: 1547887244
+    Path: event:/Player/Combat/HitReceived-Corgi
+--- !u!114 &8117276061265376974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9ad421bf920e94fb53b63b96d2fe47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnEnemyHitBinding
+  _fmodEvent:
+    Guid:
+      Data1: -796222905
+      Data2: 1128197541
+      Data3: -606067793
+      Data4: -769355142
+    Path: event:/Enemy/Cat/Hit-Cat

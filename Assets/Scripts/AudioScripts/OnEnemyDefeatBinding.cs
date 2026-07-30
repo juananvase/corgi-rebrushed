@@ -1,54 +1,67 @@
-// ──────────────────────────────────────────────────────────────
-// DESACTIVADO TEMPORALMENTE — Health.OnDeath aún no expone el evento.
-// Descomentar cuando Health.cs exponga el UnityEvent OnDeath.
-// ──────────────────────────────────────────────────────────────
-// using FMODUnity;
-// using Sirenix.OdinInspector;
-// using UnityEngine;
-//
-// /// <summary>
-// /// Plays a defeat stinger when an enemy dies.
-// /// Listens to Health.OnDeath on enemy GameObjects.
-// /// Finds all Health components in the scene and subscribes to
-// /// enemies only (tag "Enemy").
-// /// </summary>
-// [AddComponentMenu("Corgi Audio/On Enemy Defeat Binding")]
-// public class OnEnemyDefeatBinding : MonoBehaviour
-// {
-//     [FoldoutGroup("FMOD")]
-//     [SerializeField] private EventReference _fmodEvent;   // enemy defeat stinger (e.g., Music/EnemyDefeat)
-//
-//     private Health[] _enemyHealthComponents;
-//
-//     private void Awake()
-//     {
-//         var enemies = GameObject.FindGameObjectsWithTag("Enemy");
-//         _enemyHealthComponents = new Health[enemies.Length];
-//         for (int i = 0; i < enemies.Length; i++)
-//             _enemyHealthComponents[i] = enemies[i].GetComponent<Health>();
-//     }
-//
-//     private void OnEnable()
-//     {
-//         foreach (var health in _enemyHealthComponents)
-//         {
-//             if (health != null)
-//                 health.OnDeath.AddListener(OnEnemyDefeated);
-//         }
-//     }
-//
-//     private void OnDisable()
-//     {
-//         foreach (var health in _enemyHealthComponents)
-//         {
-//             if (health != null)
-//                 health.OnDeath.RemoveListener(OnEnemyDefeated);
-//         }
-//     }
-//
-//     private void OnEnemyDefeated()
-//     {
-//         if (!_fmodEvent.IsNull)
-//             RuntimeManager.PlayOneShot(_fmodEvent);
-//     }
-// }
+using FMODUnity;
+using Sirenix.OdinInspector;
+using UnityEngine;
+
+/// <summary>
+/// Plays a defeat stinger when an enemy dies.
+/// Listens to Health.OnDeath on all EnemyController GameObjects in the scene.
+/// Finds enemies via EnemyController component instead of tags.
+/// </summary>
+[AddComponentMenu("Corgi Audio/On Enemy Defeat Binding")]
+public class OnEnemyDefeatBinding : MonoBehaviour
+{
+    // ────────────────────────────────────────────────────────────
+    // FMOD Event Reference — assigned in the Inspector
+    // ────────────────────────────────────────────────────────────
+    [FoldoutGroup("FMOD")]
+    [SerializeField] private EventReference _fmodEvent;   // enemy defeat stinger (e.g., Music/EnemyDefeat)
+
+    // ────────────────────────────────────────────────────────────
+    // All enemy Health components found at startup
+    // ────────────────────────────────────────────────────────────
+    private Health[] _enemyHealthComponents;
+
+    // ────────────────────────────────────────────────────────────
+    // Lifecycle: find all EnemyControllers and cache their Health
+    // ────────────────────────────────────────────────────────────
+    private void Awake()
+    {
+        var controllers = FindObjectsOfType<EnemyController>();
+        _enemyHealthComponents = new Health[controllers.Length];
+        for (int i = 0; i < controllers.Length; i++)
+            _enemyHealthComponents[i] = controllers[i].GetComponent<Health>();
+    }
+
+    // ────────────────────────────────────────────────────────────
+    // Lifecycle: subscribe to every enemy's death event
+    // ────────────────────────────────────────────────────────────
+    private void OnEnable()
+    {
+        foreach (var health in _enemyHealthComponents)
+        {
+            if (health != null)
+                health.OnDeath.AddListener(OnEnemyDefeated);
+        }
+    }
+
+    // ────────────────────────────────────────────────────────────
+    // Lifecycle: unsubscribe from all enemies to prevent leaks
+    // ────────────────────────────────────────────────────────────
+    private void OnDisable()
+    {
+        foreach (var health in _enemyHealthComponents)
+        {
+            if (health != null)
+                health.OnDeath.RemoveListener(OnEnemyDefeated);
+        }
+    }
+
+    // ────────────────────────────────────────────────────────────
+    // Event handler: an enemy was defeated — play the stinger
+    // ────────────────────────────────────────────────────────────
+    private void OnEnemyDefeated()
+    {
+        if (!_fmodEvent.IsNull)
+            RuntimeManager.PlayOneShot(_fmodEvent);
+    }
+}

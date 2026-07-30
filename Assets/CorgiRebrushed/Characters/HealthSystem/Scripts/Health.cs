@@ -10,7 +10,11 @@ public class Health : MonoBehaviour, IDamageable, IHealable
     [BoxGroup("Debug"), ShowInInspector] public float Percentage => _currentHealth / _maxHealth;
     [BoxGroup("Debug"), ShowInInspector] public bool IsAlive => _currentHealth >= 1f;
 
-    [SerializeField, BoxGroup("Events")]private UnityEvent<DamageInfo> OnDamaged;
+    [SerializeField, BoxGroup("Events")] public UnityEvent<DamageInfo> OnDamaged; //Cambiado a public para que audio pueda suscribirse a este evento
+
+    //Audio
+    [SerializeField, BoxGroup("Events")]public UnityEvent OnDeath;
+    //End audio
 
     public virtual void Damaged(DamageInfo damageInfo)
     {
@@ -20,6 +24,11 @@ public class Health : MonoBehaviour, IDamageable, IHealable
         _currentHealth = Mathf.Clamp(_currentHealth, 0f, _maxHealth);
         
         OnDamaged.Invoke(damageInfo);
+        //Audio - death detection
+        if (!IsAlive)
+            OnDeath.Invoke();
+        //End audio
+
     }
     [ContextMenu("Damage Test 10%"), Button("Damage Test 10%")]
     public void DamageTest()
