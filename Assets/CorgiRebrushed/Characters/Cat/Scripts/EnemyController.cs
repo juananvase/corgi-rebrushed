@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField, FoldoutGroup("References")] private EnemyDataSO _enemyData;
     [SerializeField, FoldoutGroup("References")] private NavMeshAgent _navMeshAgent; 
     [SerializeField, FoldoutGroup("References")] private Rigidbody _rigidbody; 
+    [SerializeField, FoldoutGroup("References")] private Animator _animator;
     
     private Transform _playerTransform;
 
@@ -23,6 +24,9 @@ public class EnemyController : MonoBehaviour
     private bool _isPlayerVisible;
     private bool _isPlayerInRange;
     
+    private int _speed;
+    private int _attackTrigger;
+    
     // Cache an array for non-allocating physics checks (Max 5 targets per hit)
     private readonly Collider[] hitBuffer = new Collider[5];
 
@@ -30,15 +34,20 @@ public class EnemyController : MonoBehaviour
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _rigidbody = GetComponent<Rigidbody>();
+        
+        _attackTrigger = Animator.StringToHash("Attack");
+        _speed = Animator.StringToHash("Speed");
     }
 
     private void Start()
     {
-        _playerTransform = EnemyEncounterManager.instance.PlayerTransform;
+        _playerTransform = GameManager.instance.PlayerTransform;
     }
 
     private void Update()
     {
+        _animator.SetFloat(_speed, _navMeshAgent.velocity.magnitude);
+        
         DetectPlayer();
         UpdateBehaviourState();
     }
@@ -50,7 +59,7 @@ public class EnemyController : MonoBehaviour
 
     private void ApplyStopingForce()
     {
-        if (_navMeshAgent.velocity.magnitude < 0.1f)
+        if (_navMeshAgent.desiredVelocity.magnitude < 1f)
         {
             Vector3 horizontalVelocity = new Vector3(_rigidbody.linearVelocity.x, 0f, _rigidbody.linearVelocity.z);
             _rigidbody.AddForce(horizontalVelocity * -15f, ForceMode.Force);
@@ -113,6 +122,11 @@ public class EnemyController : MonoBehaviour
 
     private void Attack()
     {
+        _animator.SetTrigger(_attackTrigger);
+    }
+
+    public void ApplyDamageOnCue()
+    {
         ApplyDamage(_enemyData.AttackHalfExtents, _enemyData.AttackOffset, _enemyData.MeleeAttackDamage, EDamageType.Scratch);
     }
     
@@ -125,6 +139,7 @@ public class EnemyController : MonoBehaviour
         
         yield return Tween.Delay(_enemyData.AttackCooldown).ToYieldInstruction();
         
+        _animator.ResetTrigger(_attackTrigger);
         _isOnAttackCoolDown  = false;
         _navMeshAgent.speed = currentSpeed;
     }

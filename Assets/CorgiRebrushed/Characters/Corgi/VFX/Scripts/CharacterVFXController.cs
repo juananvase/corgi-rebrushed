@@ -18,14 +18,16 @@ public class CharacterVFXController : MonoBehaviour
     
     [SerializeField] [FoldoutGroup("Chilli VXF")] private AbilitiesDataSO _abilitiesData;
     [SerializeField][FoldoutGroup("Chilli VXF")] private ParticleSystem _fireParticles;
+    [SerializeField][FoldoutGroup("Chilli VXF")] private ParticleSystem _smokeParticles;
     [SerializeField] [FoldoutGroup("Chilli VXF")] private TransformEventAsset _onStartChilliState;
     
-    [SerializeField][FoldoutGroup("Water VXF")] private VisualEffect _WaterParticles;
-    
+    [SerializeField][FoldoutGroup("Water VXF")] private GameObject _waterParticlesObjectPrefab;
     
     private ParticleSystem.EmissionModule _runParticlesEmission; 
     private ParticleSystem.EmissionModule _fireParticlesEmission; 
+    private ParticleSystem.EmissionModule _smokeParticlesEmission; 
     private Coroutine _chilliStateCoroutine;
+    private Coroutine _waterSplashCoroutine;
     
     
     private void OnEnable()
@@ -42,8 +44,10 @@ public class CharacterVFXController : MonoBehaviour
     {
         _runParticlesEmission = _runParticles.emission;
         _fireParticlesEmission = _fireParticles.emission;
+        _smokeParticlesEmission = _smokeParticles.emission;
+        
         _fireParticles.Stop();
-        _WaterParticles.Stop();
+        _smokeParticles.Stop();
         
     }
 
@@ -54,7 +58,23 @@ public class CharacterVFXController : MonoBehaviour
 
     public void PlayWaterParticles()
     {
-        _WaterParticles.Play();
+        if (_waterSplashCoroutine != null)
+        {
+            StopCoroutine(_waterSplashCoroutine);
+            _waterSplashCoroutine = StartCoroutine(WaterSplashRoutine());
+        }
+        else _waterSplashCoroutine = StartCoroutine(WaterSplashRoutine());
+    }
+
+    private IEnumerator WaterSplashRoutine()
+    {
+        GameObject waterSplash = Instantiate(_waterParticlesObjectPrefab, transform.position + new Vector3(0,-1,0), Quaternion.identity);
+        if(waterSplash.TryGetComponent(out ParticleSystem waterSplashParticles)) waterSplashParticles.Play();
+        
+        yield return Tween.Delay(waterSplashParticles.main.duration).ToYieldInstruction();
+        
+        Destroy(waterSplash);
+        
     }
 
     private void SetMeleeSlashTransform()
@@ -80,13 +100,10 @@ public class CharacterVFXController : MonoBehaviour
     public void StartChilliState(Transform context)
     {
         if(context != transform) return;
-        
-        _fireParticles.Play();
 
         if (_chilliStateCoroutine != null)
         {
             StopCoroutine(_chilliStateCoroutine);
-            _chilliStateCoroutine = null;
             _chilliStateCoroutine = StartCoroutine(ChilliStateRoutine());
         }
         else _chilliStateCoroutine = StartCoroutine(ChilliStateRoutine());
@@ -94,12 +111,19 @@ public class CharacterVFXController : MonoBehaviour
 
     private IEnumerator ChilliStateRoutine()
     {
+        _fireParticles.Play();
         _fireParticlesEmission.enabled = true;
         yield return Tween.Delay(_abilitiesData.ChilliSateDuration).ToYieldInstruction();
+        
         _fireParticlesEmission.enabled = false;
-        yield return Tween.Delay(0.5f).ToYieldInstruction();
         _fireParticles.Stop();
         
+        _smokeParticles.Play();
+        _smokeParticlesEmission.enabled = true;
+        yield return Tween.Delay(0.5f).ToYieldInstruction();
+        
+        _smokeParticles.Stop();
+        _smokeParticlesEmission.enabled = false;
         
     }
 }

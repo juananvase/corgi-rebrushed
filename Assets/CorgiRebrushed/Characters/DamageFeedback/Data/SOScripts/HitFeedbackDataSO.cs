@@ -1,3 +1,4 @@
+using PrimeTween;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -5,6 +6,8 @@ using UnityEngine;
 [InlineEditor]
 public class HitFeedbackDataSO : ScriptableObject
 {
+    [field: SerializeField, FoldoutGroup("Camera Shake")] public float CameraShakeForce { get; private set; }
+    [field: SerializeField, FoldoutGroup("Camera Shake")] public float CameraShakeDuration { get; private set; }
     [field: SerializeField, FoldoutGroup("Hit Flash")] public Color FlashColor { get; private set; }
     [field: SerializeField, FoldoutGroup("Hit Flash")] public float FlashDuration { get; private set; }
     

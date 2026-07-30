@@ -11,6 +11,11 @@ public class WaterJump : Abilitiy
 {
     [SerializeField] [FoldoutGroup("References")] private Rigidbody _rigidbody;
     [SerializeField, BoxGroup("Events")] private UnityEvent OnWaterImpulse;
+    
+    private float _nextReadyTime;
+    private bool _isCooldownOver => Time.time >= _nextReadyTime;
+    
+    
     //Audio
      [FoldoutGroup("Audio")] public UnityEvent OnWaterJetActivated;
     // End Audio
@@ -32,12 +37,16 @@ public class WaterJump : Abilitiy
     
     private void PerformWaterImpulse(ECorgiAbility context)
     {
+        Debug.Log(_isCooldownOver);
+        if (!_isCooldownOver) return;
         if (context != ECorgiAbility.Water) return;
         
         ApplyDamage(_abilitiesData.WaterJumpAttackBoxHalfExtents, _abilitiesData.WaterJumpAttackOffset, _abilitiesData.WaterImpulseDamage, gameObject, EDamageType.WaterJump);
         ApplyImpulseForce();
         OnWaterImpulse.Invoke();
         PlayWaterJetVfx();
+        _nextReadyTime = ResetCooldown(_abilitiesData.WaterJumpCoolDownDuration);
+        
         //Audio
         OnWaterJetActivated?.Invoke();
         // End Audio

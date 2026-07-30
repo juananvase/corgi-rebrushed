@@ -9,8 +9,6 @@ public class EnemyEncounterManager : MonoBehaviour
         if (instance != null && instance != this) Destroy(this);
         else instance = this;
     }
-
-    [field: SerializeField, FoldoutGroup("References")] public Transform PlayerTransform { get; private set; }
     
     private void Awake()
     {
