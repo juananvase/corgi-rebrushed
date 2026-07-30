@@ -26,7 +26,7 @@ MonoBehaviour:
   <CharacterLength>k__BackingField: 1.3
   <CharacterWidth>k__BackingField: 0.4
   <CastCushion>k__BackingField: 0.55
-  <Damage>k__BackingField: 10
+  <Damage>k__BackingField: 40
   <HitLayers>k__BackingField:
   - Enemy
   - Tree

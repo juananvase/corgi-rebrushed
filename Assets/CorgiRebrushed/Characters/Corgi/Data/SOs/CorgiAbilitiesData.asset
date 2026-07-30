@@ -59,7 +59,7 @@ MonoBehaviour:
       useUnscaledTime: 0
       _useFixedUpdate: 0
       _updateType: 0
-  <WaterImpulseDamage>k__BackingField: 10
+  <WaterImpulseDamage>k__BackingField: 25
   <WaterCascadeVfxPrefab>k__BackingField: {fileID: 2443346602915605235, guid: c3f9e3786f7c49b43abe89eee32162d3, type: 3}
   <VfxOffset>k__BackingField: {x: 0, y: -1, z: 0}
   <TreeFallCoolDownDuration>k__BackingField: 5
@@ -124,7 +124,7 @@ MonoBehaviour:
   <TreeDestroyTime>k__BackingField: 5
   <TreeFallHitLayers>k__BackingField:
   - Enemy
-  <TreeFallDamage>k__BackingField: 10
+  <TreeFallDamage>k__BackingField: 999
   <ChilliExplosionCoolDownDuration>k__BackingField: 3
   <ChilliPrefab>k__BackingField: {fileID: 3869377576810499731, guid: ca7f07f8c1d317848b09cdbef0be1565, type: 3}
   <ChilliInScaleTweenSettings>k__BackingField:
@@ -169,8 +169,8 @@ MonoBehaviour:
     _updateType: 0
   <ChilliExplosionAttackBoxHalfExtents>k__BackingField: {x: 2, y: 0.5, z: 2}
   <ChilliExplosionAttackOffset>k__BackingField: {x: 0, y: 0, z: 0}
-  <ChilliExplosionDamage>k__BackingField: 10
-  <ChilliSateDuration>k__BackingField: 3
+  <ChilliExplosionDamage>k__BackingField: 50
+  <ChilliSateDuration>k__BackingField: 4
   <ChilliAcceleration>k__BackingField: 75
   <ChilliMaxSpeed>k__BackingField: 20
   <ChilliCorgiMaterial>k__BackingField: {fileID: 2100000, guid: 8943f5e1fea0f014396716f79c4213bd, type: 2}
