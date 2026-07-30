@@ -1657,6 +1657,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1523232665300491628, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
+      propertyPath: m_ControllerManager.Controllers.Array.data[0].Input.Gain
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523232665300491628, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
+      propertyPath: m_ControllerManager.Controllers.Array.data[1].Input.Gain
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 4415029665305666297, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
       value: 2
