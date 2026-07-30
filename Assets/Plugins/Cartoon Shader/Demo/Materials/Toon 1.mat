@@ -28,6 +28,7 @@ Material:
     m_Floats:
     - _Highlight_Intensity: 0.5
     - _Highlight_Size: 0.43
+    - _QueueControl: 0
     m_Colors:
     - _Base_Color: {r: 0.9960785, g: 0.9960785, b: 0.9960785, a: 0}
     - _Outline_Color: {r: 0.7137255, g: 0.73333335, b: 0.9333334, a: 1}
