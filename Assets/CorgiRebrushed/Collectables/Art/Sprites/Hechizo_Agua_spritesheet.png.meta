@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,16 +34,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
-  nPOTScale: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,12 +95,2058 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d9a702bbbb9f2e4ea72301621328b85
+      internalID: -1137204693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64dd15e6ec4c2043b6e7b33538c318f
+      internalID: 1462314175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f66cb6fee479b84a890491d170e0bc7
+      internalID: 1176047405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57509e1ec5b9ff41989971ae39f8b0a
+      internalID: -380142053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e6299139d8fcf42b55d809dbbd14c2
+      internalID: -1529579309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 13695
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d635d650be558429630f546cbf5c37
+      internalID: -121334148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8d2da4d6507444e816fd6e61f317db
+      internalID: -1205515296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514c73150c013be47b013adcdef489a9
+      internalID: -281370161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12931bfc5218c3d46a48ddb4f46fdba2
+      internalID: -1991317959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2181bcac455904e47ad2f745445238ce
+      internalID: 1445127113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb950014ad1a051489ce72e0a6870748
+      internalID: 2082105987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 12782
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988162e1949a3a741a945ac929d639dc
+      internalID: 1692203739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba971f605bde3d44c91ef0b5126d16b4
+      internalID: 1953745623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69460cbf2707ad48bab043fccd5e3f7
+      internalID: -1184520817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2642970d098139d4180ca14ffd6cea9c
+      internalID: -490202664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1fa20339ba1a6942bfbc61b63d236c6
+      internalID: 759083057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fe539692bd4e434b8b581a4c37d3af9
+      internalID: -465582016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 11869
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c0c463fee27c540ab22876b3ac8afd
+      internalID: 1262823314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53857453c185bc94f8d11932428852dc
+      internalID: 657915562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b92c507ecc5c134f84e0d36ef36dcef
+      internalID: 1925501249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce19dc24b0d97f4d954ab81d838660d
+      internalID: -1112088274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07e5236f50814d4e8a1f2dbb4e35f28
+      internalID: -323264719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b16c520d3f8d154abb24b749151d42c
+      internalID: 1027615150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 10956
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e596475c3b21948a293a72dd77910f
+      internalID: 1135108652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754fef5b9d39e854f9f02b922ad3c02b
+      internalID: -66894797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253d07f822d2ed643a3b5bf0664587d2
+      internalID: -759667031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735c853061cf95a4e9b142821f0ee841
+      internalID: -1370032374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d15849c24fdd04b8ba43e8ab832772
+      internalID: 2069479693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0378dc708f30cf419646c1d8b9eefb6
+      internalID: 1889829132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 10043
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbfdee76d5e942942a0a23e2e287d41b
+      internalID: 272899101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63df725929fadcb49b186135a0e65cbf
+      internalID: -1276879285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0afe53ffa02cf54088893bf17baae3d
+      internalID: 1596663889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23013f33b30868540b57258a59bb74da
+      internalID: 1005361276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818d67599fbc5b345bba9ed4cb7fa055
+      internalID: -594391772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b85b3a477f5b3c4ab321cc4f052ecb7
+      internalID: -821992163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 9130
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43077509431c25549aa04b488754fa1b
+      internalID: 370160989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db811bc795e9e849947666821e7a1e6
+      internalID: 931933792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427635defab75dd4ea24fc1fa5c5f573
+      internalID: -845608185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d30c6bcfabb5649a049547cf4abcda
+      internalID: -397882358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c132f8d0a5009a4e85802cf052d396e
+      internalID: 1235903895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c40058f89b12d74d8bcf53b4205aaa1
+      internalID: 552714502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 8217
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9919eba35ce0827478cea2e1ede30890
+      internalID: 1323980293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ff1596639c26d4db211a4aafee19cb
+      internalID: 2018963702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4965d8d9c2d744b488202a66d97f554c
+      internalID: -1898053731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd85f5f7685c458458abb5fff8d01dcf
+      internalID: 653361396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd943177bc51bb5439736b12dae78722
+      internalID: -787282907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f61e27018947d84ea627dbc4285940c
+      internalID: 1863783399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 7304
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79444191d9db6f74da0390290a42300f
+      internalID: -152542121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21497a9ff799694081ba3a3e9b15a07
+      internalID: -1611015496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25faa9a9d56e85143a7f3d02ba2077c2
+      internalID: -780853341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b1c59e0d916be4fa4d4ce6686e7460
+      internalID: 1174617810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47aac92744928c41b443ed646cbe07c
+      internalID: 1007518548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884db065351fc314882c8962df1d400e
+      internalID: 175107958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_53
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 6391
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15765f9da7abbaf47a4d81a2f41dd289
+      internalID: -1425578845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762b8d7b3f3cc7a43b26e11e2a6b8d9a
+      internalID: -1139837315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_55
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b08c6ec47fc9a42bc796d5b25288a1
+      internalID: -1344899223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_56
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84a6b467a577764ebc90220cc5f8076
+      internalID: -1310488757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_57
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbdf7aa1a03db4e4090807abee95a8a5
+      internalID: -590131755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9a56aba2a98fd47bd724f4e9107411
+      internalID: 1234490677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_59
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 5478
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f187364a88b484fac4b8b373398f98
+      internalID: 1596809919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658ea9a1c887ad94a83282e381c5877f
+      internalID: -1013227848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_61
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf8cc7f79244234194122f551ae1e28
+      internalID: -349196571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_62
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec7f880355042a459b95b684ada6d5b
+      internalID: -529933320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_63
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435199cef949f0142929d66dd76f25af
+      internalID: 110609396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_64
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d4101e37b5bb145b3523c09fefa0ad
+      internalID: 700712090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_65
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 4565
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4648b132d7c104cb3f9e891f156a4b
+      internalID: 575805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd5cd647b46e5642ae5c5cd7a107e87
+      internalID: -2053877624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_67
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578340421a8c16e4a8ec9b9eacc70bb6
+      internalID: -1504334440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_68
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5230b4862fadc46bf4b1b6a2977b67
+      internalID: 1626828285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_69
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba88ece31f12334597cb8749eb5a45f
+      internalID: -473172999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_70
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51bf972bc68a92549a029eab41ceb079
+      internalID: 92727076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_71
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 3652
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d627b5dc8c0974a4a83d5ca2df6121b9
+      internalID: -1333708954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4faa179af06c0469701a3156f91313
+      internalID: -1742307935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_73
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231578c8892485e419b619a967298d87
+      internalID: 1562342601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_74
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31ec75ff46e2b1418ffe17a3a75e9bd
+      internalID: 811306983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_75
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101c32c98f162d547845b969780e609e
+      internalID: -2122237447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_76
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b335fc113726d4ab8483e37042c790
+      internalID: -887372210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_77
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 2739
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5102efefad3d66c43a1ecff107ae13e6
+      internalID: 995034508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00940554f8be4cd4f8fb2fab6d6f8167
+      internalID: 1164089098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_79
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e43b5ef93db196d46a8392b2644050c6
+      internalID: 677507549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_80
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a0051bc25f51d439ea88775cc435b0
+      internalID: 272443530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_81
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceaa0aec8178fd44bb5e6ed23ef8ce7b
+      internalID: -1346139392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_82
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ed6e0f16ebf6142b5c928b5d0e70c2
+      internalID: 91612993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_83
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 1826
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f01f30ac2dc3a024b9ea538f9d80d3bf
+      internalID: -1247956393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270eb218765b86f4b84b459a32839a4f
+      internalID: 1214974457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_85
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66a70cabd55dfd4e80b7d4b30327eb7
+      internalID: -1347488735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_86
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c495bed819ab30143bbf44bf2f260932
+      internalID: 543542496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_87
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8392ac2970b5bd244a005d1349fe51d5
+      internalID: 180027935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_88
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c0a1942c240bf4385538941c37f443
+      internalID: 1962944697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_89
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 913
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85f58886d37abb418299ea9f1d307f6
+      internalID: -39031778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6c8a0547cac204a9f7179f0c8c79a7
+      internalID: -981357659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_91
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 0
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 700908ae405f1144ca56d60fd2256b6d
+      internalID: -1460266018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hechizo_Agua_spritesheet_92
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 0
+        width: 985
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae5f964409297d439c49e9f162460f6
+      internalID: 669299164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0114f80e9f883e843bfeaa4094e28e71
     internalID: 0
     vertices: []
     indices: 
@@ -108,8 +2154,105 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
-    nameFileIdTable: {}
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":16.0},"gridSpriteSize":{"x":985.0,"y":913.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: False
+    nameFileIdTable:
+      Hechizo_Agua_spritesheet_0: -1137204693
+      Hechizo_Agua_spritesheet_1: 1462314175
+      Hechizo_Agua_spritesheet_10: 2082105987
+      Hechizo_Agua_spritesheet_11: 1692203739
+      Hechizo_Agua_spritesheet_12: 1953745623
+      Hechizo_Agua_spritesheet_13: -1184520817
+      Hechizo_Agua_spritesheet_14: -490202664
+      Hechizo_Agua_spritesheet_15: 759083057
+      Hechizo_Agua_spritesheet_16: -465582016
+      Hechizo_Agua_spritesheet_17: 1262823314
+      Hechizo_Agua_spritesheet_18: 657915562
+      Hechizo_Agua_spritesheet_19: 1925501249
+      Hechizo_Agua_spritesheet_2: 1176047405
+      Hechizo_Agua_spritesheet_20: -1112088274
+      Hechizo_Agua_spritesheet_21: -323264719
+      Hechizo_Agua_spritesheet_22: 1027615150
+      Hechizo_Agua_spritesheet_23: 1135108652
+      Hechizo_Agua_spritesheet_24: -66894797
+      Hechizo_Agua_spritesheet_25: -759667031
+      Hechizo_Agua_spritesheet_26: -1370032374
+      Hechizo_Agua_spritesheet_27: 2069479693
+      Hechizo_Agua_spritesheet_28: 1889829132
+      Hechizo_Agua_spritesheet_29: 272899101
+      Hechizo_Agua_spritesheet_3: -380142053
+      Hechizo_Agua_spritesheet_30: -1276879285
+      Hechizo_Agua_spritesheet_31: 1596663889
+      Hechizo_Agua_spritesheet_32: 1005361276
+      Hechizo_Agua_spritesheet_33: -594391772
+      Hechizo_Agua_spritesheet_34: -821992163
+      Hechizo_Agua_spritesheet_35: 370160989
+      Hechizo_Agua_spritesheet_36: 931933792
+      Hechizo_Agua_spritesheet_37: -845608185
+      Hechizo_Agua_spritesheet_38: -397882358
+      Hechizo_Agua_spritesheet_39: 1235903895
+      Hechizo_Agua_spritesheet_4: -1529579309
+      Hechizo_Agua_spritesheet_40: 552714502
+      Hechizo_Agua_spritesheet_41: 1323980293
+      Hechizo_Agua_spritesheet_42: 2018963702
+      Hechizo_Agua_spritesheet_43: -1898053731
+      Hechizo_Agua_spritesheet_44: 653361396
+      Hechizo_Agua_spritesheet_45: -787282907
+      Hechizo_Agua_spritesheet_46: 1863783399
+      Hechizo_Agua_spritesheet_47: -152542121
+      Hechizo_Agua_spritesheet_48: -1611015496
+      Hechizo_Agua_spritesheet_49: -780853341
+      Hechizo_Agua_spritesheet_5: -121334148
+      Hechizo_Agua_spritesheet_50: 1174617810
+      Hechizo_Agua_spritesheet_51: 1007518548
+      Hechizo_Agua_spritesheet_52: 175107958
+      Hechizo_Agua_spritesheet_53: -1425578845
+      Hechizo_Agua_spritesheet_54: -1139837315
+      Hechizo_Agua_spritesheet_55: -1344899223
+      Hechizo_Agua_spritesheet_56: -1310488757
+      Hechizo_Agua_spritesheet_57: -590131755
+      Hechizo_Agua_spritesheet_58: 1234490677
+      Hechizo_Agua_spritesheet_59: 1596809919
+      Hechizo_Agua_spritesheet_6: -1205515296
+      Hechizo_Agua_spritesheet_60: -1013227848
+      Hechizo_Agua_spritesheet_61: -349196571
+      Hechizo_Agua_spritesheet_62: -529933320
+      Hechizo_Agua_spritesheet_63: 110609396
+      Hechizo_Agua_spritesheet_64: 700712090
+      Hechizo_Agua_spritesheet_65: 575805
+      Hechizo_Agua_spritesheet_66: -2053877624
+      Hechizo_Agua_spritesheet_67: -1504334440
+      Hechizo_Agua_spritesheet_68: 1626828285
+      Hechizo_Agua_spritesheet_69: -473172999
+      Hechizo_Agua_spritesheet_7: -281370161
+      Hechizo_Agua_spritesheet_70: 92727076
+      Hechizo_Agua_spritesheet_71: -1333708954
+      Hechizo_Agua_spritesheet_72: -1742307935
+      Hechizo_Agua_spritesheet_73: 1562342601
+      Hechizo_Agua_spritesheet_74: 811306983
+      Hechizo_Agua_spritesheet_75: -2122237447
+      Hechizo_Agua_spritesheet_76: -887372210
+      Hechizo_Agua_spritesheet_77: 995034508
+      Hechizo_Agua_spritesheet_78: 1164089098
+      Hechizo_Agua_spritesheet_79: 677507549
+      Hechizo_Agua_spritesheet_8: -1991317959
+      Hechizo_Agua_spritesheet_80: 272443530
+      Hechizo_Agua_spritesheet_81: -1346139392
+      Hechizo_Agua_spritesheet_82: 91612993
+      Hechizo_Agua_spritesheet_83: -1247956393
+      Hechizo_Agua_spritesheet_84: 1214974457
+      Hechizo_Agua_spritesheet_85: -1347488735
+      Hechizo_Agua_spritesheet_86: 543542496
+      Hechizo_Agua_spritesheet_87: 180027935
+      Hechizo_Agua_spritesheet_88: 1962944697
+      Hechizo_Agua_spritesheet_89: -39031778
+      Hechizo_Agua_spritesheet_9: 1445127113
+      Hechizo_Agua_spritesheet_90: -981357659
+      Hechizo_Agua_spritesheet_91: -1460266018
+      Hechizo_Agua_spritesheet_92: 669299164
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
