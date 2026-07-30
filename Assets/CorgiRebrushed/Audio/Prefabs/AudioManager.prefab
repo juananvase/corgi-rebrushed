@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 1484931727395699772}
   - component: {fileID: 7737536626449496628}
   - component: {fileID: 8117276061265376974}
+  - component: {fileID: 3728936804545974366}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -456,3 +457,22 @@ MonoBehaviour:
       Data3: -606067793
       Data4: -769355142
     Path: event:/Enemy/Cat/Hit-Cat
+--- !u!114 &3728936804545974366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7db3162aea358749a06a2c136d17d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnAbilityUnlockBinding
+  _fmodEvent:
+    Guid:
+      Data1: -1821070471
+      Data2: 1188768030
+      Data3: 31213996
+      Data4: -1459152508
+    Path: event:/Abilities/StingersAbilities/AbilityUnlocked
