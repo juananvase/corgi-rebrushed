@@ -86,10 +86,12 @@ public enum EDamageType
     WaterJump,
     Tree,
     Chilli,
-    Scratch
+    Scratch,
+    Wool
 }
 
 public enum EHealType
 {
-    Normal
+    Normal,
+    Treat
 }
