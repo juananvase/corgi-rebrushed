@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 331266351}
   - component: {fileID: 331266350}
   - component: {fileID: 331266349}
+  - component: {fileID: 331266353}
   m_Layer: 13
   m_Name: enemy
   m_TagString: Untagged
@@ -358,6 +359,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &331266353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331266348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b16d15e3f97264b96e94b5fbfc9fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
 --- !u!114 &411593531 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6720400504547907784, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
@@ -562,8 +575,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961739749}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13870122, y: -0.0000000051102216, z: 7.157118e-10, w: 0.99033433}
-  m_LocalPosition: {x: 0, y: 4.315, z: -7}
+  m_LocalRotation: {x: -0.018764272, y: -0.71850216, z: -0.01939878, w: 0.69500095}
+  m_LocalPosition: {x: 6.019302, y: 1.9895551, z: 0.20021066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

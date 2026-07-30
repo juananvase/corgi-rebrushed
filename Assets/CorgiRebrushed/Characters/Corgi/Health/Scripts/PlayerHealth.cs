@@ -16,5 +16,6 @@ public class PlayerHealth : Health
     protected override void PerfomDeath()
     {
         base.PerfomDeath();
+        GameManager.instance.Respawn();
     }
 }
