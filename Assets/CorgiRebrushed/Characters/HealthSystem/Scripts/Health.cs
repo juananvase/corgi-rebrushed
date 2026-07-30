@@ -11,6 +11,7 @@ public class Health : MonoBehaviour, IDamageable, IHealable
     [BoxGroup("Debug"), ShowInInspector] public bool IsAlive => _currentHealth >= 1f;
 
     [SerializeField, BoxGroup("Events")]private UnityEvent<DamageInfo> OnDamaged;
+    [SerializeField, BoxGroup("Events")]private UnityEvent OnDeath;
 
     public virtual void Damaged(DamageInfo damageInfo)
     {
@@ -20,12 +21,22 @@ public class Health : MonoBehaviour, IDamageable, IHealable
         _currentHealth = Mathf.Clamp(_currentHealth, 0f, _maxHealth);
         
         OnDamaged.Invoke(damageInfo);
+
+        if (_currentHealth <= 0f)
+        {
+            PerfomDeath();
+        }
     }
     [ContextMenu("Damage Test 10%"), Button("Damage Test 10%")]
     public void DamageTest()
     {
         DamageInfo damageInfo = new DamageInfo(_maxHealth * 0.1f, gameObject, gameObject, gameObject, EDamageType.Normal);
         Damaged(damageInfo);
+    }
+
+    protected virtual void PerfomDeath()
+    {
+        OnDeath.Invoke();
     }
     
     public void Heal(HealInfo healInfo)
