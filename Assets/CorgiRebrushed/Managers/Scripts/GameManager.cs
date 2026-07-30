@@ -19,12 +19,17 @@ public class GameManager : MonoBehaviour
     [field: SerializeField, FoldoutGroup("References")] public CinemachineImpulseSource PlayerCameraCinemachineImpulseSource { get; private set; }
 
     [field: SerializeField, FoldoutGroup("GameEvents")] private IntEventAsset _onTreatCollected;
+    
+    public int CurrentLevelIndex = 0;
 
     [ShowInInspector, FoldoutGroup("Test")] public int TreatCount { get; private set; } = 0;
     
     private void Awake()
     {
         InitiateSinglenton();
+
+        if (SceneManager.GetActiveScene().buildIndex > 4) return;
+        CurrentLevelIndex = SceneManager.GetActiveScene().buildIndex;
     }
     
     private void OnEnable()
@@ -40,6 +45,11 @@ public class GameManager : MonoBehaviour
     private void UpdateTreatCount(int context)
     {
         TreatCount++;
+    }
+
+    public void Respawn()
+    {
+        LoadSceneByIndex(CurrentLevelIndex);
     }
 
     public void LoadSceneByIndex(int sceneIndex)

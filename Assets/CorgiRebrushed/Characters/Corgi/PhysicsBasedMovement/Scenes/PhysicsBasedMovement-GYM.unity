@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 331266351}
   - component: {fileID: 331266350}
   - component: {fileID: 331266349}
+  - component: {fileID: 331266353}
   m_Layer: 13
   m_Name: enemy
   m_TagString: Untagged
@@ -358,6 +359,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &331266353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331266348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b16d15e3f97264b96e94b5fbfc9fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
 --- !u!114 &411593531 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6720400504547907784, guid: bee976fcbf49282419d0c5f75c575fef, type: 3}
@@ -374,6 +387,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 417840332688821661, guid: 9935d9ebcb0238e40a98db11a1166fb7, type: 3}
   m_PrefabInstance: {fileID: 7882111501913886371}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &612239956 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6354809772028871239, guid: 10ff07446ef6df24ba167f1c23d97af5, type: 3}
+  m_PrefabInstance: {fileID: 770484357753793006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &612239958
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612239956}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &848463078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -562,8 +602,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961739749}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13870122, y: -0.0000000051102216, z: 7.157118e-10, w: 0.99033433}
-  m_LocalPosition: {x: 0, y: 4.315, z: -7}
+  m_LocalRotation: {x: -0.018764272, y: -0.71850216, z: -0.01939878, w: 0.69500095}
+  m_LocalPosition: {x: 6.019302, y: 1.9895551, z: 0.20021066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1260,7 +1300,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6354809772028871239, guid: 10ff07446ef6df24ba167f1c23d97af5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 612239958}
   m_SourcePrefab: {fileID: 100100000, guid: 10ff07446ef6df24ba167f1c23d97af5, type: 3}
 --- !u!1001 &2931612929368812766
 PrefabInstance:
