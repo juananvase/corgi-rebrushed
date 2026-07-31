@@ -987,7 +987,6 @@ GameObject:
   - component: {fileID: 6376064758358441661}
   - component: {fileID: 2925868597051054196}
   - component: {fileID: 2419340908151065216}
-  - component: {fileID: 8080527194411569046}
   - component: {fileID: 7398605094141443656}
   - component: {fileID: 484032968899301501}
   - component: {fileID: 2355443551183846535}
@@ -1119,7 +1118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterVFXController
   _movement: {fileID: 2925868597051054196}
   _runParticles: {fileID: 3503637591413490279}
-  _melee: {fileID: 8080527194411569046}
+  _melee: {fileID: 0}
   _meleeSlashVFX: {fileID: 5284466563846898898}
   _meleeSpinSlashVFX: {fileID: 7475484046242361190}
   _meleeSlashTransform: {fileID: 5284466563846898899}
@@ -1166,6 +1165,15 @@ MonoBehaviour:
   _orientation: {fileID: 4376337836434605870}
   <CharacterData>k__BackingField: {fileID: 11400000, guid: e9b55dda2f3d50a4ab5938572c9bdacc, type: 2}
   _rigidbody: {fileID: 8023257346298294945}
+  OnFootstep:
+    m_PersistentCalls:
+      m_Calls: []
+  OnJump:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLand:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2419340908151065216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1183,21 +1191,6 @@ MonoBehaviour:
   _orientation: {fileID: 4376337836434605870}
   <CharacterData>k__BackingField: {fileID: 11400000, guid: e9b55dda2f3d50a4ab5938572c9bdacc, type: 2}
   _cameraTransform: {fileID: 4472720011615709231}
---- !u!114 &8080527194411569046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7937491203180931596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d58c9af1813d2d94bb54686545200ba8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Melee
-  _inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  _animator: {fileID: 4590237496311073407}
-  cooldownDuration: 3
 --- !u!114 &7398605094141443656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1285,6 +1278,9 @@ MonoBehaviour:
       Entry: 8
       Data: 
   _onPickupEventAsset: {fileID: 11400000, guid: 71356051f20421f46a2a4f7da39c27c6, type: 2}
+  OnAbilityUnlocked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &484032968899301501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1355,6 +1351,15 @@ MonoBehaviour:
   _movement: {fileID: 2925868597051054196}
   _bodySkinMesh: {fileID: 3339557784315467354}
   _onStartChilliState: {fileID: 11400000, guid: 0a56338db4b39c445ae24bad6797bd63, type: 2}
+  OnChilliExplosionActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnChilliStateEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnChilliStateExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8172467476581512096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,7 +1940,7 @@ MonoBehaviour:
   _onFinishAttackAnimation:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8080527194411569046}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Melee, Assembly-CSharp
         m_MethodName: OnAttackAnimationEnded
         m_Mode: 1
@@ -1962,7 +1967,7 @@ MonoBehaviour:
   _onFinishFinalAttackAnimation:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8080527194411569046}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Melee, Assembly-CSharp
         m_MethodName: OnFinalAttackAnimationEnded
         m_Mode: 1

@@ -34,7 +34,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Attack",
+                    "name": "Attackk",
                     "type": "Button",
                     "id": "06444340-7522-4b5e-a2d3-3e197e564565",
                     "expectedControlType": "",
@@ -190,7 +190,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Attack",
+                    "action": "Attackk",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
