@@ -8,6 +8,6 @@ public class FloatObjectet : MonoBehaviour
 
     private void OnEnable()
     {
-        Tween.LocalPosition(transform, startValue: Vector3.zero, endValue: new Vector3(0f, transform.position.y + 0.1f, 0f), _floatingTweenSettings);
+        Tween.LocalPosition(transform, startValue: Vector3.zero, endValue: new Vector3(0f, 0.1f, 0f), _floatingTweenSettings);
     }
 }

@@ -361,7 +361,7 @@ MonoBehaviour:
       Enabled: 1
       Input:
         InputAction: {fileID: -8448833250038859060, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-        Gain: 1
+        Gain: 10
         CancelDeltaTime: 0
       InputValue: 0
       Driver:
@@ -372,7 +372,7 @@ MonoBehaviour:
       Enabled: 1
       Input:
         InputAction: {fileID: -8448833250038859060, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-        Gain: -1
+        Gain: -10
         CancelDeltaTime: 0
       InputValue: -0
       Driver:
@@ -1086,7 +1086,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument:
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   _onStartChilliState: {fileID: 11400000, guid: 0a56338db4b39c445ae24bad6797bd63, type: 2}

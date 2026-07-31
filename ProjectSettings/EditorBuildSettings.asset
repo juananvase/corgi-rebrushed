@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/CorgiRebrushed/UI/Scenes/MainMenu-UI.unity
+    guid: 63039d9f3117edf418ff961000e0714e
+  - enabled: 1
     path: Assets/CorgiRebrushed/Levels/Scenes/Tutorial-LVL.unity
     guid: 2051f9e961dcc9e41bbcaded2cf9a074
   - enabled: 1

@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     [field: SerializeField, FoldoutGroup("GameEvents")] private IntEventAsset _onTreatCollected;
     
-    public int CurrentLevelIndex = 0;
+    public static int CurrentLevelIndex = 0;
 
     [ShowInInspector, FoldoutGroup("Test")] public int TreatCount { get; private set; } = 0;
     
