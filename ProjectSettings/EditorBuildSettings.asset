@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/CorgiRebrushed/Levels/Scenes/Tutorial-LVL.unity
     guid: 2051f9e961dcc9e41bbcaded2cf9a074
+  - enabled: 1
+    path: Assets/CorgiRebrushed/Levels/Scenes/Level-1-LVL.unity
+    guid: 939d07792db02bd4ea7d2805116687b8
+  - enabled: 1
+    path: Assets/CorgiRebrushed/Levels/Scenes/Level-2-LVL.unity
+    guid: db1bb21d58e7e794eab9bf2fa3b858d7
+  - enabled: 1
+    path: Assets/CorgiRebrushed/Levels/Scenes/Final-LVL.unity
+    guid: 56abf222344881d42a2138f74ce753eb
+  - enabled: 1
+    path: Assets/CorgiRebrushed/Levels/Scenes/BadEnding-LVL.unity
+    guid: 99f068e8f35894840aa8020260c42eb5
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

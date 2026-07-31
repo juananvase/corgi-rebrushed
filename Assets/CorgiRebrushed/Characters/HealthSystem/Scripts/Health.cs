@@ -24,17 +24,22 @@ public class Health : MonoBehaviour, IDamageable, IHealable
         _currentHealth = Mathf.Clamp(_currentHealth, 0f, _maxHealth);
         
         OnDamaged.Invoke(damageInfo);
-        //Audio - death detection
-        if (!IsAlive)
-            OnDeath.Invoke();
-        //End audio
 
+        if (_currentHealth <= 0f)
+        {
+            PerfomDeath();
+        }
     }
     [ContextMenu("Damage Test 10%"), Button("Damage Test 10%")]
     public void DamageTest()
     {
         DamageInfo damageInfo = new DamageInfo(_maxHealth * 0.1f, gameObject, gameObject, gameObject, EDamageType.Normal);
         Damaged(damageInfo);
+    }
+
+    protected virtual void PerfomDeath()
+    {
+        OnDeath.Invoke();
     }
     
     public void Heal(HealInfo healInfo)

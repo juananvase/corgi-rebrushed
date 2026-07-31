@@ -129,6 +129,7 @@ MonoBehaviour:
   _rigidbody: {fileID: 6100413921229823872}
   _respawnPoint: {fileID: 4336976266775643752}
   _acceleration: 45
+  _direction: {x: 0, y: 0, z: 1}
   _respawnTime: 5
   _maxSpeed: 50
   _damage: 999
