@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{2ca39ec0-20bc-41ae-93b6-c0edecc1d633}">
 		<property name="assetPath">
-			<value>197185__gladkiy__jack_russel_terrier_plays_growl_breathe.wav</value>
+			<value>Voice/197185__gladkiy__jack_russel_terrier_plays_growl_breathe.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

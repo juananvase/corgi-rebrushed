@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{23cc8d51-0698-4504-860e-794e3c6e7e03}">
 		<property name="name">
-			<value>Attack</value>
+			<value>Attack-Corgi</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>
@@ -165,7 +165,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{8bf5d1b0-e3bf-432f-8f99-b311984fca5b}">
 		<property name="volume">
-			<value>-15.5</value>
+			<value>-8.5</value>
 		</property>
 		<property name="name">
 			<value>Paint</value>
@@ -205,15 +205,15 @@
 		<property name="start">
 			<value>2</value>
 		</property>
-		<property name="playlistMode">
-			<value>1</value>
-		</property>
 		<relationship name="sounds">
 			<destination>{84982010-98f6-4120-879f-eb46c2cd9d89}</destination>
 			<destination>{1d0e0c30-af50-4faf-a513-a158d2172b99}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{06fafb8b-2d3b-4433-8298-142319ecfd41}">
+		<property name="volume">
+			<value>-7</value>
+		</property>
 		<property name="name">
 			<value>Woosh</value>
 		</property>
@@ -228,6 +228,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{cc607ab7-37de-45ed-9bbe-c7fcc206057f}">
+		<property name="volume">
+			<value>-6</value>
+		</property>
 		<property name="name">
 			<value>Magic</value>
 		</property>
@@ -263,11 +266,17 @@
 	<object class="MixerBusPanner" id="{794380ae-acd5-47ac-8631-ddd78213bd75}" />
 	<object class="MixerBusFader" id="{6d54b7cf-b01a-48c6-a891-d0f76e9b871f}" />
 	<object class="SingleSound" id="{3a620889-987f-413b-925a-00889753ca28}">
+		<property name="pitch">
+			<value>-8</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{73d899fc-e387-4dfb-b7d6-fc71eb335c72}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{4aaf3dd6-28a4-4597-9a95-f75fd221116d}">
+		<property name="pitch">
+			<value>-10</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{4600e8db-7924-426d-a606-720feb3ec440}</destination>
 		</relationship>
@@ -282,10 +291,14 @@
 			<destination>{a2dda2be-4178-4c25-9b37-2c6cc260911c}</destination>
 			<destination>{566b179b-3d09-4abc-84cb-f72e55634dce}</destination>
 			<destination>{618b265f-58dc-4709-ae9a-52191b9ac667}</destination>
+			<destination>{7d2a485b-dd7c-436f-93db-217b74810665}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{773b77b8-39ac-4e51-a990-54cbc29083d1}" />
 	<object class="SingleSound" id="{bb479d61-ead0-4604-99c3-0f76e4375129}">
+		<property name="volume">
+			<value>-7</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{166fa7f3-0b16-48a8-ac13-6bf52f0bd28d}</destination>
 		</relationship>
@@ -296,16 +309,25 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{873f7ffb-5b26-44a3-b1a4-d412e48804b1}">
+		<property name="volume">
+			<value>-8.5</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{fdc2977d-036e-41c4-bb77-69298ea328ef}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{d10d27d4-06ac-4c1f-8799-0e7e45346af9}">
+		<property name="volume">
+			<value>-6</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{11964fdf-9331-4dd8-b2e1-e7c03ccd55da}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{84982010-98f6-4120-879f-eb46c2cd9d89}">
+		<property name="volume">
+			<value>1</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{fbfdc935-9135-4229-a869-a81c8511a221}</destination>
 		</relationship>
@@ -338,7 +360,7 @@
 	<object class="MixerBusFader" id="{ac1abadb-67b7-40a5-9a1a-5d0edff3f682}" />
 	<object class="ThreeEQEffect" id="{a2dda2be-4178-4c25-9b37-2c6cc260911c}">
 		<property name="lowGain">
-			<value>-27.5</value>
+			<value>-4</value>
 		</property>
 		<property name="midGain">
 			<value>-19</value>
@@ -356,12 +378,41 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{618b265f-58dc-4709-ae9a-52191b9ac667}" />
+	<object class="SFXReverbEffect" id="{7d2a485b-dd7c-436f-93db-217b74810665}">
+		<property name="decayTime">
+			<value>2700</value>
+		</property>
+		<property name="earlyDelay">
+			<value>7</value>
+		</property>
+		<property name="lateDelay">
+			<value>11</value>
+		</property>
+		<property name="HFDecayRatio">
+			<value>10</value>
+		</property>
+		<property name="diffusion">
+			<value>75</value>
+		</property>
+		<property name="density">
+			<value>86.5</value>
+		</property>
+		<property name="highCut">
+			<value>500</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>62</value>
+		</property>
+		<property name="wetLevel">
+			<value>3.5</value>
+		</property>
+	</object>
 	<object class="ThreeEQEffect" id="{e50fce57-cf2c-4b82-9ef2-f6c9db9ca11c}">
 		<property name="lowGain">
-			<value>-18.5</value>
+			<value>-6</value>
 		</property>
 		<property name="midGain">
-			<value>-6.5</value>
+			<value>-5.5</value>
 		</property>
 		<property name="highGain">
 			<value>6</value>
@@ -398,6 +449,9 @@
 		</property>
 		<property name="earlyLateMix">
 			<value>62</value>
+		</property>
+		<property name="wetLevel">
+			<value>3.5</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{f47713bd-7392-4597-87fb-ce7dc455bc0e}" />

@@ -4,6 +4,7 @@ using GameEvents;
 using PrimeTween;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events; //Required for audio
 
 public class ChilliExplosion : Abilitiy
 {
@@ -11,6 +12,12 @@ public class ChilliExplosion : Abilitiy
     [SerializeField] [FoldoutGroup("References")] private SkinnedMeshRenderer _bodySkinMesh;
     [SerializeField] [FoldoutGroup("References")] private TransformEventAsset _onStartChilliState;
     private Coroutine _chilliStateCoroutine;
+
+    //Audio
+    [FoldoutGroup("Audio")] public UnityEvent OnChilliExplosionActivated;
+    [FoldoutGroup("Audio")] public UnityEvent OnChilliStateEnter;
+    [FoldoutGroup("Audio")] public UnityEvent OnChilliStateExit;
+    //End Audio
     
     private float _nextReadyTime;
     private bool _isCooldownOver => Time.time >= _nextReadyTime;
@@ -32,6 +39,11 @@ public class ChilliExplosion : Abilitiy
         if (!_isCooldownOver) return;
         if (context != ECorgiAbility.Fire) return;
         SpawnObject(_abilitiesData.ChilliPrefab, _spawnPoint.position, Quaternion.identity);
+
+        //Audio
+        OnChilliExplosionActivated?.Invoke();
+        //End Audio
+
         _nextReadyTime = ResetCooldown(_abilitiesData.ChilliExplosionCoolDownDuration);
     }
     
@@ -54,12 +66,20 @@ public class ChilliExplosion : Abilitiy
         _movement.CurrentAcceleration = _abilitiesData.ChilliAcceleration;
         _movement.CurrentMaxSpeed = _abilitiesData.ChilliMaxSpeed;
         _bodySkinMesh.material = _abilitiesData.ChilliCorgiMaterial;
+
+        //Audio
+        OnChilliStateEnter?.Invoke();
+        //End Audio
         
         yield return Tween.Delay(_abilitiesData.ChilliSateDuration).ToYieldInstruction();
 
         _movement.CurrentAcceleration = _movement.CharacterData.Acceleration;
         _movement.CurrentMaxSpeed = _movement.CharacterData.MaxSpeed;
         _bodySkinMesh.material = _abilitiesData.CommonCorgiMaterial;
+
+        //Audio
+        OnChilliStateExit?.Invoke();
+        //End Audio
     }
     
 }

@@ -28,15 +28,15 @@ namespace CorgiAudio
         // ──────────────────────────────────────────────
         // Inspector — Volume Control
         // Controls bus:/ (master) and bus:/Music directly.
-        // Range is 0-1 (attenuation only, never amplifies).
-        // Does NOT modify VCAs or internal mix balance.
+        // Range is 0–1 (attenuation only, never amplifies).
+        // Applied once on Start().
         // ──────────────────────────────────────────────
         [FoldoutGroup("Volume Control")]
-        [SerializeField, Range(0f, 1f), OnValueChanged(nameof(OnMasterVolumeChanged))]
+        [SerializeField, Range(0f, 1f)]
         private float _masterVolume = 1f;
 
         [FoldoutGroup("Volume Control")]
-        [SerializeField, Range(0f, 1f), OnValueChanged(nameof(OnMusicVolumeChanged))]
+        [SerializeField, Range(0f, 1f)]
         private float _musicVolume = 1f;
 
         private FMOD.Studio.Bus _masterBus;
@@ -81,6 +81,13 @@ namespace CorgiAudio
             RuntimeManager.StudioSystem.getBus("bus:/Music", out _musicBus);
         }
 
+        private void Start()
+        {
+            // Apply slider values once, after prefab deserialization is complete.
+            ApplyMasterVolume();
+            ApplyMusicVolume();
+        }
+
         private void OnDestroy()
         {
             if (Instance == this)
@@ -94,12 +101,9 @@ namespace CorgiAudio
         {
             try
             {
-                // FMOD auto-loads banks from StreamingAssets/Audio/ when configured in FMOD Settings.
-                // We explicitly load any additional banks specified in _bankNames.
                 foreach (var bankName in _bankNames)
                 {
                     RuntimeManager.LoadBank(bankName, true);
-                    //Debug.Log($"[CorgiAudio] Loaded bank: {bankName}");
                 }
 
                 _banksLoaded = true;
@@ -114,16 +118,31 @@ namespace CorgiAudio
         // ──────────────────────────────────────────────
         // Volume Control (Bus attenuation)
         // ──────────────────────────────────────────────
-        private void OnMasterVolumeChanged()
+        private void ApplyMasterVolume()
         {
             if (_masterBus.hasHandle())
                 _masterBus.setVolume(_masterVolume);
         }
 
-        private void OnMusicVolumeChanged()
+        private void ApplyMusicVolume()
         {
             if (_musicBus.hasHandle())
                 _musicBus.setVolume(_musicVolume);
+        }
+
+        // ──────────────────────────────────────────────
+        // Public API — Volume
+        // ──────────────────────────────────────────────
+        public void SetMasterVolume(float volume)
+        {
+            _masterVolume = Mathf.Clamp01(volume);
+            ApplyMasterVolume();
+        }
+
+        public void SetMusicVolume(float volume)
+        {
+            _musicVolume = Mathf.Clamp01(volume);
+            ApplyMusicVolume();
         }
 
         // ──────────────────────────────────────────────
@@ -204,14 +223,11 @@ namespace CorgiAudio
                 return;
 
             _currentMusicState = stateName;
-            // The actual music transition is handled by FmodMusicController,
-            // which sets the FMOD parameter "MusicState".
             RuntimeManager.StudioSystem.setParameterByName("MusicState", GetMusicStateHash(stateName));
         }
 
         private float GetMusicStateHash(string stateName)
         {
-            // Simple label-to-float mapping. Expand as needed.
             return stateName switch
             {
                 "Exploration" => 0f,

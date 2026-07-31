@@ -13,12 +13,24 @@ GameObject:
   - component: {fileID: 1081745579694666554}
   - component: {fileID: 9059865501915549644}
   - component: {fileID: 4592705838347340790}
+  - component: {fileID: 7380010103370239477}
   - component: {fileID: 2421962285473641383}
   - component: {fileID: 7367623572277809987}
   - component: {fileID: 256401300777029155}
   - component: {fileID: 3756841497894435881}
   - component: {fileID: 5326221070090887830}
   - component: {fileID: 7554123504450075542}
+  - component: {fileID: 4724013868395125071}
+  - component: {fileID: 2134784149678256}
+  - component: {fileID: 5139425640005806545}
+  - component: {fileID: 4347367654171503907}
+  - component: {fileID: 7297849959085067508}
+  - component: {fileID: 1898203188846938975}
+  - component: {fileID: 1293469112898538550}
+  - component: {fileID: 1484931727395699772}
+  - component: {fileID: 7737536626449496628}
+  - component: {fileID: 8117276061265376974}
+  - component: {fileID: 3728936804545974366}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -114,6 +126,25 @@ MonoBehaviour:
     FmodParameter: TimeScale
   - Name: PaintingState
     FmodParameter: PaintingState
+--- !u!114 &7380010103370239477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c59a866bccd0fdd498ae15cf7842dc92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicController
+  _musicEvent:
+    Guid:
+      Data1: 1567449694
+      Data2: 1306412617
+      Data3: 2021490092
+      Data4: 146969769
+    Path: event:/Music/Music
 --- !u!114 &2421962285473641383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,14 +182,14 @@ MonoBehaviour:
       Data2: 1267291245
       Data3: 286111895
       Data4: -1616011267
-    Path: event:/Painting/Enter
+    Path: event:/Painting/StingersPainting/Enter
   _exitFmodEvent:
     Guid:
       Data1: -640408115
       Data2: 1094472353
       Data3: -727970402
       Data4: 1846879206
-    Path: event:/Painting/Exit
+    Path: event:/Painting/StingersPainting/Exit
 --- !u!114 &256401300777029155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +227,7 @@ MonoBehaviour:
       Data2: 1309092970
       Data3: 1891267982
       Data4: -2054854684
-    Path: event:/Painting/Confirm
+    Path: event:/Painting/StingersPainting/Confirm
   _failedFmodEvent:
     Guid:
       Data1: 667184871
@@ -242,3 +273,226 @@ MonoBehaviour:
       Data3: 883049091
       Data4: 1072999852
     Path: event:/Abilities/TreeSpawn
+--- !u!114 &4724013868395125071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb12f616df4901544bea8a5fc22e21fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnFootstepBinding
+  _fmodEvent:
+    Guid:
+      Data1: -30545754
+      Data2: 1160919397
+      Data3: -345026133
+      Data4: 981367807
+    Path: event:/Player/Movement/Footstep
+--- !u!114 &2134784149678256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccea48a879898448b2d3e496bee9ed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnJumpBinding
+  _fmodEvent:
+    Guid:
+      Data1: -153468084
+      Data2: 1260840372
+      Data3: 1244125612
+      Data4: 1329701688
+    Path: event:/Player/Movement/Jump
+--- !u!114 &5139425640005806545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 395940b33bb48974aaf49e82c2d3ad23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnLandBinding
+  _fmodEvent:
+    Guid:
+      Data1: -2116343585
+      Data2: 1085307586
+      Data3: 1091631756
+      Data4: 1629860812
+    Path: event:/Player/Movement/Land
+--- !u!114 &4347367654171503907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85d7eaee4dc9af4bbf857d61b59bb50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnAttackBinding
+  _barkFmodEvent:
+    Guid:
+      Data1: -1992047239
+      Data2: 1318552002
+      Data3: -123938687
+      Data4: 1550426246
+    Path: event:/Player/Voice/Corgi/BarkAttack
+  _attackFmodEvent:
+    Guid:
+      Data1: 600608081
+      Data2: 1157891736
+      Data3: 1316556422
+      Data4: 58617404
+    Path: event:/Player/Combat/Attack-Corgi
+--- !u!114 &7297849959085067508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3d22f18584800429b72bd4ae2e6b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnChilliExplosionBinding
+  _fmodEvent:
+    Guid:
+      Data1: 1141681340
+      Data2: 1332452865
+      Data3: -1066777957
+      Data4: 42626897
+    Path: event:/Abilities/ChilliExplosion
+--- !u!114 &1898203188846938975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b212d8c1412cbc2498247c30b392403b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnChilliStateBinding
+  _enterFmodEvent:
+    Guid:
+      Data1: -480484405
+      Data2: 1145250039
+      Data3: -1952619376
+      Data4: -1524961723
+    Path: event:/Abilities/StingersAbilities/ChilliStateEnter
+  _exitFmodEvent:
+    Guid:
+      Data1: 1402800159
+      Data2: 1282168506
+      Data3: -37777267
+      Data4: -1604678493
+    Path: event:/Abilities/StingersAbilities/ChilliStateExit
+--- !u!114 &1293469112898538550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ec932570d75a3a48ab56572829fa951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnPlayerDeathBinding
+  _fmodEvent:
+    Guid:
+      Data1: -896820065
+      Data2: 1108046836
+      Data3: 441940113
+      Data4: -665912069
+    Path: event:/Player/StingersPlayer/PlayerDeath
+--- !u!114 &1484931727395699772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1f82b6ed0a2744db91e59793ad3527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnEnemyDefeatBinding
+  _fmodEvent:
+    Guid:
+      Data1: -1753543080
+      Data2: 1314886757
+      Data3: -769053508
+      Data4: -745334795
+    Path: event:/Enemy/StingersEnemy/EnemyDefeat
+--- !u!114 &7737536626449496628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8182504c7740aef44b5d0c61e60a9f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnPlayerHitBinding
+  _fmodEvent:
+    Guid:
+      Data1: 801483214
+      Data2: 1297877130
+      Data3: 521791362
+      Data4: 1547887244
+    Path: event:/Player/Combat/HitReceived-Corgi
+--- !u!114 &8117276061265376974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9ad421bf920e94fb53b63b96d2fe47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnEnemyHitBinding
+  _fmodEvent:
+    Guid:
+      Data1: -796222905
+      Data2: 1128197541
+      Data3: -606067793
+      Data4: -769355142
+    Path: event:/Enemy/Cat/Hit-Cat
+--- !u!114 &3728936804545974366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188389082915244927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7db3162aea358749a06a2c136d17d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnAbilityUnlockBinding
+  _fmodEvent:
+    Guid:
+      Data1: -1821070471
+      Data2: 1188768030
+      Data3: 31213996
+      Data4: -1459152508
+    Path: event:/Abilities/StingersAbilities/AbilityUnlocked
