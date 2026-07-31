@@ -12,10 +12,6 @@ public class WaterJump : Abilitiy
     [SerializeField] [FoldoutGroup("References")] private Rigidbody _rigidbody;
     [SerializeField, BoxGroup("Events")] private UnityEvent OnWaterImpulse;
     
-    private float _nextReadyTime;
-    private bool _isCooldownOver => Time.time >= _nextReadyTime;
-    
-    
     //Audio
      [FoldoutGroup("Audio")] public UnityEvent OnWaterJetActivated;
     // End Audio
@@ -34,7 +30,12 @@ public class WaterJump : Abilitiy
     {
         _rigidbody = GetComponent<Rigidbody>();
     }
-    
+
+    private void Update()
+    {
+        GUIManager.instance.WaterAbilityProgress = GetCooldownProgress(_abilitiesData.WaterJumpCoolDownDuration);
+    }
+
     private void PerformWaterImpulse(ECorgiAbility context)
     {
         Debug.Log(_isCooldownOver);

@@ -19,9 +19,6 @@ public class ChilliExplosion : Abilitiy
     [FoldoutGroup("Audio")] public UnityEvent OnChilliStateExit;
     //End Audio
     
-    private float _nextReadyTime;
-    private bool _isCooldownOver => Time.time >= _nextReadyTime;
-    
     private void OnEnable()
     {
         _abilityEventAsset.OnInvoked.AddListener(PerformChilliExplosion);
@@ -33,7 +30,12 @@ public class ChilliExplosion : Abilitiy
         _abilityEventAsset.OnInvoked.RemoveListener(PerformChilliExplosion);
         _onStartChilliState.OnInvoked.RemoveListener(StartChilliState);
     }
-    
+
+    private void Update()
+    {
+        GUIManager.instance.ChilliAbilityProgress = GetCooldownProgress(_abilitiesData.ChilliExplosionCoolDownDuration);
+    }
+
     private void PerformChilliExplosion(ECorgiAbility context)
     {
         if (!_isCooldownOver) return;

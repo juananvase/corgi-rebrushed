@@ -189648,11 +189648,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a61c43d83f9815342a8a68015aeb5c99, type: 2}
     - target: {fileID: 8455079374328843483, guid: c0909cbccd2de964cb9cf85826990d4c, type: 3}
       propertyPath: _nextSceneIndex
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8455079374328843483, guid: c0909cbccd2de964cb9cf85826990d4c, type: 3}
       propertyPath: _treatAmountRequire
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

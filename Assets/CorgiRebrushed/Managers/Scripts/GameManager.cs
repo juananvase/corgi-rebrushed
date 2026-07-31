@@ -51,6 +51,11 @@ public class GameManager : MonoBehaviour
     {
         LoadSceneByIndex(CurrentLevelIndex);
     }
+    
+    public void Death()
+    {
+        LoadSceneByIndex(5);
+    }
 
     public void LoadSceneByIndex(int sceneIndex)
     {

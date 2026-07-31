@@ -1,11 +1,10 @@
+using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events; //Required for audio
 
 public class TreeFall : Abilitiy
 {
-    private float _nextReadyTime;
-    private bool _isCooldownOver => Time.time >= _nextReadyTime;
     
     //Audio
     [FoldoutGroup("Audio")] public UnityEvent OnTreeSpawnActivated;
@@ -19,6 +18,11 @@ public class TreeFall : Abilitiy
     private void OnDisable()
     {
         _abilityEventAsset.OnInvoked.RemoveListener(PerformTreeFall);
+    }
+
+    private void Update()
+    {
+        GUIManager.instance.TreeAbilityProgress = GetCooldownProgress(_abilitiesData.TreeFallCoolDownDuration);
     }
 
     [Button]

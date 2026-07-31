@@ -79,6 +79,7 @@ Transform:
   - {fileID: 7319678376869126865}
   - {fileID: 8904833086785303055}
   - {fileID: 1511364588138567038}
+  - {fileID: 1833828875928656893}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7182475907514225542
@@ -172,7 +173,54 @@ MonoBehaviour:
   <PlayerTransform>k__BackingField: {fileID: 0}
   <PlayerCameraCinemachineImpulseSource>k__BackingField: {fileID: 0}
   _onTreatCollected: {fileID: 11400000, guid: c4ac23fc7c595ea40b60f8152c61b12c, type: 2}
-  CurrentLevelIndex: 0
+--- !u!1 &7951046884762122650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1833828875928656893}
+  - component: {fileID: 3742483138104300595}
+  m_Layer: 0
+  m_Name: GUIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1833828875928656893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7951046884762122650}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6018858298102826153}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3742483138104300595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7951046884762122650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa2342bac131854bbb5af065e37e966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GUIManager
+  <WaterAbilityFillBar>k__BackingField: {fileID: 0}
+  <TreeAbilityFillBar>k__BackingField: {fileID: 0}
+  <ChilliAbilityFillBar>k__BackingField: {fileID: 0}
+  <HealthFillBar>k__BackingField: {fileID: 0}
 --- !u!1001 &609378840257629114
 PrefabInstance:
   m_ObjectHideFlags: 0

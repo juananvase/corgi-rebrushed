@@ -11,6 +11,9 @@ public abstract class Abilitiy : MonoBehaviour
     // Cache an array for non-allocating physics checks (Max 20 targets per hit)
     private readonly Collider[] hitBuffer = new Collider[20];
     
+    protected float _nextReadyTime;
+    protected bool _isCooldownOver => Time.time >= _nextReadyTime;
+    
     protected void ApplyDamage(Vector3 halfExtents, Vector3 attackOffset, float damage, GameObject instigator, EDamageType damageType)
     {
         Vector3 boxCenter = transform.position + transform.TransformDirection(attackOffset);
@@ -49,4 +52,12 @@ public abstract class Abilitiy : MonoBehaviour
     {
         return Time.time + cooldownDuration;
     }
+    
+    protected float GetCooldownProgress(float cooldownDuration)
+    {
+        if (_isCooldownOver) return 1f;
+        float timeRemaining = _nextReadyTime - Time.time;
+        return 1f - Mathf.Clamp01(timeRemaining / cooldownDuration);
+    }
+    
 }

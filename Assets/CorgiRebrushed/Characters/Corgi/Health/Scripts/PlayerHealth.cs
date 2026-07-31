@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using GameEvents;
 using PrimeTween;
@@ -7,6 +8,12 @@ using UnityEngine;
 public class PlayerHealth : Health
 {
     [SerializeField] [FoldoutGroup("References")] private TransformEventAsset _onStartChilliState;
+
+    private void Update()
+    {
+        GUIManager.instance.HealthProgress = Percentage;
+    }
+
     public override void Damaged(DamageInfo damageInfo)
     {
         if(damageInfo.EDamageType == EDamageType.Chilli) _onStartChilliState.Invoke(transform);
@@ -24,6 +31,6 @@ public class PlayerHealth : Health
     private IEnumerator DeathRoutine()
     {
         yield return Tween.Delay(1.5f).ToYieldInstruction();
-        GameManager.instance.Respawn();
+        GameManager.instance.Death();
     }
 }
