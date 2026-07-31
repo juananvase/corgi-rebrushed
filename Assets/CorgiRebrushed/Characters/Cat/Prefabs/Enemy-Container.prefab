@@ -275,6 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   _enemyData: {fileID: 11400000, guid: c6a269f8d2a095a45af44085876d9b57, type: 2}
+  _health: {fileID: 4007694160605200535}
   _navMeshAgent: {fileID: 2947524439657717721}
   _rigidbody: {fileID: 4385168095908701205}
   _animator: {fileID: 3911019546819687782}

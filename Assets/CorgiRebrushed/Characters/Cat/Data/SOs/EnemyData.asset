@@ -20,7 +20,7 @@ MonoBehaviour:
     m_Bits: 1024
   <PatrolRadius>k__BackingField: 10
   <AttackCooldown>k__BackingField: 1
-  <MeleeAttackDamage>k__BackingField: 10
+  <MeleeAttackDamage>k__BackingField: 1
   <AttackHalfExtents>k__BackingField: {x: 0.5, y: 0.85, z: 0.5}
   <AttackOffset>k__BackingField: {x: 0, y: 0.35, z: 1.5}
   <VisionRange>k__BackingField: 10

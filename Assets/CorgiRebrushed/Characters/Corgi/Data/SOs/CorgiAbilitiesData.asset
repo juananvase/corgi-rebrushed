@@ -59,7 +59,7 @@ MonoBehaviour:
       useUnscaledTime: 0
       _useFixedUpdate: 0
       _updateType: 0
-  <WaterImpulseDamage>k__BackingField: 25
+  <WaterImpulseDamage>k__BackingField: 999
   <WaterCascadeVfxPrefab>k__BackingField: {fileID: 2443346602915605235, guid: c3f9e3786f7c49b43abe89eee32162d3, type: 3}
   <VfxOffset>k__BackingField: {x: 0, y: -1, z: 0}
   <TreeFallCoolDownDuration>k__BackingField: 5
@@ -169,7 +169,7 @@ MonoBehaviour:
     _updateType: 0
   <ChilliExplosionAttackBoxHalfExtents>k__BackingField: {x: 2, y: 0.5, z: 2}
   <ChilliExplosionAttackOffset>k__BackingField: {x: 0, y: 0, z: 0}
-  <ChilliExplosionDamage>k__BackingField: 50
+  <ChilliExplosionDamage>k__BackingField: 999
   <ChilliSateDuration>k__BackingField: 4
   <ChilliAcceleration>k__BackingField: 75
   <ChilliMaxSpeed>k__BackingField: 20

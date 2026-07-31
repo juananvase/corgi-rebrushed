@@ -9,6 +9,7 @@ using Random = UnityEngine.Random;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField, FoldoutGroup("References")] private EnemyDataSO _enemyData;
+    [SerializeField, FoldoutGroup("References")] private Health _health;
     [SerializeField, FoldoutGroup("References")] private NavMeshAgent _navMeshAgent; 
     [SerializeField, FoldoutGroup("References")] private Rigidbody _rigidbody; 
     [SerializeField, FoldoutGroup("References")] private Animator _animator;
@@ -91,6 +92,8 @@ public class EnemyController : MonoBehaviour
 
     private void UpdateBehaviourState()
     {
+        if(!_health.IsAlive)return;
+        
         if (!_isPlayerVisible && !_isPlayerInRange)
         {
             PerformPatrol();
