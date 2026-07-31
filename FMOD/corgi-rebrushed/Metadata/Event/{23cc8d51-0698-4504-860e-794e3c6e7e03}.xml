@@ -165,7 +165,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{8bf5d1b0-e3bf-432f-8f99-b311984fca5b}">
 		<property name="volume">
-			<value>-15.5</value>
+			<value>-8.5</value>
 		</property>
 		<property name="name">
 			<value>Paint</value>
@@ -211,6 +211,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{06fafb8b-2d3b-4433-8298-142319ecfd41}">
+		<property name="volume">
+			<value>-7</value>
+		</property>
 		<property name="name">
 			<value>Woosh</value>
 		</property>
@@ -293,6 +296,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{773b77b8-39ac-4e51-a990-54cbc29083d1}" />
 	<object class="SingleSound" id="{bb479d61-ead0-4604-99c3-0f76e4375129}">
+		<property name="volume">
+			<value>-7</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{166fa7f3-0b16-48a8-ac13-6bf52f0bd28d}</destination>
 		</relationship>
@@ -303,16 +309,25 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{873f7ffb-5b26-44a3-b1a4-d412e48804b1}">
+		<property name="volume">
+			<value>-8.5</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{fdc2977d-036e-41c4-bb77-69298ea328ef}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{d10d27d4-06ac-4c1f-8799-0e7e45346af9}">
+		<property name="volume">
+			<value>-6</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{11964fdf-9331-4dd8-b2e1-e7c03ccd55da}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{84982010-98f6-4120-879f-eb46c2cd9d89}">
+		<property name="volume">
+			<value>1</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{fbfdc935-9135-4229-a869-a81c8511a221}</destination>
 		</relationship>

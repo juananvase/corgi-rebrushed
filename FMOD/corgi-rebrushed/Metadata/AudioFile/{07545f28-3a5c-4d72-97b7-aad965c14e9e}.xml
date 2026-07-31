@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{07545f28-3a5c-4d72-97b7-aad965c14e9e}">
 		<property name="assetPath">
-			<value>Magic/magic-cymbal-swell.wav</value>
+			<value>magic-cymbal-swell.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
